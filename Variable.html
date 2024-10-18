@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/Image/javafavicon.ico">
+        <title>JavaFlair: Variables</title> 
+        <link rel="stylesheet" href="/CSS/Indexstyle.css">
+        <link rel="stylesheet" href="/CSS/sidebarstyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+        
+    </head>
+
+    <body>
+
+        <div id="sidebar-nav"></div>
+        
+            <div id="main-content">
+            <header>
+                <h1>Java Variables</h1>
+                <hr>
+            </header>
+
+            <nav role="navigation">
+                <a href="/HTML/Comments.html" aria-label="Go to previous page" class="nav-button" style="float:left"> &lt; Previous </a>
+                <a href="/HTML/Data_Type.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt; </a> 
+                <br>
+                <hr>
+            </nav>    
+
+        <main role="main">
+
+            <section>
+
+                <h2>Introduction to Variables in Java</h2>
+                <p>
+                     Imagine you have a box, and inside that box, you can store different things like numbers,
+                     words, or even true/false values. In Java, these boxes are called variables. Variables help 
+                     us store information that our programs can use and manipulate.
+                </p>
+                <hr>
+                
+            </section>
+
+            <section>
+
+                <h2>Why Use Variables?</h2>
+                <p>
+                    Variables make your code dynamic. They allow your program to "remember" important data, 
+                    perform calculations, and even change behaviors based on different inputs.
+                    <br>
+                    Think about it like this: If you're building a game, how would you keep track of the player's 
+                    score, their health points, or the current level? That's where variables come in!
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Rules for Declaring Variables in Java</h2>
+                <ol>
+                    <li><strong>Choose a Data Type</strong> Start by selecting the appropriate data type <b>(e.g., int, double, String, boolean)</b>.</li>
+
+                    <li><strong>Give a Descriptive Name:</strong> Use a meaningful name for your variable. The name should start with a letter or underscore and can include numbers after the first character.
+                    <ul>
+                        <li><b>Example:</b><pre><code class="language-java">int age;</code></pre></li>
+                    </ul>
+                    </li>
+                        
+                    <li><strong>No Spaces or Special Characters: </strong>Variable names cannot contain spaces or special characters (except <strong>$ and _</strong>).
+                        <ul>
+                            <li><b>Correct:</b><pre><code class="language-java">int totalAmount;</code></pre></li>  
+                            <li><b>Incorrect:</b><pre><code class="language-java">int total-amount;</code></pre>  </li>
+                        </ul>
+                    </li> 
+
+                    <li><strong>End with a Semicolon:</strong>  Every variable declaration must end with a semicolon (<strong>;</strong>).
+                        <ul>
+                            <li><b>Example:</b> <pre><code class="language-java">String name = "John";</code></pre></li>
+                        </ul> 
+                    </li>
+                    
+                    <li><strong>Java is Case Sensitive:</strong> Variable names are case-sensitive, meaning <b>age</b> and <b>Age</b> are different variables.</li>
+
+                    <li><strong>Avoid Java Reserved Words:</strong> You cannot use Java keywords (like <b>int, class, new, </b>etc.) as variable names.</li>
+                    
+                </ol>
+
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>How to Declare a Variable?</h2>
+                <p>
+                    Declaring a variable in Java is like saying, "Hey, I need a box to store something!" 
+                    Here's the simple syntax:
+                </p>
+                <pre><code class="language-java"><strong>type variableName;</strong></code></pre>
+
+                <ul>
+                    <li><b>type:</b> This is the kind of data (like int, double, char).</li>
+                    <li><b>variableName:</b> This is the name you give to the variable (your box).</li>
+                    <li><b>value:</b> This is the actual data you store.</li>
+                </ul>
+
+                <p><b>Example:</b></p>
+                <pre><code class="language-java">int level; (Declaring a variable 'level' to store the game level)</code></pre>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Variable Initialization in Java</h2>
+                <p>
+                    Once you declare a variable, you often want to give it an initial value. This process is called initialization. <strong>Initialization</strong> happens when you assign a value to a variable for the first time.
+                </p>
+
+                <h3>How to Initialize a Variable</h3>
+                <p>
+                    The syntax for initializing a variable is similar to declaring it, with an additional step where you assign a value:
+                    <pre><code class="language-java"><strong>variableName = value;</strong></code></pre>
+                    <ol>
+                        <li><strong>value:</strong> The data you're assigning to that variable.</li>
+                    </ol>
+                    <b>Example:</b>
+                    <ol>
+                    <li>
+                        First, declare the variable, then initialize it with a value.
+                        <pre><code class="language-java">int age; // Declaration of the variable 'age'.
+age = 30; // Initialization of 'age' with a value of 30.</code></pre>
+                    </li>
+
+                    <li>
+                        Alternatively, declare and initialize the variable in a single line.
+                        <pre><code class="language-java">int age = 30;</code></pre>
+                    </li>
+                </ol>
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Types of Variables in Java</h2>
+                <p>Java gives you different "types" of variables for different kinds of information:</p>
+                <ol>
+                    <li><b>int (Integer):</b> Stores whole numbers without decimal points.</li>
+                    <p><b>Example:</b></p>
+                    <pre><code class="language-java">int age = 25; (Storing the player's age)</code></pre>
+                
+                    <li><b>double (Floating Point):</b> Stores numbers with decimal points and is more precise than float. Typically used for high-precision calculations.</li>
+                    <p><b>Example:</b></p>
+                    <pre><code class="language-java">double score = 99.5; (Storing the player's score)</code></pre>
+                    <p><b>Note:</b> Use double when you need more precision for values, such as financial calculations.</p>
+                
+                    <li><b>float (Floating Point):</b> Stores numbers with decimal points but with less precision than double. Useful when memory savings are more important than precision.</li>
+                    <p><b>Example:</b></p>
+                    <pre><code class="language-java">float temperature = 36.6f; (Storing the body temperature)</code></pre>
+                    <p><b>Note:</b> Always append an <code>f</code> at the end of the value to specify that it is a float.</p>
+                
+                    <li><b>char (Character):</b> Stores a single letter or symbol. It's important to note that <b>single quotes</b> (<b>' '</b>) are used for char values.</li>
+                    <p><b>Example:</b></p>
+                    <pre><code class="language-java">char grade = 'A'; (Storing the player's grade)</code></pre>
+                
+                    <li><b>boolean (Boolean):</b> Stores <b>true</b> or <b>false</b> values.</li>
+                    <p><b>Example:</b></p>
+                    <pre><code class="language-java">boolean isGameOver = false; (Is the game over?)</code></pre>
+                
+                    <li><b>String:</b> Stores a sequence of characters. For String, <b>double quotes</b> (<b>" "</b>) are required to store the text.</li>
+                    <p><b>Example:</b></p>
+                    <pre><code class="language-java">String playerName = "Alex"; (Storing the player's name)</code></pre>
+                </ol>                
+                <hr>
+
+            </section>
+
+            <section>
+
+                <br>
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <iframe src="https://trinket.io/embed/java/a54d96362efa?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>What Happens When You Reassign a Variable?</h2>
+                    <p>
+                        After you initialize a variable, you can change its value at any point. When you reassign a new value to a variable, the old value is replaced, and the variable now holds the new value. However, remember that the original value is lost unless it was stored elsewhere.
+                    </p>
+
+                    <b>Example:</b>
+                        <pre><code class="language-java">int a = 5; // 'a' is initialized with the value 5.
+a = 10;    // The old value (5) is replaced, and 'a' now holds 10.</code></pre>
+
+                    <p>
+                        In this case, once <code>a</code> is reassigned to 10, the value 5 is no longer stored. If you need the old value later, you would have to assign it to another variable before the reassignment.
+                    </p>
+                <hr>
+
+            </section>
+            
+            <section>
+
+                <br>
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+
+                <iframe src="https://trinket.io/embed/java/a8f86af69fae?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+
+            <section>
+                
+                <h2>Why Should You Care About Variables?</h2>
+                <p>Variables are everywhere in coding! Whether you're building a small calculator or a complex app, 
+                    you'll constantly use variables to hold and process information. They make your code powerful and flexible.
+                    <br>
+                    Think of it like a recipe where ingredients (variables) change every time you cook something new. 
+                    You wouldn't want the same dish over and over, right? Variables help make sure your code is as exciting 
+                    and dynamic as possible!
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Working with Multiple Variables in Java</h2>
+                <p>
+                    In Java, you often need to store and manipulate several pieces of related data. This is where using multiple variables comes in handy. By declaring multiple variables of the same type, you can keep your code organized and easy to read.
+                </p>
+                
+                <h3>Declaring and Initializing Multiple Variables</h3>
+                <p>
+                    You can declare and initialize multiple variables of the same type in a single statement. This is particularly useful when you have related data that you want to manage together.
+                </p>
+                <pre><code class="language-java">int a = 5, b = 10, c = 15; // Declaring and initializing multiple variables</code></pre>
+                <p>
+                    In this example, three integer variables (a, b, and c) are declared and initialized with values of 5, 10, and 15, respectively.
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <br>
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+
+                <iframe src="https://trinket.io/embed/java/fc467917c20c?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+                
+            </section>
+
+            <section>
+
+                <h2>Ready to Practice?</h2>
+                <p>Create a Java program that helps calculate how much money someone will save in a year. The program should:</p>
+                <ol>
+                    <li><b>Declare variables</b> to store the user's name, weekly savings amount, and total weeks.</li>
+                    <li><b>Ask the user</b> for input to set these variables.</li>
+                    <li><b>Calculate the total savings</b> for the year by multiplying the weekly savings by the number of weeks.</li>
+                    <li><b>Display a summary</b> showing the user's name, their weekly savings, and the total amount they will have saved at the end of the year.</li>
+                </ol>
+                <hr>
+
+            </section>
+
+        </main>
+
+        <nav role="navigation">
+            <a href="/HTML/Comments.html" aria-label="Go to previous page" class="nav-button" style="float:left"> &lt; Previous </a>
+            <a href="/HTML/Data_Type.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt; </a> 
+            <br>
+            <hr>
+        </nav>
+
+        <footer>
+            <p><b>Summary</b></p>
+            <ul>
+                <li><strong>Definition:</stronstrong> Variables store data, making your programs interactive and flexible.</li>
+                <li><strong>Types:</strong> Common types include int for numbers, char for single characters (using <b>'</b>), and String for text (using <b>"</b>).</li>
+                <li><strong>Importance:</strong> Variables give your code memory and adaptability, making it more powerful.</li>
+            </ul>
+            <p> &copy; JavaFlair 2024. All rigths reserved.</p>
+        </footer>
+    
+        <script src="/JavaScript/sidebar.js"></script>
+        <script src="/JavaScript/trinket-page.js"></script>
+        
+    </div>
+    </body>
+
+</html>

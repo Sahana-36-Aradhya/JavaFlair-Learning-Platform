@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair : Switch Statement</title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Imagestyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+</head>
+
+<body>
+
+  <div id="sidebar-nav"></div>
+
+  <div id="main-content">
+        <header>
+            <h1>Java Switch Statement</h1>
+            <hr>
+        </header>
+
+        <nav role="navigation">
+          <a href="ControlStatements.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+          <a href="While.html" aria-label="Go to next page" type="nav-button" class="nav-button" style="float:right;">Next &gt;</a>
+            <br>
+            <hr>
+        </nav>
+      
+      <main role="main">
+
+        <section>
+
+          <h2>Introduction to switch statement</h2>
+          <p>
+            The <strong>switch statement</strong> is a control statement that allows you to execute <strong>one block of code among multiple choices</strong> based on the value of a variable. It is particularly useful when you have a <b>fixed set of possible values</b> for a variable. Using a switch statement can make your code <b>cleaner</b> and <b>easier</b> to read compared to a series of if-else statements.
+          </p>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>When to Use a Switch Statement</h2>
+            <ul>
+              <li>When you need to evaluate a single expression against multiple constant values.</li>
+              <li>When the possible values are discrete and known (like days of the week, menu options, etc.).</li>
+              <li>When you want to improve code readability and maintainability by avoiding lengthy if-else chains.</li>
+            </ul>
+            <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Syntax</h2>
+          <p>The syntax of the switch statement is as follows:</p>
+          <pre><code class="language-java">switch (expression) {
+    case value1:
+        // code to execute if expression matches value1
+        break;
+    case value2:
+        // code to execute if expression matches value2
+        break;
+    // more cases can be added
+    default:
+        // code to execute if expression doesn't match any case
+}</code></pre>
+      <ul>
+        <li><b>expression</b>: The variable or expression you want to evaluate.</li>
+        <li><b>case</b>: Each case represents a possible value of the expression. If it matches, the associated code block will execute.</li>
+        <li><b>default</b>: This block executes if none of the cases match the expression. It's like a fallback option for invalid or unexpected values.</li>
+        </ul>
+
+        <br>
+        <img src="Switch_Statement_Flowchart.png" alt="Switch Statement FlowChart"> 
+        <br>
+        <hr>
+
+      </section>
+
+        <section>
+
+          <h2>Example: Day of the Week</h2>
+          <p>
+            Here's an example program that uses a switch statement to print the name of the day based on an integer input representing the day of the week (1 for Monday, 2 for Tuesday, etc.):
+          </p>
+          <pre><code class="language-java">import java.util.Scanner;
+    public class DayOfWeek {
+      public static void main(String[] args) {
+         Scanner scanner = new Scanner(System.in); 
+            
+          System.out.print("Enter a number (1-7) for the day of the week: ");
+          int day = scanner.nextInt();
+        
+            switch (day) {
+              case 1:
+                System.out.println("Monday");
+                  break;
+              case 2:
+                System.out.println("Tuesday");
+                  break;
+              case 3:
+                System.out.println("Wednesday");
+                  break;
+              case 4:
+                System.out.println("Thursday");
+                  break;
+              case 5:
+                System.out.println("Friday");
+                  break;
+              case 6:
+                System.out.println("Saturday");
+                  break;
+              case 7:
+                System.out.println("Sunday");
+                  break;
+              default:
+                System.out.println("Invalid day! Please enter a number between 1 and 7.");
+              }
+            
+              scanner.close(); 
+            }
+        }</code></pre>            
+
+            <b>Explanation of the Example</b>
+            <ol>
+              <li><b>Input:</b> The program prompts the user to enter a number between 1 and 7.</li>
+              <li><b>Switch Statement:</b> The entered number is evaluated against the cases.
+              <ul>
+                <li>If the user enters <b>1</b>, it outputs <b>"Monday"</b>.</li>
+                <li>If <b>4</b> is entered, it outputs <b>"Thursday"</b>.</li>
+                <li>If an <b>invalid number</b> (not between 1 and 7) is entered, <b>it executes the default case</b>, informing the user of the invalid input.</li>
+              </ul>
+            </li>
+            <li>
+              <b>Break Statement:</b>The break statement is crucial in the switch case. It prevents the execution from falling through to the next case, even if that next case does not match the expression. Without a break, the code will continue executing subsequent cases, even if they do not match, leading to unintended behavior. This is known as fall-through.
+            </li>
+            <li>
+              <b>Default Case:</b> The default case is like the "catch-all" option. It runs if none of the specified cases match the expression. For example, if the user enters an invalid number for the day (like 8 or -1), the default case will handle it and print an error message. While the default case is optional, it is a good practice to include it, especially when handling user input, to account for unexpected values.
+            </li>
+            </ol>
+            <hr>
+
+          </section>
+
+          <section>
+
+            <h2>Key Points to Remember</h2>
+            <ul>
+              <li>
+                <b>Fall-through Behavior:</b> If you omit the break statement, the program will execute all subsequent cases until it encounters a break or the end of the switch block. This can be useful for grouping multiple cases together:
+              </li>
+              <pre><code class="language-java">switch (day) {
+      case 1:
+      case 2:
+      case 3:
+              System.out.println("It's a weekday!");
+                break;
+      case 4:
+      case 5:
+              System.out.println("Almost the weekend!");
+                break;
+      case 6:
+      case 7:
+              System.out.println("It's the weekend!");
+                break;
+      default:
+              System.out.println("Invalid day!");
+        }</code></pre>
+
+            <li><b>Data Types:</b>In Java, switch statements can only evaluate variables of certain data types, including:
+            <ul>
+              <li> int </li>
+              <li> char </li>
+              <li> String (from Java 7 onwards)</li>
+              <li> enum types </li>
+            </ul>
+          </li>
+            </ul>
+            <hr>
+
+          </section>
+
+          <section>
+
+            <br>
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/d096da6f89f1?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <hr>
+
+          </section>
+
+        <section>
+
+          <h2>Nested Switch Statements</h2>
+          <p>
+            A nested switch is simply a switch statement inside another switch. This technique is useful when you need to make further decisions within each case of a switch. However, using nested switches can make the code more complex, so it's important to use them judiciously to keep the code readable.
+          </p>
+          <hr>
+
+          </section>
+
+          <section>
+
+            <br>
+          <b>Syntax:</b>
+          <pre><code class="language-java">switch (variable1) {
+            case value1:
+                // Code to execute if variable1 equals value1
+                switch (variable2) {
+                    case valueA:
+                        // Code to execute if variable1 equals value1 and variable2 equals valueA
+                        break;
+                    case valueB:
+                        // Code to execute if variable1 equals value1 and variable2 equals valueB
+                        break;
+                    // Additional cases for variable2
+                    default:
+                        // Code to execute if variable1 equals value1 but no cases match for variable2
+                }
+                break;
+            case value2:
+                // Code to execute if variable1 equals value2
+                switch (variable3) {
+                    case valueX:
+                        // Code to execute if variable1 equals value2 and variable3 equals valueX
+                        break;
+                    case valueY:
+                        // Code to execute if variable1 equals value2 and variable3 equals valueY
+                        break;
+                    // Additional cases for variable3
+                    default:
+                        // Code to execute if variable1 equals value2 but no cases match for variable3
+                }
+                break;
+            // Additional cases for variable1
+            default:
+                // Code to execute if no cases match for variable1
+        }</code></pre>
+        
+        <ul>
+          <li>
+            <b>Variables and Control Flow:</b>The request was to explain how the program uses two variables (<b>variable1</b> and <b>variable2/variable3</b>) to control which blocks of code are executed in the nested switch structure.
+          </li>
+
+          <li>
+            <b>Outer and Inner Switch Statements:</b>A clear explanation was needed to show how the outer switch decides the flow based on <b>variable1</b>, while the inner switch makes further decisions using <b>variable2</b> or <b>variable3</b>.
+          </li>
+
+          <li>
+            <b>Break Statement:</b>The request sought a description of the <b>break</b> statement's importance in preventing fall-through and ensuring correct execution of the code.
+          </li>
+
+          <li>
+            <b>Default Case: </b>This is used to explain the purpose of the default case in handling unexpected values for both the outer and inner switches.
+          </li>
+
+        </ul>
+
+        <br>
+        <img src="Nested_Switch_Flowchart.png" alt="Nested Switch FlowChart">
+        <br>
+          <hr>
+
+          </section>
+
+          <section>
+
+          <b>Example:</b>
+          <pre><code class="language-java">switch (category) {
+            case 1:
+                System.out.println("Category: Fruit");
+                switch (item) {
+                    case 1:
+                        System.out.println("Item: Apple");
+                        break;
+                    case 2:
+                        System.out.println("Item: Banana");
+                        break;
+                }
+                break;
+            case 2:
+                System.out.println("Category: Vegetable");
+                switch (item) {
+                    case 1:
+                        System.out.println("Item: Carrot");
+                        break;
+                    case 2:
+                        System.out.println("Item: Broccoli");
+                        break;
+                }
+                break;
+        }</code></pre>
+
+        <ol>
+          <li>Outer Switch Statement (<b>switch (category)</b>):
+          <ul>
+            <li>The outer <b>switch</b> checks the value of <b>category</b> to determine whether it is 1 or 2.</li>
+            <li><b>case 1</b> corresponds to the "Fruit" category.</li>
+            <li><b>case 2</b> corresponds to the "Vegetable" category.</li>
+          </ul>
+        </li>
+        <li>Case 1: Category is Fruit:
+          <ul>
+            <li>If <b>category</b> is <b>1</b>, it enters <b>case 1</b> and prints <b>"Category: Fruit"</b>.</li>
+            <li>Then, it checks the item using the <b>inner switch</b>.
+              <ul>
+                <li>If <b>item</b> is <b>1</b>, it prints "Item: Apple".</li>
+                <li>If <b>item</b> is <b>2</b>, it prints "Item: Banana".</li>
+              </ul>
+            </li>
+            <li>The <b>break</b> statements ensure the program exits the inner <b>switch</b> block after a match is found.</li>
+          </ul>
+        </li>
+        <li>Case 2: Category is Vegetable:
+          <ul>
+            <li>If <b>category</b> is <b>2</b>, it enters <b>case 2</b> and prints <b>"Category: Vegetable"</b>.</li>
+            <li>Then, it checks the item in the inner switch:
+              <ul>
+                <li>If <b>item</b> is <b>1</b>, it prints <b>"Item: Carrot"</b>.</li>
+                <li>If <b>item</b> is <b>2</b>, it prints <b>"Item: Broccoli"</b>.</li>
+              </ul>
+            </li>
+            <li>Like in case <b>1</b>, <b>break</b> statements are used to exit the inner <b>switch</b> after the item is matched and printed.</li>
+          </ul>
+        </li>
+        </ol>
+        <hr>
+
+        </section>
+
+        <section>
+
+          <br>
+          <p><b>Please click on the 'Run' button to view the output.</b></p>
+          <iframe src="https://trinket.io/embed/java/3756291357a6?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Ready to Practice?</h2>
+          <p>Design a Java program that takes an integer input from 1 to 3, representing the colors of a traffic light:</p>
+          <ol>
+            <li>Red</li>
+            <li>Yellow</li>
+            <li>Green</li>
+          </ol>
+          <p>Use a switch statement to display the meaning of each light.</p>
+          <hr>
+
+        </section>
+
+    </main>
+
+    <nav role="navigation">
+      <a href="ControlStatements.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="While.html" aria-label="Go to next page" type="nav-button" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+  <footer role="contentinfo">
+    <p><b>Summary</b></p>
+    <ul>
+      <li><b>Control Statements:</b> Tools like if, else if, switch, and the ternary operator help programs make decisions based on specific conditions, allowing for dynamic behavior in coding.</li>
+      <li><b>Types of Conditionals:</b>Different conditional statements are covered: simple if statements for basic checks, else if for multiple conditions, nested if statements for layered decision-making, and switch statements for handling multiple specific values.</li>
+      <li><b>Ternary Operator:</b>The ternary operator simplifies conditional checks into a single line, making it a quick and efficient alternative to standard if-else statements for straightforward conditions.</li>
+    </ul>
+    <p>&copy; JavaFlair 2024. All rights reserved.</p>
+  </footer>
+
+  <script src="sidebar.js"></script>
+  <script src="trinket-page.js"></script>
+  
+</div>
+
+</body>
+</html>

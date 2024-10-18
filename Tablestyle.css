@@ -1,0 +1,28 @@
+table {
+  width: 100%; /* Full width of the container */
+  border-collapse: collapse; /* Merge borders for a cleaner look */
+  margin-top: 20px; /* Space above the table */
+}
+
+th, td {
+  padding: 15px; /* Padding inside cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #b9afcc; /* Light lavender border for cells */
+}
+
+th {
+  background-color: #E6E6FA; /* Lavender background for table headers */
+  color: #000000; /* Dark text color for headers */
+}
+
+tr:nth-child(even) {
+  background-color: #F8F8FF; /* Light lavender for even rows */
+}
+
+tr:hover {
+  background-color: #D1E7FF; /* Light blue on hover for rows */
+}
+
+td {
+  color: #000000; /* Dark text color for table cells */
+}

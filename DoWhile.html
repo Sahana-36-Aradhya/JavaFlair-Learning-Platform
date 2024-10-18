@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair : Do-While Loop </title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Imagestyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+    
+  </head>
+
+  <body>
+
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+      <header>
+        <h1>Java Do-While Loop</h1>
+        <hr>
+      </header>
+
+      <nav role="navigation">
+        <a href="While.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="For.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+          <br>
+          <hr>
+      </nav>
+
+    <main role="main">
+      
+      <section>
+        
+        <h2>Do-While Loop</h2>
+        <p>
+          The <b>do-while</b> loop in Java is similar to the <b>while</b> loop, but with a key difference: the <b>do-while</b> loop guarantees that the block of code will execute at least once, even if the condition is false at the beginning. This is because the condition is checked after the code block executes.
+        </p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Syntax</h2>
+        <p>Here’s the basic syntax of a do-while loop:</p>
+        <pre><code class="language-java">do {
+  // code block to be executed
+} while (condition);</code></pre>
+        <ul>
+          <li><b>code block:</b> This is the set of statements that will <b>run at least once</b> and will continue running as long as the condition is true.</li>
+          <li><b>condition:</b> This is a <b>boolean expression</b> that the loop checks after executing the code block. If it evaluates to <b>true</b>, the loop <b>will execute again</b>. If it's <b>false</b>, the <b>loop will terminate</b>.</li>
+        </ul>
+        <img src="Do_While_Loop_FlowChart.png" alt="Do-While Loop FlowChart">
+        <hr>
+      </section>
+
+      <section>
+        <h2>Example of a Do-While Loop</h2>
+        <p>
+          Let’s look at a simple example where we ask the user to enter a number, and we print it until they enter a negative number:
+        </p>
+        <pre><code class="language-java">int number;
+    do {
+        System.out.print("Enter a positive number (negative to exit): ");
+        number = scanner.nextInt();
+        if (number >= 0) {
+          System.out.println("You entered: " + number);
+        }
+    } while (number >= 0);</code></pre>
+
+          <b>Explanation of the Example:</b>
+          <ol>
+            <li><b>Code Execution:</b> The code block inside the do section executes first, prompting the user to enter a number.</li>
+            <li><b>Condition Check:</b> After executing the block, the loop checks if the entered number is non-negative.</li>
+            <li><b>Loop Continuation:</b> If the number is positive, the loop repeats, allowing the user to enter another number.</li>
+            <li><b>Exit Condition:</b> When the user enters a negative number, the loop terminates, and a message is printed.</li>
+          </ol>
+          <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Important Points to Remember</h2>
+        <ul>
+          <li><b>Guaranteed Execution:</b> The do-while loop ensures that the code block <b>runs at least once</b>, making it ideal for situations where the <b>initial condition check may not be necessary</b>.</li>
+          <li><b>Condition Check:</b> The condition is <b>evaluated after the code block runs</b>, which is the key difference from the while loop.</li>
+        </ul>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Use Cases for Do-While Loops</h2>
+        <p>do-while loops are often used when:</p>
+        <ul>
+          <li>You need to ensure that the code block executes <b>at least once</b>, such as prompting user input.</li>
+          <li>You want to process data that requires an initial operation before evaluating the continuation condition.</li>
+          <li>You need a loop where the condition check is <b>appropriate</b> after the code execution.</li>
+        </ul>
+        <p>By understanding how the do-while loop works, you can effectively manage situations in your Java programs where at least one execution of the loop body is required!</p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/2dfd367e5417?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <br>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Ready to Practice?</h2>
+        <p>
+          Write a Java program that prompts the user to enter a series of numbers. Use a <strong>do-while</strong> loop to check if each entered number is <strong>even</strong> or <strong>odd</strong>. The program should <b>continue asking for numbers until the user enters 0</b>, which should terminate the loop. For each number entered (except for 0), print whether it is "Even" or "Odd".
+        </p>
+        <hr>
+
+      </section>
+
+    </main>
+
+    <nav role="navigation">
+      <a href="While.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="For.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+  <footer role="contentinfo">
+    <p><b>Summary</b></p>
+    <ul>
+      <li><b>Guaranteed Execution: </b>The do-while loop executes the code block at least once before checking the condition, making it ideal for user input prompts.</li>
+      <li><b>Syntax and Structure:</b>  It consists of a do block followed by a while condition checked after execution; if true, the loop continues; if false, it stops.</li>
+      <li><b>Use Cases: </b> Commonly used when an operation needs to run before evaluating if the loop should continue, offering flexibility in data processing and user interaction.</li>
+    </ul>
+    <p>&copy; JavaFlair 2024. All rights reserved.</p>
+  </footer>
+
+  <script src="sidebar.js"></script>
+  <script src="trinket-page.js"></script>
+
+</div>
+
+  </body>
+</html>

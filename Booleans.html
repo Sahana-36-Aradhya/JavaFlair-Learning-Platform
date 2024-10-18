@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair : Boolean</title>
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <div id="sidebar-nav"></div>
+    
+    <div id="main-content">
+      <header>
+        <h1>Java Boolean</h1>
+        <hr>
+      </header>
+
+      <nav role="navigation">
+        <a href="Concatenation.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="ControlStatements.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+      </nav>
+
+    <main role="main">
+
+      <section>
+
+        <h2>Introduction to Boolean</h2>
+        <p>
+          Welcome to the world of Boolean logic! In Java, Boolean values are essential building blocks for decision-making, represented by true and false. They enable you to control the flow of your program through conditional statements and loops.
+        </p>
+        <p>
+          With Booleans, you can evaluate conditions, making your code dynamic and responsive to various scenarios. Understanding how to use Boolean values effectively is crucial for creating efficient algorithms and robust applications. Dive in and discover how these simple true/false values unlock the potential of your Java programs!
+        </p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>What is Boolean?</h2>
+        <p>
+          At its core, a <b>Boolean</b> represents a simple truth value — either <strong>true</strong> or <strong>false</strong>. But don’t let its simplicity fool you! With Boolean logic, you can control the entire behavior of your program based on conditions and logic flows.
+        </p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Why is Boolean Important?</h2>
+        <p>Imagine making decisions without being able to express <b>yes</b> or <b>no!</b> In programming, Boolean values allow your code to think — to decide what actions to take based on conditions. Whether it’s checking if a user is logged in, determining if a value is within a certain range, or controlling complex loops and conditions, Boolean is the backbone of logical operations in Java.</p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Simple Conditions Using Boolean:</h2>
+        <p>
+          In Java, Booleans can either be <b>true</b> or <b>false</b>. For example, you can create a Boolean variable to represent whether something is fun:
+        </p>
+        <pre><code class="language-java">boolean isJavaFun = true;
+System.out.println("Is Java fun? " + isJavaFun);</code></pre>
+      <p>
+        Here, isJavaFun holds the value true, and when printed, it displays "Is Java fun? true". Notice we didn't use any conditions here—just the simple assignment and display.
+      </p>
+      <hr>
+      <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/bf861a797caa?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+      
+      <section>
+
+        <h2>Comparing Values:</h2>
+        <p>
+          Java allows you to compare values like numbers, and the result of a comparison is a Boolean value (<b>true</b> or <b>false</b>).
+        </p>
+        <pre><code class="language-java">int a = 5;
+          int b = 10;
+boolean isGreater = a > b;
+System.out.println("Is a greater than b? " + isGreater);</code></pre>
+        <p>
+          In this example, a > b evaluates to false because 5 is not greater than 10. The result (false) is stored in the Boolean variable isGreater.
+        </p>
+        <hr>
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/732ffea442c0?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Combining Booleans with Logical Operators:</h2>
+        <p>
+          Booleans become more powerful when you combine them with logical operators like && (AND), || (OR), and ! (NOT). These operators allow you to work with multiple conditions.
+        </p>
+        <pre><code class="language-java">int age = 25;
+boolean isEligible = (age > 18) && (age &lt; 65);
+System.out.println("Is the person eligible? " + isEligible);</code></pre>
+          <p>
+            In this case, both conditions (age > 18 and age < 65) need to be true for isEligible to be true. Here, since 25 fits within the range, the result is true.
+          </p>
+          <hr>
+          <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+          <iframe src="https://trinket.io/embed/java/19115706162d?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+          <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Why You'll Love Boolean</h2>
+        <ul>
+          <li><b>Simplicity with Power:</b> A Boolean can either be true or false, but this tiny value controls the flow of your entire program.</li>
+          <li><b>Logical Clarity:</b> Boolean expressions make your code more readable and easier to understand.</li>
+          <li><b>Decision-Making:</b> You can build dynamic code that reacts to changing inputs or conditions using Boolean logic.</li>
+        </ul>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Ready to Practice?</h2>
+        <p>
+          Write a Java program that checks if a number is even using the `%` operator and prints the result stored in a Boolean variable.
+        </p>
+        <hr>
+
+      </section>
+
+    </main>
+
+      <nav role="navigation">
+        <a href="Concatenation.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="ControlStatements.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+      </nav>
+
+    <footer role="contentinfo">
+      <p><b>Summary</b></p>
+      <ul>
+        <li><b>Booleans Basics:</b> Booleans are true or false values in Java that help with simple assignments and comparisons.</li>
+        <li><b>Using Logical Operators:</b> You can combine Booleans with AND, OR, and NOT to evaluate multiple conditions.</li>
+        <li><b>Practice Questions:</b> Try simple exercises to strengthen your understanding of Booleans without using if statements.</li>
+      </ul>
+      <p>&copy; JavaFlair 2024. All rights reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="trinket-page.js"></script>
+    
+  </div>
+    
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair: Break and Continue Statements</title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Imagestyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+
+</head>
+
+<body>
+  
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+    <header>
+        <h1>JavaFlair: Break and Continue Statements</h1>
+        <hr>
+    </header>
+
+    <nav role="navigation">
+      <a href="For.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="Array.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+    <main role="main">
+
+    <section>
+
+        <h2>Understanding Java Break and Continue Statements</h2>
+        <p>The <strong>break</strong> and <strong>continue</strong> statements control the flow of <b>loops</b> and <b>switch blocks</b>. The break statement exits a loop or switch immediately, transferring control to the next statement outside. It’s useful for <b>stopping</b> further execution when a condition is met. On the other hand, <b>continue skips</b> the current iteration of a loop and moves to the next one, allowing the loop to continue running. These statements offer <b>flexibility</b>, making loops and switches more efficient and responsive to conditions.</p>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Break Statement</h2>
+        <p>The <strong>break</strong> statement is used to exit a loop or switch case immediately, skipping any remaining iterations or cases.</p>
+        <section>
+          <h2>Syntax of <code>break</code> Statement</h2>
+          <pre><code class="language-java">break;</code></pre>
+
+          <img src="Break_Statement_FlowChart.png" alt="Break Statement FlowChart">
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Example: Breaking Out of a Loop</h2>
+        <pre><code class="language-java">for (int i = 1; i &lt;= 10; i++) { 
+  if (i == 5) {
+      break;
+    }
+  System.out.println(i);
+}</code></pre>
+        <ul>
+          <li>The loop prints numbers from <b>1</b> to <b>4</b>.</li>
+          <li>When <b>i</b> reaches <b>5</b>, the break statement <b>terminates</b> the loop, and <b>Loop terminated</b>. is printed.</li>
+        </ul>
+        <hr>
+
+    </section>
+
+    <section>
+
+      <br>
+      <p><b>Please click on the 'Run' button to view the output.</b></p>
+      <iframe src="https://trinket.io/embed/java/75793e4ea3df?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Continue Statement</h2>
+        <p>The <b>continue</b> statement skips the current iteration and moves to the next one, allowing you to bypass certain conditions.</p>
+    </section>
+    <section>
+        <h2>Syntax of continue Statement</h2>
+        <pre><code class="language-java">continue;</code></pre>
+
+        <img src="Continue_Statement_FlowChart.png" alt="Continue Statement FlowChart">
+        <hr>
+    </section>    
+
+    <section>
+        <pre><code class="language-java">for (int i = 1; i &lt;= 10; i++) {
+  if (i % 2 == 0) {
+      continue;
+    }
+  System.out.println(i);
+}</code></pre>
+    <ul>
+      <li>The loop prints only odd numbers from <b>1</b> to <b>10</b>. </li>
+      <li>When <b>i</b> is <b>even</b>, the continue statement <b>skips</b> the current iteration, and the loop proceeds to the next iteration.</li>
+    </ul>
+    <hr>
+
+    </section>
+
+    <section>
+
+      <br>
+      <p><b>Please click on the 'Run' button to view the output.</b></p>
+      <iframe src="https://trinket.io/embed/java/438780627309?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <hr>
+
+    </section>
+
+    <section>
+
+        <h3>Ready to Practice?</h3>
+        <ol>
+        <li><b>Break Question:</b> Write a program that asks the user to enter numbers until a negative number is entered. Use the <code>break</code> statement to exit the loop.</li>
+        <li><b>Continue Question:</b> Create a program that prints numbers from 1 to 20 but skips multiples of 3 using the <code>continue</code> statement.</li>
+      </ol>
+        <hr>
+
+    </section>
+
+  </main>
+
+    <nav role="navigation">
+      <a href="For.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="Array.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+    <footer role="contentinfo">
+      <p><b>Summary</b></p>
+      <ul>
+        <li><b>break Statement:</b>Use break to immediately exit a loop or switch statement, which is useful for stopping execution when a specific condition is met.</li>
+        <li><b>continue Statement:</b>Use continue to skip the current iteration of a loop and proceed to the next iteration, helpful for bypassing certain conditions without terminating the loop.</li>
+        <li><b>Effective Control:</b>Both break and continue enhance your control over loop execution, improving code efficiency and readability.</li>
+      </ul>
+      <p>&copy; JavaFlair 2024. All rights reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="trinket-page.js"></script>
+
+  </div>
+  
+</body>
+</html>

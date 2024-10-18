@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlare: Input with Scanner</title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+</head>
+
+<body>
+
+    <div id="sidebar-nav"></div>
+    <div id="main-content">
+        <header> 
+            <h1>Java Input</h1>
+            <hr>
+        </header>
+
+        <nav role="navigation">
+            <a href="Output.html" aria-label="Go to previous page" class="nav-button" style="float:left">&lt; Previous</a>
+            <a href="Comments.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>
+            <br>
+            <hr>
+        </nav>
+    
+    <main role="main">
+
+        <section>
+
+            <h2>Introduction to Input in Java</h2>
+            <p>
+                Input is a crucial aspect of programming that allows your applications to interact with users. 
+                In Java, we often need to get data from users to make programs dynamic and responsive. By accepting 
+                input, your program can perform tasks based on the information provided, such as calculating values, 
+                storing user preferences, or making decisions.
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Why We Need Input:</h2>
+
+                <ol>
+                    <li>
+                        <b>Interactivity:</b> Input enables users to provide data, making your applications more interactive and engaging.
+                    </li>
+                    <li>
+                        <b>Flexibility:</b> By allowing input, your program can adapt to different situations and user needs, rather than being static.
+                    </li>
+                    <li>
+                        <b>Data Processing:</b>  Input lets your program collect data to process and analyze, leading to meaningful outputs.
+                    </li>
+                </ol>
+                <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Manual Input:</h2>
+            <p>
+                When users manually enter data, they provide real-time information, allowing the program to respond 
+                accordingly. This can include anything from entering a name to inputting complex numerical values for 
+                calculations. The ability to accept manual input is essential for creating user-friendly applications.
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Introduction to Scanner in Java</h2>
+            <p>
+                The <b>Scanner</b> class is a powerful tool in Java that allows us to read input from various sources 
+                like the keyboard, files, and even strings. This makes it essential for interactive programs where user 
+                input is required.
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Importing the Scanner Class</h2>
+            <p>
+                Before we can use the <b>Scanner</b>, we need to import it. You can do this by adding the following line 
+                at the top of your Java file:
+            </p>
+
+                <pre><code class="language-java">import java.util.Scanner;</code></pre>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Creating a Scanner Object</h2>
+            <p>
+                To use the <b>Scanner</b>, we must first create an instance (or object) of it. Here’s how to do that:
+            </p>
+
+            <pre><code class="language-java">Scanner scanner = new Scanner(System.in);</code></pre>
+
+            <ul>
+                <li>We create a <b>Scanner</b> object named scanner.</li>
+                <li>We pass <b>System.in</b> to the constructor, which tells the scanner to read from the keyboard.</li>
+            </ul>
+            <p><b>No worries! Just focus on using the Scanner for now; we'll cover object creation and details later.</b></p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Taking Input with Scanner</h2>
+            <p>
+                Now that we have a <b>Scanner</b> object, we can start taking input from the user. 
+                Here are some common methods you can use:
+            </p>
+
+            <ol>
+
+                <h3>Reading an Integer</h3>
+                <li>To read an integer value, use the <b>nextInt()</b> method:</li>
+                        <pre><code class="language-java">System.out.print("Enter an integer: ");
+int number = scanner.nextInt();
+System.out.println("You entered: " + number);</code></pre>
+                    <br>
+
+                    <hr>
+                    <p><b>Please click on the 'Run' button to view the output.</b></p>
+                    <br>
+                    <iframe src="https://trinket.io/embed/java/f1ab38b629e8?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <hr>
+
+<h3>Reading a Double</h3>
+                <li>To read a double value, use the <b>nextDouble()</b> method:</li>
+                        <pre><code class="language-java">System.out.print("Enter a decimal number: ");
+double decimal = scanner.nextDouble();
+System.out.println("You entered: " + decimal);</code></pre>
+                    <br>
+
+                    <hr>
+                    <p><b>Please click on the 'Run' button to view the output.</b></p>
+                    <br>
+                    <iframe src="https://trinket.io/embed/java/9cd1035c2c75?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <hr>
+
+<h3>Reading a String</h3>
+                <li>
+                    To read a string, you can use the <b>nextLine(</b>) method. 
+                    However, it's important to note that <b>nextLine()</b> reads the entire line of input:
+                </li>
+                <pre><code class="language-java">System.out.print("Enter your name: ");
+String name = scanner.nextLine();
+System.out.println("Hello, " + name + "!");</code></pre>
+                    <br>
+
+                    <hr>
+                    <p><b>Please click on the 'Run' button to view the output.</b></p>
+                    <br>
+                    <iframe src="https://trinket.io/embed/java/0c6d0d801404?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <hr>
+            </ol>
+            <strong>
+                Note: If you use <b>nextInt()</b> or <b>nextDouble()</b> before <b>nextLine()</b>, remember to call 
+                <b>nextLine()</b> afterward to consume the newline character left in the input buffer.
+            </strong>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h3>Additional Input Methods</h3>
+            <ul>
+                <li><b>next()</b> - Reads a single word (up to the next whitespace).</li>
+                <li><b>nextBoolean()</b> - Reads a boolean value (true/false).</li>
+                <li><b>nextShort()</b> -  Reads a short integer.</li>
+                <li><b>nextByte()</b> - Reads a byte value.</li>
+            </ul>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <br>
+            <p>Try analyzing this by clicking on <b>'Run'</b> and entering different data types as input to see how the program responds based on the values you provide.</p>
+            <br>
+            <iframe src="https://trinket.io/embed/java/ac127a0b13bc?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Ready to Practice?</h2>
+            <p>Write a Java program that simulates a personal information questionnaire. The program should:</p>
+            <ol>
+                <li>Ask the user for their <b>first name</b> and <b>last name</b>, then greet them with "Hello, [first name] [last name]!"</li>
+                <li>Prompt the user to enter their <b>age</b> and display the message: "You are [age] years old."</li>
+                <li>Ask for their <b>height in meters</b> (as a decimal number) and print: "Your height is [height] meters."</li>
+                <li>Inquire about their <b>favorite color</b> and respond with: "Your favorite color is [color]."</li>
+                <li>Finally, ask the user if they enjoy programming (true/false) and respond with
+                    <ul>
+                    <li>"Great to hear!" if they answer true,</li>
+                    <li>"Keep trying!" if they answer false.</li>
+                </ul>
+                </li>
+            </ol>
+            <hr>
+
+        </section>
+        
+    </main>
+
+    <nav role="navigation">
+        <a href="Output.html" aria-label="Go to previous page" class="nav-button" style="float:left">&lt; Previous</a>
+        <a href="Comments.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+    <footer role="contentinfo">
+
+        <p><strong>Summary</strong></p>
+        <ul>
+            <li>Input in Java makes programs interactive by allowing users to provide data.</li>
+            <li>The Scanner class helps read different types of input like integers, doubles, and strings.</li>
+            <li>We learned how to import the Scanner class and use its methods to capture user input.</li>
+        </ul>
+        <p>&copy; 2024 Java Flair. All rights reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="trinket-page.js"></script>
+
+</div>
+
+</body>
+
+</html>

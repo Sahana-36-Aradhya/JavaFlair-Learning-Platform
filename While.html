@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair : While Loop </title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+      <header>
+      <h1>Java While Loop</h1>
+      <hr>
+    </header>
+
+    <nav role="navigation">
+      <a href="Switch.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="DoWhile.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+    <main role="main">
+      
+        <section>
+
+          <h2>What is a Loop?</h2>
+          <p>
+            Loops are powerful structures in programming that allow you to <b>execute a block of code repeatedly, based on a specified condition</b>. They are particularly useful for tasks that require repetition, saving you time and reducing the risk of errors. By using loops, your code becomes cleaner and easier to read.
+          </p>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>While Loop</h2>
+          <p>
+            The <strong>while</strong> loop in Java is designed to <b>repeat a block of code</b> as long as a <b>certain condition evaluates to true</b>. This means that if the condition is met, the loop will continue running until the condition changes to false.
+          </p>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Syntax</h2>
+          <p>Here’s the basic syntax of a while loop:</p>
+          <pre><code class="language-java">while (condition) {
+            // code block to be executed
+          }</code></pre>
+
+          <ul>
+            <li><b>condition:</b> This is a boolean expression that the loop checks before each iteration. If it evaluates to true, the code block inside the loop will execute. If it's false, the loop terminates.</li>
+            <li><b>code block:</b> This is the set of statements that will run repeatedly while the condition is true.</li>
+          </ul>
+          <img src="While_Loop_FlowChart.png" alt="While Loop FlowChart">
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Example of a While Loop</h2>
+          <p>Let’s look at a simple example where we print the numbers from 0 to 4 using a while loop:</p>
+          <pre><code class="language-java">int i = 0; // Initialize the variable
+  while (i &lt; 5) { // Condition to check
+    System.out.println(i); // Code block to execute
+      i++; // Increment the variable
+  }</code></pre>
+        <ol>
+          <li><b>Initialization:</b> We start by initializing a variable <b>i</b> to <b>0</b>. This variable will help us track how many times the loop has executed.</li>
+          <li><b>Condition:</b> The loop checks if <b>i</b> is less than <b>5</b>. As long as this condition is true, the loop will continue.</li>
+          <li><b>Code Execution:</b> Inside the loop, we print the current value of <b>i</b>.</li>
+          <li><b>Increment:</b> After printing, we increase the value of <b>i</b> by <b>1</b> using <b>i++</b>. This step is crucial; without it, <b>i</b> would always be <b>0</b>, and the loop would run indefinitely, creating an infinite loop.</li>
+        </ol>
+        <hr>
+
+        </section>
+        
+        <section>
+
+          <h2>Important Points to Remember</h2>
+          <ul>
+            <li><b>Termination Condition:</b> Always ensure that the condition will eventually become false; otherwise, you risk creating an <b>infinite loop</b>, which can crash your program.</li>
+            <li><b>Control Variables:</b> Make sure to modify the control variable (in this case, <b>i</b>) within the loop to eventually meet the termination condition.</li>
+          </ul>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Use Cases for While Loops</h2>
+          <p><strong>while</strong> loops are often used when:</p>
+          <ul>
+            <li>The number of <b>iterations is not known</b> beforehand (e.g., reading data until the end of a file).</li>
+            <li>You want to continue processing until a certain <b>condition changes</b> (e.g., user input).</li>
+            <li>You require <b>repeated actions</b> based on dynamic conditions.</li>
+          </ul>
+          <p>
+            By understanding how the while loop works, you can efficiently manage repeated tasks in your Java programs!
+          </p>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <br>
+          <p><b>Please click on the 'Run' button to view the output.</b></p>
+          <iframe src="https://trinket.io/embed/java/b6d697a43125?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+          <hr>
+
+        </section>
+
+        <section>
+
+          <h2>Ready to Practice?</h2>
+          <p>Create a program that prompts the user to enter a number and then uses a <strong>while loop</strong> to print the multiplication table for that number from <b>1 to 10</b>.</p>
+
+        </section>
+        <hr>
+
+    </main>
+
+    <nav role="navigation">
+      <a href="Switch.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="DoWhile.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+  <footer role="contentinfo">
+    <p><b>Summary</b></p>
+    <ul>
+      <li><b>Execution:</b> The while loop runs a block of code repeatedly as long as a given condition is true.</li>
+      <li><b>Key Rule:</b> Always ensure the condition will eventually become false and update the control variable to prevent infinite loops. </li>
+    </ul>
+    <p>&copy; JavaFlair 2024. All rights reserved.</p>
+  </footer>
+
+  <script src="sidebar.js"></script>
+  <script src="trinket-page.js"></script>
+
+</div>
+  </body>
+</html>

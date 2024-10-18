@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US"> 
+  
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair : Classes</title>
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+      <header>
+        <h1>Java Classes</h1>
+        <hr>
+      </header>
+
+      <nav role="navigation">
+        <a href="Array.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+          <br>
+          <hr>
+      </nav>      
+
+    <main>
+
+      <section>
+
+        <h2>What is a Class?</h2>
+        <p>
+          A class in Java is a template or blueprint used to create <b>objects</b>. It groups related attributes (variables) and methods (functions) that define the behavior and characteristics of an object. By using classes, you can model real-world entities in a program.
+        </p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Key Features of Classes:</h2>
+        <ol>
+          <li><b>Encapsulation:</b> Classes bundle data and methods together, protecting the internal state of objects.</li>
+          <li><b>Reusability:</b> Once a class is defined, it can be used to create multiple objects.</li>
+          <li><b>Inheritance:</b> Classes can inherit properties and methods from other classes.</li>
+          <li><b>Polymorphism:</b> A class can define methods that behave differently based on the object.</li>
+        </ul>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Syntax for Creating a Class</h2>
+        <p>Here is the general structure of a class in Java:</p>
+        <pre><code class="language-java">class ClassName {
+
+dataType attributeName;
+      
+  // Constructor
+  ClassName(parameters) {
+  // Initialization code
+}
+      
+  // Methods
+  returnType methodName(parameters) {
+  // Method body
+  }
+}</code></pre>
+    <h2>Explanation of Syntax:</h2>
+    <ol>
+      <li><b>class ClassName:</b> The keyword <b>class</b> is followed by the <b>name</b> of the class. The name should follow Java naming conventions, starting with a capital letter.</li>
+      <li><b>Attributes (Fields):</b> Variables that hold data related to the <b>object</b>. Each attribute has a <b>data type</b> (e.g., int, String).</li>
+      <li><b>Constructor:</b> A special method used to <b>initialize objects</b> of the class. It usually sets the <b>initial</b> values of the attributes.</li>
+      <li><b>Methods:</b> Functions inside the class that define <b>behaviors</b>. Methods can return values or <b>perform actions</b> using the class's attributes.</li>
+    </ul>
+    <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Attributes and Methods in Detail</h2>
+        <br>
+        <h3>Attributes (Fields):</h3>
+        <p>
+          Attributes store the <b>state</b> or <b>properties</b> of an object. For example, in a Car class, attributes might include the <b>color</b>, <b>model</b>, and <b>year</b>.
+        </p>
+        <pre><code class="language-java">class Car {
+String color;
+String model;
+int year;
+}</code></pre>
+      <br>
+      <h3>Methods:</h3>
+      <p>
+        Methods define the <b>behavior</b> or <b>actions</b> that an object can perform. For example, the Car class could have a method to display the car’s details.
+      </p>
+      <pre><code class="language-java">void displayDetails() {
+  System.out.println("Model: " + model);
+  System.out.println("Color: " + color);
+  System.out.println("Year: " + year);
+}</code></pre>
+      <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Constructors in Java</h2>
+        <p>
+          A <b>constructor</b> is a special type of method used to initialize objects. It has the same name as the class and does not return any value. Constructors help set up initial values for object attributes.
+        </p>
+        <b>Constructor Example:</b>
+        <pre><code class="language-java">class Car {
+    String color;
+    String model;
+    int year;
+      
+    // Constructor to initialize attributes
+    Car(String color, String model, int year) {
+    this.color = color;
+    this.model = model;
+    this.year = year;
+  }
+}</code></pre>
+    <p>
+        <b>
+          Car(String color, String model, int year):</b> This constructor takes three parameters and assigns them to the attributes  <b>color</b>, <b>model</b>, and <b>year</b> using the this keyword, which refers to the current object. 
+    </p>
+    <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Creating Objects</h2>
+        <p>
+          Once a class is defined, you can create objects (instances of the class). Objects are created using the <b>new</b> keyword, followed by the constructor of the class.
+        </p>
+        <b>Example:</b>
+        <pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        // Creating an object of the Car class
+        Car myCar = new Car("Red", "Toyota", 2020);
+        
+        // Calling the method to display car details
+        myCar.displayDetails();
+    }
+}</code></pre>
+      <ol>
+        <li><b><code>Car myCar = new Car("Red", "Toyota", 2020);</code>:</b> Creates an instance of the <b>Car</b> class named <b>myCar</b> and assigns values to the attributes <b>color</b>, <b>model</b>, and <b>year</b>.</li>
+        <li><b><code>myCar.displayDetails();</code>: </b>Calls the displayDetails() method to <b>print</b> the car’s details.</li>
+      </ol>
+      <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/e66f5d68a6ac?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <br>
+        <h2>Explanation:</h2>
+        <ol>
+          <li>This code defines a <b>Car</b> class with attributes for color, model, and year.</li>
+          <li>A constructor initializes these attributes when a new <b>Car</b> object is created.</li>
+          <li>The <b>displayDetails()</b> method prints the car's details.</li>
+        </ol>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Ready to Practice?</h2>
+        <ul>
+          <li><b>Define a Class:</b> Create a class named <b>Book</b> with attributes <b>title</b>, <b>author</b>, and <b>price</b>. Write a constructor and a method to display book details.</li>
+          <li><b>Object Creation:</b> In the <b>main</b> method, create an object of the <b>Book</b> class and display its details.</li>
+          <li><b>Modify Attributes:</b> Add a method in the <b>Book</b> class to update the price of the book, and demonstrate this in your main method.</li>
+        </ul>
+        <hr>
+
+      </section>
+
+    </main>
+
+      <nav role="navigation">
+        <a href="Array.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+          <br>
+          <hr>
+      </nav>
+  
+      <footer role="contentinfo">
+        <p><b>Summary:</b></p>
+            <ul>
+                <li><b>Class:</b> A blueprint for creating objects, encapsulating data (attributes) and methods (functions).</li>
+                <li><b>Attributes:</b> Variables that store the state of an object.</li>
+                <li><b>Methods:</b> Functions that define the behavior of an object.</li>
+                <li><b>Constructor:</b> A special method used to initialize objects.</li>
+                <li><b>Object: An instance of a class created using the new keyword.</b></li>
+            </ul>
+            <p>&copy; JavaFlair 2024. All rights reserved.</p>
+      </footer>
+
+      <script src="sidebar.js"></script>
+      <script src="trinket-page.js"></script>
+      
+    </div>
+
+    
+
+  </body>
+</html>

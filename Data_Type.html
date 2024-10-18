@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+        <title>JavaFlair: Data Types</title>
+        <link rel="stylesheet" href="Indexstyle.css">
+        <link rel="stylesheet" href="sidebarstyle.css">
+        <link rel="stylesheet" href="Imagestyle.css">
+        <link rel="stylesheet" href="Tablestyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="sidebar-nav"></div>
+        <div id="main-content">
+            <header>
+                <h1>Java Data Types</h1>
+                <hr>
+            </header>
+
+            <nav role="navigation">
+                <a href="Variable.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+                <a href="TypeCasting.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+                <br>
+                <hr>
+            </nav>
+
+        <main role="main">
+
+        <section>
+
+            <h2>Introduction to Data Types</h2>
+            <p>
+                Imagine you're building a toolbox for your Java programs. Each tool in this box is designed to hold a 
+                specific kind of information. In Java, these tools are known as data types. Data types tell Java what
+                kind of data you're dealing with— <b>whether it’s a whole number, a letter, a word, or even a simple 
+                true/false answer.</b>
+            </p>
+            <p><b>Think of it like this:</b></p>
+
+            <ul>
+                <li>A hammer is like <strong>int</strong> for numbers.</li>
+                <li>A screwdriver is like <strong>String</strong> for words or letters.</li>
+                <li>A wrench is like <strong>boolean</strong> for true/false values.</li>
+            </ul>
+
+            <p>
+                By using the right tool (data type), you make sure your program knows exactly how to handle the data.
+            </p>
+            <hr>
+
+        </section>
+        
+        <section>
+
+            <h2>Why Are Data Types Important?</h2>
+            <p>
+                Data types keep your code organized and efficient. Without them, your program wouldn’t know how to 
+                handle different kinds of data. Think of it like this: you wouldn’t use a hammer to cut wood, right? 
+                Just like that, each piece of data needs the right tool.
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Java's Two Main Categories of Data Types</h2>
+            <p>Java has two types of data:</p>
+            <ul>
+
+                <li><strong>Primitive Data Types:</strong> The basic building blocks, simple and fast.</li>
+                <li><strong>Reference Data Types:</strong> These are more complex and are used to store objects.</li>
+
+            </ul>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <img src="Java-Data-Types.png" alt="Java Data Types" title= "Java Data types"/>
+            <hr>
+
+        </section>
+
+        <section>
+            <h2>Memory Usage of Java Primitive Data Types</h2>
+
+            <p>
+                This table presents the eight primitive data types in Java, each with its specific role and memory size, demonstrating how much space each variable occupies in memory. Understanding these data types—like <strong>byte</strong>, <strong>int</strong>, and <strong>boolean</strong>—is crucial for effective programming, as they determine how you store and manage data in your applications. Each type has unique characteristics, such as the range of values it can hold and the amount of memory it consumes, which can influence your choice based on the needs of your program. To put it simply, a <strong>bit</strong> is the smallest unit of data in a computer, representing a binary value of either 0 or 1, while a <strong>byte</strong> consists of 8 bits and is commonly used to represent a character or a small piece of data.
+            </p>
+
+            <table>
+                <caption><strong>Java Primitive Data Types</strong></caption>
+                <tr>
+                    <th scope="col">Data Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Size (Bytes)</th>
+                    <th scope="col">Size (Bits)</th>
+                </tr>
+
+                <tr>
+                    <td>byte</td>
+                    <td>8-bit signed integer</td>
+                    <td>1</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td>short</td>
+                    <td>16-bit signed integer</td>
+                    <td>2</td>
+                    <td>16</td>
+                </tr>
+
+                <tr>
+                    <td>int</td>
+                    <td>32-bit signed integer</td>
+                    <td>4</td>
+                    <td>32</td>
+                </tr>
+
+                <tr>
+                    <td>long</td>
+                    <td>64-bit signed integer</td>
+                    <td>8</td>
+                    <td>64</td>
+                </tr>
+
+                <tr>
+                    <td>float</td>
+                    <td>Single-precision 32-bit IEEE 754 floating point</td>
+                    <td>4</td>
+                    <td>32</td>
+                </tr>
+
+                <tr>
+                    <td>double</td>
+                    <td>Double-precision 64-bit IEEE 754 floating point</td>
+                    <td>8</td>
+                    <td>64</td>
+                </tr>
+
+                <tr>
+                    <td>char</td>
+                    <td>Single 16-bit Unicode character</td>
+                    <td>2</td>
+                    <td>16</td>
+                </tr>
+
+                <tr>
+                    <td>boolean</td>
+                    <td>Represents one bit of information: true or false</td>
+                    <td>1 (not precisely defined)</td>
+                    <td>1 (not precisely defined)</td>
+                </tr>
+
+                <tr>
+                    <td>String</td>
+                    <td>A sequence of characters</td>
+                    <td>Varies (depends on the number of characters)</td>
+                    <td>Varies (depends on the number of characters)</td>
+                </tr>
+
+            </table>
+            <p>Let’s dive into each one!</p>
+            <hr>
+            
+        </section>
+
+        <section>
+
+            <h3>Primitive Data Types</h3>
+                <p>Primitive types are the most basic data types in Java. There are 8 of them, and each serves a unique purpose. The range of a data type refers to the set of values it can represent. Understanding the range helps you choose the right type for your variables based on the expected values they will hold.</p>
+                <ul>
+                    <li><strong>int:</strong> Stores whole numbers. 
+                <ul>
+                    <li><b>Example:</b> <pre><code class="language-java">int score = 100;</code></pre> (Perfect for tracking a game score!)</li>
+                    <li><b>Range:</b> From -2,147,483,648 to 2,147,483,647</li>
+
+                <p>
+                    The keywords <strong>Integer.MIN_VALUE</strong> and <strong>Integer.MAX_VALUE</strong> are essential for understanding the range of the int data type in Java. They provide the <b>minimum</b> and <b>maximum</b> values that can be stored in an int variable.
+                    <hr>
+                </p>
+                    <br>
+                <p>
+                    <b>Please click on the 'Run' button to view the output.</b></p>
+                    <iframe src="https://trinket.io/embed/java/0ae6a5385ef5?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                    <hr>
+                </ul>
+            </li>
+
+            <li><strong>double:</strong> Stores decimal numbers, allowing for greater precision.
+            <ul>
+                <li><b>Example:</b> <pre><code class="language-java">double temperature = 98.6;</code></pre> (Great for scientific data!)</li>
+                <li><b>Range:</b> Approximately ±1.7E−308 to ±1.7E+308</li>
+
+            <p>
+                The keywords <strong>Double.MIN_VALUE</strong> and <strong>Double.MAX_VALUE</strong> are vital for grasping the range of the double data type in Java. <strong>Double.MIN_VALUE</strong> denotes the <b>smallest positive value</b> that can be represented, while <strong>Double.MAX_VALUE</strong> indicates the <b>largest value</b> a double variable can hold. Understanding these limits is essential for effective numerical computations and <b>preventing overflow</b> errors.
+            </p>
+
+                <hr>
+            <br>
+            
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/cc2eca448476?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+        </ul>
+    </li>
+
+    <li><strong>char:</strong> Stores a single character (remember to use single quotes).
+        <ul>
+            <li><b>Example:</b> <pre><code class="language-java">char grade = 'A';</code></pre> (Storing grades or symbols.)</li>
+            <li><b>Range:</b> A single 16-bit Unicode character.</li>
+
+            <p>
+                The char data type in Java stores a <b>single character</b>, represented by <b>single quotes</b> (e.g., 'A'). Each char is a <b>16-bit</b> Unicode character, supporting a wide range of symbols and letters, and is associated with <strong>ASCII</strong> (American Standard Code for Information Interchange) values, where, for example, <b> 'A'</b>  has an ASCII value of <b> 65</b> . The example code demonstrates how to display the minimum and maximum values of char using <strong>Character.MIN_VALUE</strong> and <strong>Character.MAX_VALUE</strong>. It also shows initializing a char variable with 'A' and updating it to 'Z', illustrating how to manipulate character variables in Java.
+            </p>
+                <hr>
+            <br>
+
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/ec1032f2150f?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+        </ul>
+    </li>
+
+    <li><strong>boolean:</strong> Stores true or false values.
+        <ul>
+            <li><b>Example:</b> <pre><code class="language-java">boolean isGameOver = false;</code></pre> (Use it for decisions!)</li>
+            <li><b>Values:</b> Only two possible values: true or false.</li>
+
+            <br>
+            <p>The boolean data type in Java is used to store <strong>true</strong> or <strong>false</strong> values, making it essential for <strong>decision-making</strong> in programming. It can only hold two possible values: true or false. The example code demonstrates the initialization of a boolean variable, isGameOver, set to false, which could be used to control the flow of a program based on game state.</p>
+
+                <hr>
+            <br>
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/276146875fae?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+        </ul>
+    </li>
+
+    <li><strong>byte:</strong> Stores small integers. It is an 8-bit signed integer.
+        <ul>
+            <li><b>Example:</b> <pre><code class="language-java">byte level = 5;</code></pre> (Useful for small ranges, such as player levels.)</li>
+            <li><b>Range:</b> From -128 to 127.</li>
+
+            <br>
+            <p>
+                The byte data type in Java is used to store <strong>small integers</strong> and is an <strong>8-bit signed integer</strong>. It has a range of values from -128 to 127, making it useful for scenarios where memory efficiency is crucial, such as <strong>representing player levels</strong> in a game. The example code demonstrates the initialization of a byte variable, level, set to 5.
+            </p>
+            <hr>
+            <br>
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/2386d628a3b3?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+        </ul>
+    </li>
+
+    <li><strong>short:</strong> Stores small integers. It is a 16-bit signed integer.
+        <ul>
+            <li><b>Example:</b> <pre><code class="language-java">short distance = 1500;</code></pre> (Useful when memory savings are a concern.)</li>
+            <li><b>Range:</b> From -32,768 to 32,767.</li>
+
+            <br>
+            <p>
+                The short data type in Java is a <strong>16-bit signed integer</strong>, which allows it to store <strong>small integer values</strong> efficiently. It can hold values ranging from <strong>-32,768</strong> to <strong>32,767</strong>, making it suitable for situations where <b>memory optimization</b> is necessary. In the example code below, we initialize a short variable to represent a distance and demonstrate how to update its value.
+            </p>
+            <hr>
+            <br>
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/d2877f1f76e1?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+        </ul>
+    </li>
+
+    <li><strong>long:</strong> Stores large integers. It is a 64-bit signed integer.
+        <ul>
+            <li><b>Example:</b> <pre><code class="language-java">long population = 7800000000L;</code></pre> (Ideal for very large numbers, like population counts.)</li>
+            <li><b>Range:</b> From -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.</li>
+
+            <br>
+            <p>
+                The long data type in Java is a <strong>64-bit signed integer</strong>, designed to store large integer values that <b>exceed the capacity of the int</b> data type. With a range from <strong>-9,223,372,036,854,775,808</strong> to <strong>9,223,372,036,854,775,807</strong>, it is particularly useful for applications requiring the representation of large numbers, such as population counts or high-precision calculations. In the code example below, we initialize a long variable to represent a population and demonstrate how to update its value.
+            </p>
+            <hr>
+            <br>
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/6401b45acb91?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+        </ul>
+    </li>
+
+    <li><strong>float:</strong> Stores decimal numbers, but with less precision than double. It is a 32-bit IEEE 754 floating point.
+        <ul>
+            <li><b>Example:</b> <pre><code class="language-java">float price = 19.99f;</code></pre> (Useful for prices or measurements.)</li>
+            <li><b>Range:</b> Approximately ±3.40282347E+38 (6-7 decimal digits precision).</li>
+
+            <br>
+            <p>
+                The float data type in Java is a <strong>32-bit</strong> IEEE 754 floating-point number designed to store decimal values with <strong>less precision than double</strong>. It has a range of approximately <strong>±3.40282347E+38</strong> and can represent around <b>6-7</b> decimal digits of precision, making it suitable for applications like prices or measurements where high precision is not critical. In the following code example, we initialize a float variable to represent a price and demonstrate how to update its value.
+            </p>
+            <hr>
+
+            <br>
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <iframe src="https://trinket.io/embed/java/88b4cb15f8fe?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <hr>
+        </ul>
+    </li>
+</ul>
+<hr>
+        </section>
+
+        <section>
+
+            <h3>Reference Data Types</h3>
+            <p>
+                These types store objects, which can be more complex pieces of data. The most common one you'll use early on is String, which stores sequences of characters (text).
+            </p>
+                <ul>
+                    <li><strong>String: </strong>Used for text. 
+                        <ul>
+                            <li><b>Example:</b><pre><code class="language-java">String name = "JavaFlair";</code></pre>(Perfect for storing names or words!)</li>
+
+                            <br>
+                            <p>
+                                The String data type in Java is used to store sequences of characters, making it ideal for handling text such as names or phrases. Unlike primitive data types, String can hold complex data structures and allows for various operations like concatenation, comparison, and manipulation of text. In the example below, we initialize a String variable to store the name "JavaFlair," demonstrating how to work with string data in Java.
+                            </p>
+                            <hr>
+
+                            <br>
+                            <p><b>Please click on the 'Run' button to view the output.</b></p>
+                            <iframe src="https://trinket.io/embed/java/044808595a92?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Why Should You Care?</h2>
+            <p>
+                Data types make your programs more efficient and reliable. They help Java manage memory and 
+                run smoothly. When you pick the right data type, your program works faster, and it’s easier 
+                to debug.
+            </p>
+
+            <hr>
+            
+        </section>
+
+        <section>
+
+            <h2>Ready to Practice?</h2>
+
+            <p>
+                Now that you understand the basics, why not try declaring a few variables of your own? Play around with numbers, characters, and text to see how Java handles them!
+            </p>
+                <p><i>Declare and initialize variables for the following:</i></p>
+
+                <ol>
+                    <li>A variable to store the age of a person (whole number).</li>
+                    <li>A variable to store the price of a book (decimal number).</li>
+                    <li>A variable to store the first letter of a name (single character).</li>
+                    <li>A variable to store whether a light is on or off (boolean).</li>
+                </ol>
+                <p>Feel free to test these in your Java environment and see how the different data types work in action!</p>
+                <hr>
+
+            </section>
+
+        
+    </main>
+
+    <nav role="navigation">
+        <a href="Variable.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="TypeCasting.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+    <footer role="contentinfo">
+
+        <p><b>Summary</b></p>
+
+        <ul>
+            <li><strong>Data Types:</strong> Define the type of information a variable can hold.</li>
+            <li><strong>Primitive Types:</strong>  Like <b>int, double, char,</b> and <b>boolean,</b> handle basic data.</li>
+            <li><strong>Reference Types: </strong> Like <b>String,</b> manage more complex data like text.</li>
+        </ul>
+
+        <p>&copy; JavaFlair 2024. All rigths reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="trinket-page.js"></script>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair: Type Casting</title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+</head>
+
+<body>
+
+    <div id="sidebar-nav"></div>
+    <div id="main-content">
+
+        <header>
+            <h1>Java TypeCasting</h1>
+            <hr>
+        </header>
+
+        <nav role="navigation">
+            <a href="Data_Type.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+            <a href="Operator.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+            <br>
+            <hr>
+        </nav>
+
+    <main role="main">
+
+        <section>
+
+            <h2>Introduction to Type Casting</h2>
+            <p>
+                Have you ever tried fitting a square peg into a round hole? In Java, this is sometimes possible, 
+                but it needs to be done carefully. Think of type casting as transforming one tool into another. 
+                When working with different data types, sometimes you’ll need to convert one type to another. 
+                This process is called type casting.
+            </p>
+
+            <p>Imagine it like this:</p>
+
+                <ul>
+                    <li><strong>Widening:</strong> Upgrading a smaller box to a bigger one.</li>
+                    <li><strong>Narrowing:</strong> Squeezing something from a bigger box into a smaller one.</li>
+                </ul>
+
+            <p>By mastering type casting, you’ll unlock the power to move data around your programs in different forms.</p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Why is Type Casting Important?</h2>
+            <p>
+                In Java, you often work with various data types that need to interact smoothly. However, they 
+                aren’t always compatible on their own. For instance, if you try to store 9.99 in a whole number 
+                (int), Java won’t allow it directly without casting. Type casting gives you the flexibility to 
+                work with mixed data types, helping you maintain organized and efficient code.
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Widening Type Casting (Automatic)</h2>
+            <p>
+                Widening occurs automatically when moving from a smaller size to a larger size. Think of it as 
+                Java saying, “Hey, I can handle this!” For example, converting an int to a double doesn’t require 
+                any extra work. Java does it for you!
+            </p>
+                <ul>
+                    <li><b>Example</b>
+                        <ul>
+                            <li>Turning a byte into an int.</li>
+                            <li>Converting an int into a double.</li>
+                        </ul>
+                    </li>
+                </ul>
+            <p>It’s safe, and there’s no risk of losing data.</p>
+            <p><b>Example:</b></p>
+            <pre><code class="language-java">byte byteValue = 10; 
+int intValue = byteValue; </code></pre>
+
+            <hr>
+
+            <br>
+            <p><b>You're doing great! Now Run the code above to see how Java makes widening type casting easy and safe!</b></p>
+            <iframe src="https://trinket.io/embed/java/5a5bd74731a7?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Narrowing Type Casting (Manual)</h2>
+            <p>
+                Narrowing is when you go from a larger type to a smaller type, but you must tell Java to do it. 
+                It’s like saying, “Yes, I know this is a bit tricky, but I’m sure.” However, this method comes 
+                with a warning: narrowing can lose information if you're not careful.
+            </p>
+            <p>
+                <b>Common Mistake:</b> Be mindful that you might lose valuable data when narrowing, 
+                especially when converting from a floating-point number to an integer.
+            </p>
+            <p><b>Example:</b></p>
+            <pre><code class="language-java">double decimalValue = 15.75;
+int intValue = (int) decimalValue;</code></pre>
+            <hr>
+
+            <br>
+            <p><b>You're doing great! Now Run the code above to see how Java makes widening type casting easy and safe!</b></p>
+            <iframe src="https://trinket.io/embed/java/ff839fa5a0f1?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            <p>
+                Go ahead and run the code to see how narrowing type casting works in action! You'll discover how Java handles data conversion, so let's get coding!
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>How Does It Work?</h2>
+            <ul>
+                <li><strong>Widening:</strong> Java automatically converts the smaller type into the larger one.</li>
+                <li><strong>Narrowing:</strong>  You must explicitly tell Java to convert the larger type into a smaller one using parentheses.</li>
+            </ul>
+            <p>Think of it like a magic spell: you declare the type you’re converting to, and Java performs the transformation.</p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Why Should You Care?</h2>
+            <p>
+                Type casting adds versatility to your programs. When you understand how to convert types, 
+                you open up new possibilities to manipulate data in more complex ways. Remember, mastering type casting 
+                is a key step toward becoming a proficient Java programmer. Keep exploring and experimenting!
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Ready to Practice?</h2>
+            <ol>
+                <li>Convert an int to a double and print the result.</li>
+                <li>Try converting a double to an int. What happens to the decimal value? Experiment with different decimal values to see the effect!</li>
+                <li>Challenge: Cast a long into a short. What do you observe?</li>
+            </ol>
+            <hr>
+            
+        </section>
+        
+    </main>
+
+    <nav role="navigation">
+        <a href="/HTML/Data_Type.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="/HTML/Operator.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+        <footer role="contentinfo">
+            <p><b>Summary</b></p>
+            <ul>
+                <li><strong>Type Casting:</strong> Converting between data types (widening is automatic; narrowing is manual).</li>
+                <li><strong>Importance:</strong> Helps maintain organized code and ensures compatibility between data types.</li>
+                <li><strong>Practice: </strong> Experiment with examples to enhance your Java skills.</li>
+            </ul>
+            <p>&copy; JavaFlair 2024. All rigths reserved.</p>
+        </footer>
+    
+        <script src="sidebar.js"></script>
+        <script src="trinket-page.js"></script>
+
+    </div>
+
+</body>
+
+</html>

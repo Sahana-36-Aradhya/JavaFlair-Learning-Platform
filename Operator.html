@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+  <title>JavaFlair : Operators</title>
+  <link rel="stylesheet" href="Indexstyle.css">
+  <link rel="stylesheet" href="sidebarstyle.css">
+  <link rel="stylesheet" href="Tablestyle.css">
+
+</head>
+
+<body>
+
+  <div id="sidebar-nav"></div>
+  <div id="main-content">
+    <header>
+      <h1>Java Operators</h1>
+      <hr>
+    </header>
+
+    <nav role="navigation">
+      <a href="TypeCasting.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="Concatenation.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+      <br>
+      <hr>
+    </nav>
+
+  <main role="main">
+
+    <section>
+
+      <h2>Introduction to Operator</h2>
+      <p>
+        Welcome to the exciting world of operators in Java! Operators are the fundamental building blocks of any Java program, enabling you to manipulate data, perform calculations, make decisions, and control the flow of logic. From simple arithmetic to complex logical expressions, operators play a crucial role in bringing your code to life. Understanding how to effectively use Java's wide variety of operators empowers you to write more efficient, dynamic, and functional programs. Let’s explore the different types of operators that make Java such a powerful and versatile programming language.
+      </p>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Types of Operators in Java</h2>
+      <ol>
+        <li>Arithmetic Operators</li>
+        <li>Assignment Operators</li>
+        <li>Comparison (Relational) Operators</li>
+        <li>Logical Operators</li>
+        <li>Bitwise Operators</li>
+        <li>Unary Operators</li>
+        <li>Ternary Operator</li>
+        <li><i>instanceof</i> Operator</li>
+      </ol>
+      <p>
+        Each of these categories serves a unique purpose and is crucial to building robust Java applications. Let’s break them down one by one with examples.
+      </p>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Arithmetic Operators</h2>
+      <p>
+        Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, and division.
+      </p>
+
+      <table>
+        <caption></caption>
+
+        <tr>
+          <th scope="col">Operator</th>
+          <th scope="col">Description</th>
+          <th scope="col">Example</th>
+        </tr>
+
+        <tr>
+          <td>+</td>
+          <td>Addition</td>
+          <td><pre><code>int sum = a + b;</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>-</td>
+          <td>Subtraction</td>
+          <td><pre><code>int diff = a - b;</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>*</td>
+          <td>Multiplication</td>
+          <td><pre><code>int product = a * b;</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>/</td>
+          <td>Division</td>
+          <td><pre><code>int quotient = a / b;</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>%</td>
+          <td>Modulus (Remainder)</td>
+          <td><pre><code>int remainder = a % b;</code></pre></td>
+        </tr>
+      </table>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <br>
+      <p><b>Please click on the 'Run' button to view the output.</b></p>
+      <iframe src="https://trinket.io/embed/java/9c6955fc7d34?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Assignment Operators</h2>
+      <p>
+        Assignment operators assign values to variables. The most common is the = operator, but there are others that combine arithmetic operations with assignment.
+      </p>
+
+      <table>
+
+        <tr>
+        <th scope="col">Operator</th>
+        <th scope="col">Description</th>
+        <th scope="col">Example</th>
+      </tr>
+      
+      <tr>
+        <td>=</td>
+        <td>Assigns value to a variable</td>
+        <td><pre><code>x = 10;</code></pre></td>
+      </tr>
+
+      <tr>
+        <td>+=</td>
+        <td>Adds and assigns</td>
+        <td><pre><code>x += 5; (x = x + 5)</code></pre></td>
+      </tr>
+
+      <tr>
+        <td>-=</td>
+        <td>Subtracts and assigns</td>
+        <td><pre><code>x -= 5; (x = x - 5)</code></pre></td>
+      </tr>
+
+      <tr>
+        <td>*=</td>
+        <td>Multiplies and assigns</td>
+        <td><pre><code>x *= 5; (x = x * 5)</code></pre></td>
+      </tr>
+
+      <tr>
+        <td>/=</td>
+        <td>Divides and assigns</td>
+        <td><pre><code>x /= 5; (x = x / 5)</code></pre></td>
+      </tr>
+
+      <tr>
+        <td>%=</td>
+        <td>Modulus and assigns</td>
+        <td><pre><code>x %= 5; (x = x % 5)</code></pre></td>
+      </tr>
+      </table>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <br>
+      <p><b>Please click on the 'Run' button to view the output.</b></p>
+      <iframe src="https://trinket.io/embed/java/fead69ad60fb?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Comparison Operators</h2>
+      <p>
+        Comparison operators are used to compare two values. They return a boolean value (true or false).
+      </p>
+
+      <table>
+        
+        <tr>
+          <th scope="col">Operator</th>
+          <th scope="col">Description</th>
+          <th scope="col">Example</th>
+        </tr>
+
+        <tr>
+          <td>==</td>
+          <td>Equal to</td>
+          <td><pre><code>a == b</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>!=</td>
+          <td>Not equal to</td>
+          <td><pre><code>a != b</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>></td>
+          <td>Greater than</td>
+          <td><pre><code>a > b</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>&lt;</td>
+          <td>Less than</td>
+          <td><pre><code>a &lt; b</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>>=</td>
+          <td>Greater than or equal to</td>
+          <td><pre><code>a >= b</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>&lt;=</td>
+          <td>Less than or equal to</td>
+          <td><pre><code>a &lt;= b</code></pre></td>
+        </tr>
+      </table>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <br>
+      <p><b>Please click on the 'Run' button to view the output.</b></p>
+      <iframe src="https://trinket.io/embed/java/7d8ce4f0a608?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Logical Operators</h2>
+      <p>
+        Logical operators are used to perform logical operations on boolean values. They are commonly used in conditional statements and loops.
+      </p>
+
+      <table>
+        <caption></caption>
+        <tr>
+          <th scope="col">Operator</th>
+          <th scope="col">Description</th>
+          <th scope="col">Example</th>
+        </tr>
+
+        <tr>
+          <td>&&</td>
+          <td>Logical AND (returns true if both conditions are true)</td>
+          <td><pre><code>(a > b && a &lt; 100)</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>||</td>
+          <td>Logical OR (returns true if any one condition is true)</td>
+          <td><pre><code>(a>b || a &lt; 100)</code></pre></td>
+        </tr>
+
+        <tr>
+          <td>!</td>
+          <td>Logical NOT (inverts the boolean value [true becomes false and vice versa])</td>
+          <td><pre><code>!(a > b)</code></pre></td>
+        </tr>
+        <hr>
+      </table>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/5f81ff22f630?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Bitwise Operators</h2>
+        <p>
+          Bitwise operators perform operations on binary numbers (bits). These are advanced operators but are useful for certain types of low-level programming.
+        </p>
+        <table>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Description</th>
+            <th scope="col">Example</th>
+          </tr>
+
+          <tr>
+            <td>&</td>
+            <td>Bitwise AND (returns 1 if Both bits are 1)</td>
+            <td><pre><code>a & b</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>|</td>
+            <td>Bitwise OR (returns 1 if At least one bit is 1)</td>
+            <td><pre><code>a | b</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>^</td>
+            <td>Bitwise XOR (returns 1 Only when one bit is 1 [Not both])</td>
+            <td><pre><code>a ^ b</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>~</td>
+            <td>Bitwise NOT (Result is 1 when the original bit is 0	)</td>
+            <td><pre><code>~a</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>&lt;&lt;</td>
+            <td>Left Shift (Shifts positions only)</td>
+            <td><pre><code>a &lt;&lt; 2</code></pre></td>
+          </tr>
+          
+          <tr>
+            <td>>></td>
+            <td>Right shift (Shifts positions only)</td>
+            <td><pre><code>a >> 2</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>>>></td>
+            <td>Unsigned Right Shift (Shifts positions only)</td>
+            <td><pre><code>a >>> 2</code></pre></td>
+          </tr>
+ 
+        </table>
+
+        <table>
+          <caption>Truth Table of Key Bitwise Operators</caption>
+          <tr>
+            <th scope="col"> A </th>
+            <th scope="col"> B</th>
+            <th scope="col"> A & B</th>
+            <th scope="col"> A | B</th>
+            <th scope="col"> A ^ B</th>
+            <th scope="col">~A</th>
+            <th scope="col">A &lt;&lt; 1</th>						
+            <th scope="col">A >> 1</th> 
+          </tr>
+          
+          <tr>
+            <td>0</td>	
+            <td>0</td>
+            <td>0</td>	
+            <td>0</td>	
+            <td>0</td>	
+            <td>1</td>	
+            <td>0</td>	
+            <td>0</td>
+          </tr>
+
+          <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0</td>
+          </tr>
+        </table>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/b7736481eb3c?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+    
+      <section>
+
+        <h2>Unary Operators</h2>
+        <p>
+          Unary operators operate on a single operand. These operators are used to perform operations like incrementing, decrementing, negating, and inverting a value.
+        </p>
+        <table>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Description</th>
+            <th scope="col">Example</th>
+          </tr>
+
+          <tr>
+            <td>+</td>
+            <td>Unary plus (indicates a positive value)</td>
+            <td><pre><code>+a</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>-</td>
+            <td>Unary minus (negates a value)</td>
+            <td><pre><code>-a</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>++</td>
+            <td>Increment (increases value by 1)</td>
+            <td><pre><code>++a (prefix), a++ (postfix)</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>--</td>
+            <td>Decrement (decreases value by 1)</td>
+            <td><pre><code>--a (prefix), a-- (postfix)</code></pre></td>
+          </tr>
+
+          <tr>
+            <td>!</td>
+            <td>Logical complement (inverts boolean value)</td>
+            <td><pre><code>!true (false)</code></pre></td>
+          </tr>
+        </table>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/555cac24b700?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Ternary Operator (Conditional Operator)</h2>
+        <p>
+          The ternary operator is the only operator in Java that takes three operands. It is used as a shorthand for the if-else statement.
+        </p>
+        <table>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Description</th>
+            <th scope="col">Example</th>
+          </tr>
+
+          <tr>
+            <td>?:</td>
+            <td>Ternary (condition ? if true : if false)</td>
+            <td><pre><code>int result = (a > b) ? a : b;</code></pre></td>
+          </tr>
+        </table>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/494e72de992b?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2><i>instanceof</i> Operator</h2>
+        <p>
+          The instanceof operator checks whether an object is an instance of a particular class or subclass. It returns true if the object belongs to the specified class or subclass, otherwise false.
+        </p>
+        <table>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Description</th>
+            <th scope="col">Example</th>
+          </tr>
+
+          <tr>
+            <td>instanceof</td>
+            <td>Tests whether an object is an instance of a class</td>
+            <td><pre><code>Tests whether an object is an instance of a class</code></pre></td>
+          </tr>
+        </table>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/62a3ddd9db3a?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Ready to Practice?</h2>
+        <p>Try out these practice questions to apply what you've learned:</p>
+        <ol>
+          <li><b>Arithmetic Practice: </b> Write a program to calculate the total price of 5 items, applying a 10% discount.</li>
+          <li><b>Comparison Practice: </b> Compare two numbers and print whether the first is larger, smaller, or equal to the second.</li>
+          <li><b>Logical Practice: </b> Write a program that checks if a number is within a given range using logical operators.</li>
+        </ol>
+        <hr>
+
+      </section>
+
+  </main>
+
+  <nav role="navigation">
+    <a href="TypeCasting.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+    <a href="Concatenation.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+    <br>
+    <hr>
+  </nav>
+
+<footer role="contentinfo">
+  <p><b>Summary</b></p>
+  <ul>
+    <li><b>Java Operators:</b> Operators are tools for performing tasks like math, comparisons, and logic on variables in Java.</li>
+    <li><b>Main Types of Operators:</b>
+      <ul>
+        <li><b>Arithmetic:</b> For basic math (+, -, *, /).</li>
+        <li><b>Comparison:</b> To compare values (==, >, <).</li>
+        <li><b>Logical:</b> To combine conditions (&&, ||, !).</li>
+      </ul>
+    </li>
+    <li><b>Practice:</b> Try real-world examples, like calculating discounts or comparing numbers, to apply these operators.</li>
+  </ul>
+  <p>&copy; JavaFlair 2024. All rights reserved.</p>
+</footer>
+
+  <script src="sidebar.js"></script>
+  <script src="trinket-page.js"></script>
+
+</div>
+
+</body>
+
+</html>

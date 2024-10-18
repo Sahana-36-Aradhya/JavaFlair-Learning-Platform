@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+      <title>JavaFlair : Control statements</title>
+      <link rel="stylesheet" href="Indexstyle.css">
+      <link rel="stylesheet" href="sidebarstyle.css">
+      <link rel="stylesheet" href="Imagestyle.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+      <header>
+        <h1>Java Control Statements</h1>
+        <hr>
+      </header>
+
+      <nav role="navigation">
+        <a href="Booleans.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="Switch.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+        </nav>
+  
+    <main role="main">
+
+    <section>
+
+      <h2>Introduction</h2>
+      <p>
+      In programming, control statements are essential tools that allow your code to make decisions. Think of them as the traffic lights of your program—guiding the flow and determining what happens next based on specific conditions. By mastering control statements, you’ll be able to write smarter, more efficient code!
+      </p>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Why Learn Control Statements?</h2>
+      <ul>
+        <li><b>Decision-Making:</b> Control statements help your programs respond to user input or data conditions dynamically.</li>
+        <li><b>Flow Control:</b> They enable your program to take different paths based on various conditions, leading to more interactive applications.</li>
+        <li><b>Problem-Solving Skills</b>: Understanding control flow enhances your logical thinking and problem-solving abilities.</li>
+      </ul>
+      <hr>
+
+    </section>
+
+    <section>
+
+      <h2>Types of Control Statements</h2>
+      <p>Control statements can be broadly categorized into three types:</p>
+      <ol>
+        <li>Conditional Statements
+          <ul>
+            <li>These statements execute different code blocks based on whether a condition is true or false.</li>
+          </ul>
+        </li>
+        <li>Looping Statements
+          <ul>
+          <li>Used to repeat a block of code multiple times as long as a specified condition is met.</li>
+        </ul>
+      </li>
+      <li>Branching Statements
+        <ul>
+          <li>Alter the flow of control unconditionally.</li>
+        </ul>
+      </li>
+    </ol>
+    <hr>
+
+  </section>
+  
+  <section>
+
+    <h2>Conditional Statements</h2>
+  <p>Conditional statements are fundamental in programming, allowing you to execute different code based on certain conditions. They enable your program to make decisions and act accordingly, which is essential for creating dynamic and interactive experiences on a website.</p>
+ 
+    <h2>Types of conditional statements</h2>
+    <ol>
+      <li>If Statement</li>
+      <li>If-Else Statement</li>
+      <li>Else If Statement</li>
+      <li>Nested If Statement</li>
+      <li>Switch Statement</li>
+      <li>Ternary Operator (Conditional Operator)</li>
+    </ol>
+    <p>With a solid understanding of why control statements are crucial, let's dive into each type, step by step. Get ready to explore how these powerful tools can make your code more dynamic and responsive!</p>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2> If Statement</h2>
+    <ul>
+      <li><b>Purpose:</b> An if statement checks a condition. If the condition is true, the code block inside it executes. If it’s false, the code is skipped.</li>
+      <li><b>Explanation:</b> This is the simplest form of conditional statement. It’s like asking a question: If this statement is true, do this.</li>
+    </ul>
+    <b>Syntax:</b>
+    <pre><code class="language-java">if condition:
+      # code to execute if condition is true
+  </code></pre>
+  
+    <br>
+    <img src="If_FlowChart.png" title="Java If FlowChart" alt="If Control Statemnet Flowchart">
+    <br>
+ 
+    <b>Example:</b>
+    <pre><code class="language-java">int age = 18;
+if (age >= 18) {
+  console.log("You are eligible to vote!");
+}</code></pre>
+    <p>
+      In this example, the code checks if age is 18 or older. If true, it prints a message about voting eligibility.
+    </p>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <br>
+    <p><b>Please click on the 'Run' button to view the output.</b></p>
+    <iframe src="https://trinket.io/embed/java/f7cf42017b35?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2>If-Else Statement</h2>
+    <ul>
+      <li><b>Purpose:</b> The if-else statement provides an alternative action if the condition in the if is false.</li>
+      <li><b>Explanation:</b> Think of it as a fork in the road. If this condition is true, go left; otherwise, go right.</li>
+    </ul>
+    <b>Syntax:</b>
+    <pre><code class="language-java">if condition:
+      # code if true
+  else:
+      # code if false
+  </code></pre>
+
+    <br>
+    <img src="If_Else_FlowChart.png" title="Java If Else FlowChart" alt="Flowchart for If-Else statement">
+    <br>
+
+    <b>Example:</b>
+    <pre><code class="language-java">int time = 20;
+if (time &lt; 18) {
+  console.log("Good day!");
+} else {
+  console.log("Good evening!");
+}</code></pre>
+      <p>Here, the code checks if time is less than 18. If true, it greets with “Good day!” Otherwise, it greets with “Good evening!”</p>
+      <hr>
+
+  </section>
+
+  <section>
+
+    <br>
+    <p><b>Please click on the 'Run' button to view the output.</b></p>
+    <iframe src="https://trinket.io/embed/java/6882204ca3dc?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2>Else If Statement</h2>
+    <ul>
+      <li><b>Purpose:</b> The else if statement lets you evaluate multiple conditions in sequence.</li>
+      <li><b>Explanation:</b> This allows for more complex decision-making, handling multiple outcomes.</li>
+    </ul>
+    <b>Syntax:</b>
+    <pre><code class="language-java">if condition1:
+      # code for condition1
+  elif condition2:
+      # code for condition2
+  else:
+      # code if none are true
+  </code></pre>
+
+    <br>
+    <img src="Else_If_FlowChart.png" title="Java Else If FlowChart" alt="Else If FlowChart">
+    <br>
+
+    <b>Example:</b>
+    <pre><code class="language-java">int score = 85;
+if (score >= 90) {
+  "Grade: A";
+} else if (score >= 80) {
+    "Grade: B";
+  } else if (score >= 70) {
+       "Grade: C";
+  } else {
+      "Grade: D";
+      }</code></pre>
+      <p>This code checks the value of score and assigns a grade based on the range it falls into: A, B, C, or D.</p>
+      <hr>
+
+  </section>
+
+  <section>
+
+    <br>
+    <p><b>Please click on the 'Run' button to view the output.</b></p>
+    <iframe src="https://trinket.io/embed/java/7d385eb49cb1?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2>Nested If Statement</h2>
+    <ul>
+      <li><b>Purpose:</b> A nested if statement is an if statement inside another if statement. It allows for checking multiple conditions in layers.</li>
+      <li><b>Explanation:</b> Imagine a series of gates: to get to the next condition, the previous one must be true.</li>
+    </ul>
+    <b>Syntax:</b>
+    <pre><code class="language-java">if (condition1) {
+    if (condition2) {
+        // code if both condition1 and condition2 are true
+    } else {
+        // code if condition1 is true and condition2 is false
+    }
+} else {
+    // code if condition1 is false
+}</code></pre>
+
+    <br>
+    <img src="Nested_If_FlowChart.png" title="Java Nested If FlowChart" alt="Nested If">
+<b>Example:</b>
+<pre><code class="language-java">int age = 20;
+  let hasID = true;
+  
+  if (age >= 18) {
+      if (hasID) {
+          "Access granted!";
+      } else {
+          "Please show your ID.";
+      }
+  } else {
+      "Access denied. You are not old enough.";
+  }</code></pre>
+  <p>This code checks if the age is 18 or older, and if true, further checks if hasID is true to grant access, otherwise it asks for ID or denies access if under 18.</p>
+  <hr>
+
+  </section>
+
+  <section>
+
+    <br>
+    <p><b>Please click on the 'Run' button to view the output.</b></p>
+    <iframe src="https://trinket.io/embed/java/8751d0428f7a?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2>Switch Statement</h2>
+    <ul>
+      <li><b>Purpose:</b> The switch statement is useful when you want to compare a variable against multiple specific values. It’s often a cleaner alternative to multiple else if statements.</li>
+      <li><b>Explanation:</b> Think of it as a menu. Based on this choice, do this.</li>
+    </ul>
+    <b>Syntax:</b>
+    <pre><code class="language-java">switch (variable) {
+      case value1:
+          // code if variable === value1
+          break;
+      case value2:
+          // code if variable === value2
+          break;
+      // more cases can be added
+      default:
+          // code if variable doesn't match any case
+  }</code></pre>
+  <b>Example:</b>
+  <pre><code class="language-java">int day = 3;
+
+    switch (day) {
+        case 1:
+            dayName = "Monday";
+            break;
+        case 2:
+            dayName = "Tuesday";
+            break;
+        case 3:
+            dayName = "Wednesday";
+            break;
+        default:
+            dayName = "Other day";
+    }</code></pre>
+    <p>This code assigns a day name based on the value of day. If day is 1, it assigns "Monday"; if 2, "Tuesday"; if 3, "Wednesday". For any other value, it assigns "Other day".</p>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <br>
+    <p><b>Please click on the 'Run' button to view the output.</b></p>
+    <iframe src="https://trinket.io/embed/java/39cbbef5b33e?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p><b>Note:</b>Don't worry if you don't understand everything about the switch statement right now. We will study it in detail soon! This example gives you a basic idea of how it works.</p>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2>Ternary Operator (Conditional Operator)</h2>
+    <ul>
+      <li><b>Purpose:</b> The ternary operator is a shorthand for if-else statements that is often used for simple conditions.</li>
+      <li><b>Explanation:</b> It takes three parts: condition ? value if true : value if false.</li>
+    </ul>
+    <b>Syntax:</b>
+    <pre><code class="language-java">condition ? value_if_true : value_if_false;</code></pre>
+
+    <br>
+    <img src="Ternary_Operator_FlowChart.png" title="Java Ternary Operator FlowChart" alt="Ternary Operator FlowChart">
+    <br>
+
+    <b>Example:</b>
+    <pre><code class="language-java">int age = 16;
+let message = age >= 18 ? "You can vote." : "You are too young to vote.";</code></pre>
+
+  </section>
+
+  <section>
+
+    <br>
+    <p><b>Please click on the 'Run' button to view the output.</b></p>
+    <iframe src="https://trinket.io/embed/java/91c922fae608?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <hr>
+
+  </section>
+
+  <section>
+
+    <h2>Ready to Practice?</h2>
+    <p>Ask the user to input a password and check its strength based on the following criteria:</p>
+    <ul>
+      <li>If the password length is 8 characters or more, display “Strong password.”</li>
+      <li>If the password is less than 8 characters but at least 5, display “Medium password.”</li>
+      <li>If the password is shorter than 5 characters, display “Weak password.”</li>
+    </ul>
+    <hr>
+
+  </section>
+
+</main>
+
+    <nav role="navigation">
+        <a href="Booleans.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="Switch.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+    <br>
+    <hr>
+    </nav>
+
+    <footer role="contentinfo">
+      <p><b>Summary</b></p>
+      <ul>
+        <li><b>Control Statements:</b> Key tools like if, else if, switch, and the ternary operator let code make decisions based on conditions.</li>
+        <li><b>Conditional Logic:</b> Examples show how to handle different outcomes using if, else, and nested if statements.</li>
+        <li><b>Switch & Ternary Operator:</b> Switch handles multiple specific values, while the ternary operator simplifies basic if-else checks in one line.</li>
+      </ul>
+      <p>&copy; JavaFlair 2024. All rights reserved.</p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="trinket-page.js"></script>
+    
+  </div>
+</body>
+
+</html>

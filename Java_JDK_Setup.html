@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/Image/javafavicon.ico">
+        <title>JavaFlare : Java JDK SetUp</title> 
+        <link rel="stylesheet" href="Indexstyle.css">
+        <link rel="stylesheet" href="sidebarstyle.css">
+        <link rel="stylesheet" href="Codestyle.css">
+
+    </head>
+
+    <body>
+
+        <div id="sidebar-nav"></div>
+
+        <div id="main-content">
+        <header>
+            <h1>Java JDK SetUp</h1>
+            <hr>
+        </header>
+
+        <nav role="navigation"> 
+            <a href="Intro.html" aria-label="Go to previous page" class="nav-button"style="float:left">&lt; Previous</a>
+            <a href="Syntax.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>                   
+            <br>
+            <hr>
+        </nav> 
+        
+        <main role="main">
+
+            <section>
+
+                <h2>Introduction to JDK (Java Development Kit)</h2>
+                <p>
+                    Imagine you want to build a house—you need tools, materials, and a blueprint to get started. 
+                    In the world of Java programming, the JDK, or Java Development Kit, is like your toolbox. 
+                    It provides everything you need to create, compile, and run Java programs. 
+                    <br>
+                    The JDK is a software package that includes a collection of tools to help you write Java code,
+                     check it for errors (<strong>compile</strong>), and see it in action (<strong>run</strong>). Whether you're creating a simple 
+                     "Hello, World!" program or building complex applications, the JDK is your essential toolkit.
+                </p>
+                <hr>
+            </section>
+
+            <section>
+                <h2>Why JDK?</h2>
+                <p> 
+                    By using the JDK, you get access to essential tools that help you develop and run your Java programs:
+                </p>
+
+                    <ul>
+                        <li>
+                            <b>The Java Compiler (javac)</b>– This tool converts your written Java code into something 
+                            the computer can understand, called bytecode. It’s a crucial step in turning your 
+                            ideas into functioning software.
+                        </li>
+                        <li>
+                            <b>The Java Runtime Environment (JRE)</b> – Once your code is compiled, the JRE takes over, 
+                            allowing you to run the Java programs you create. Think of it as the engine that powers your 
+                            Java applications.
+                        </li>
+                        <li>
+                            <b>Other Tools</b> – The JDK comes packed with utilities that help manage, debug, and monitor your programs, 
+                                making the development process smoother and more efficient.
+                        </li>
+                    </ul>
+                    <hr>
+            </section>
+
+            <section>
+
+                <h2>Steps to Install JDK on Windows</h2>
+                <p>Follow these simple steps to install JDK on your Windows machine:</p>
+        
+                    <ol>
+                        <li>Download the JDK:
+                            <ul>
+                                <li>Go to the <a href="https://www.oracle.com/java/technologies/downloads/?er=221886" target="_blank" rel="noopener noreferrer">Oracle JDK download page.</a></li>
+                                <li>Select the latest JDK version for Windows and download the <b>.exe</b> installer.</li>
+                            </ul>
+                        </li>
+
+                        <li>Run the Installer:
+                            <ul>
+                                <li>Open the downloaded <b>.exe </b> file.</li>
+                                <li>Follow the installation prompts, choosing default settings unless you need to change the installation path.</li>
+                            </ul>
+                        </li>
+
+                        <li>Set Environment Variables:
+                            <ul>
+                                <li>Right-click on "This PC" or "My Computer" &rightarrow; Select "Properties".</li>
+                                <li>Click "Advanced system settings" &rightarrow; "Environment Variables".</li>
+                                <li>Under "System Variables", find "Path", click "Edit", and add a new entry with the path to 
+                                    the JDK bin folder <b>(e.g., C:\Program Files\Java\jdk-xx\bin).</b></li>
+                            </ul>
+                        </li>
+                        
+                        <li>Verify Installation:
+                            <ul>
+                                <li>Open Command Prompt and type: <b>java -version</b> .</li>
+                                <li>If Java is installed correctly, you’ll see the installed version.</li>
+                            </ul>
+                        </li>
+
+                    </ol>
+                    <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Steps to Install JDK on Linux</h2>
+                <p>Follow these simple steps to install JDK on your Linux machine:</p>
+                <ol>
+
+                    <li>Open Terminal.</li>
+                    <li>Update Package Manager:
+                        <ul>
+                            <li>Run the following command to update the package list: <b>sudo apt update</b> . </li>
+                        </ul>
+                    </li>
+
+                    <li>Install JDK:
+                        <ul>
+                            <li>Install OpenJDK by running: <b>sudo apt install openjdk-17-jdk</b>  . </li>
+                        <li>You can replace 17 with the desired version.</li>                           
+                        </ul>    
+                    </li>
+
+                    <li>Set Default Java Version (if multiple versions are installed):
+                        <ul> 
+                            <li><b>sudo update-alternatives --config java</b> . </li>
+                            <li>Choose the correct version from the list.</li>
+                        </ul>
+                    </li>
+
+                    <li>Verify Installation:
+                        <ul>
+                            <li>In the terminal, run <b>java -version</b> . </li>
+                        </ul>
+                    </li>
+
+                </ol>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Steps to Install JDK on macOS</h2>
+                <p>Follow these simple steps to install JDK on your macOS machine:</p>
+                <ol>
+                    <li>Download the JDK:
+                        <ul>
+                            <li>Visit the <a href="https://www.oracle.com/java/technologies/downloads/?er=221886" target="_blank" rel="noopener noreferrer">Oracle JDK download page.</a></li>
+                            <li>Download the latest JDK <b>.dmg</b> installer for macOS.</li>
+                        </ul>
+                    </li>
+
+                    <li>Install the JDK:
+                        <ul>
+                            <li>Open the downloaded <b>.dmg</b> file.</li>
+                            <li>Follow the instructions in the installer, keeping default settings.</li>
+                        </ul>
+                    </li>
+
+                    <li>Set JAVA_HOME Environment Variable (optional):
+                        <ul>
+                            <li>Open Terminal and enter: <b>export JAVA_HOME=$(/usr/libexec/java_home)</b></li>
+                            <li>Add this line to your <b>.bash_profile</b> or <b>.zshrc</b> for it to persist across sessions.</li>
+                        </ul>
+                    </li>
+
+                    <li>Verify Installation:
+                        <ul>
+                            <li>In Terminal, type: <b>java -version</b> . </li>
+                            <li>You should see the version of Java installed.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr>
+
+            </section>
+
+            <nav role="navigation"> 
+                <a href="Intro.html" aria-label="Go to previous page" class="nav-button"style="float:left">&lt; Previous</a>
+                <a href="Syntax.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>                   
+            <br>
+            <hr>
+            </nav> 
+
+        </main>
+
+        <footer role="contentinfo">
+            <p>For more information, visit the official Java documentation: 
+                <a href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html" target="_blank" rel="noopener noreferrer">Java SE Documentation</a>
+            </p>
+
+            <p><strong>Summary:</strong> </p>
+                <ul>
+                    <li>The JDK is essential for Java development, providing tools for compiling, running, 
+                        and debugging Java applications.
+                    </li>
+                </ul>
+            
+            <p>&copy; 2024 Java Flair. All rights reserved.</p>    
+        </footer>
+
+        <script src="sidebar.js"></script>
+        <script src="trinket-page.js"></script>
+    </div>
+</body>
+  
+</html>

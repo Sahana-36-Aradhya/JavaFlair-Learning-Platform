@@ -1,0 +1,10 @@
+img {
+  max-width: 100%; /* Ensures the image does not exceed the width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 8px; /* Adds rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+  margin: 20px auto; /* Centers the image horizontally and adds space above and below */
+  display: block; /* Ensures the image takes up the full width available */
+  max-height: 650px; /* Ensures the image height does not exceed a typical laptop screen size */
+  object-fit: cover; /* Ensures the image fits within the given width and height */
+}

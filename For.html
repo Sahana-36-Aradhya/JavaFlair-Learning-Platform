@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair : For and For Each Loop</title>
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Imagestyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+      <header>
+        <h1>Java For and For Each Loop</h1>
+        <hr>
+      </header>
+
+      <nav role="navigation">
+        <a href="DoWhile.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="Continue_Break.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+          <br>
+          <hr>
+      </nav>
+
+    <main role="main">
+      
+      <section>
+
+        <h2>For Loop</h2>
+        <p>The <strong>for</strong> loop is ideal when you know beforehand how many <b>iterations</b> are needed. It consists of three parts: <strong>initialization, condition, and increment</strong>/decrement.</p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Syntax of For Loop</h2>
+        <pre><code class="language-java">for (initialization; condition; increment/decrement) {
+  // code block to be executed
+}</code></pre>
+        <ul>
+          <li><b>initialization:</b> This is executed <b>once</b> at the start, where you typically initialize a variable (e.g., int i = 0).</li>
+          <li><b>condition:</b> This is </b>checked before</b> each iteration. If <b>true</b>, the loop <b>runs</b>; if <b>false</b>, the loop <b>stops</b>.</li>
+          <li><b>increment/decrement:</b> <b>After</b> each iteration, this is executed to <b>update the loop</b> control variable.</li>
+        </ul>
+
+        <img src="For_Loop_FlowChart.png" alt="For Loop FlowChart">
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Example: Printing Even Numbers from 1 to 10</h2>
+        <pre><code class="language-java">public class ForLoopExample {
+  public static void main(String[] args) {
+    for (int i = 1; i &lt;= 10; i++) {
+      if (i % 2 == 0) {
+        System.out.println(i);
+      }
+    }
+  }
+}</code></pre>
+      <b>Explanation:</b>
+      <ul>
+        <li>We initialize <b>i</b> to <b>1</b>.</li>
+        <li>The loop runs as long as i is <b>less than or equal to 10</b>.</li>
+        <li>We check if the number is <b>even</b> <b>(i % 2 == 0)</b> and print it if <b>true</b>.</li>
+        <li>After each iteration, <b>i</b> is <b>incremented</b> by 1.</li>
+      </ul>
+      <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/ffb5341822d2?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Java For-Each Loop</h2>
+        <p>
+          The <strong>for-each</strong> loop, also known as the enhanced <strong>for</strong> loop, is specifically designed to iterate over <strong>arrays</strong> or collections like <strong>ArrayList</strong>. It is more readable and removes the need for managing an index.
+        </p>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Syntax of For-Each Loop</h2>
+        <pre><code class="language-java">for (type element : array/collection) {
+  // code block to be executed
+}</code></pre>
+
+        <ul>
+          <li><b>type:</b> The <b>data type</b> of elements in the array or collection.</li>
+          <li><b>element:</b> Represents each element in the array or collection during each iteration.</li>
+        </ul>
+
+        <img src="For_Each_Loop_FlowChart.png" alt="For Each Loop FlowChart">
+        <hr>
+
+      </section>
+        
+      <section>
+
+        <h2>Example: Iterating Over an Array of Names</h2>
+        <pre><code class="language-java">public class ForEachExample {
+  public static void main(String[] args) {
+    String[] names = {"Alice", "Bob", "Charlie"};
+      for (String name : names) {
+        System.out.println(name);
+      }
+    }
+  }</code></pre>
+      <ul>
+        <li>We have an <b>array</b> of strings called <b>names</b>.</li>
+        <li>The for-each loop goes through <b>each name</b> in the array and prints it, without needing to manage any index.</li>
+      </ul>
+      <hr>
+
+      </section>
+
+      <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/96aa7578211d?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Important Points to Remember</h2>
+        <ol>
+          <li><b>For Loop:</b> Use it when the number of iterations is <b>known</b> or when you need <b>fine control</b> over the loop, such as using an <b>increment</b> or <b>decrement</b>.</li>
+          <li><b>For-Each Loop:</b> Use it to <b>simplify looping</b> through arrays or collections, especially when you <b>don’t need the index</b> or specific control over iterations.</li>
+        </ol>
+        <hr>
+
+      </section>
+
+      <section>
+
+        <h2>Ready to Practice?</h2>
+        <ol>
+          <li>Write a program that uses a <strong>for loop</strong> to print the multiplication table of any number entered by the user (from 1 to 10).</li>
+          <li>Create a program that asks the user to enter 5 integers, stores them in an array, and then uses a <strong>for-each loop</strong> to find and print the sum of the array elements.</li>
+        </ol>
+
+      </section>
+    </main>
+
+    <nav role="navigation">
+      <a href="DoWhile.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+      <a href="Continue_Break.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+        <br>
+        <hr>
+    </nav>
+
+  <footer role="contentinfo">
+    <p><b>Summary</b></p>
+    <ul>
+      <li><b>For Loop:</b> A for loop runs for a known number of iterations, with control over initialization, condition, and increment/decrement. It is ideal for tasks requiring specific numbers of iterations.</li>
+      <li><b>For-Each Loop:</b> The for-each loop simplifies iteration over arrays and collections, removing the need to manage index and providing a cleaner, more readable structure.</li>
+      <li><b>Best Practices:</b> Use for when precise control of the loop is required; use for-each for clean, concise iteration over data structures like arrays and collections.</li>
+    </ul>
+    <p>&copy; JavaFlair 2024. All rights reserved.</p>
+  </footer>
+
+  <script src="sidebar.js"></script>
+  <script src="trinket-page.js"></script>
+
+    </div>
+  
+  </body>
+</html>

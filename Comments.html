@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+        <title>JavaFlair: Comments</title>
+        <link rel="stylesheet" href="Indexstyle.css">
+        <link rel="stylesheet" href="sidebarstyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="sidebar-nav"></div>
+
+        <div id="main-content">
+            <header>
+                <h1>Java Comments</h1>
+                <hr>
+            </header>
+
+            <nav role="navigation">
+                <a href="Input.html" aria-label="Go to previous page" class="nav-button" style="float:left"> &lt; Previous</a>
+                <a href="Variable.html" aria-label="Go to next page" class="nav-button" style="float:right"> Next &gt;</a>                   
+            <br>
+            <hr>
+
+    <main role="main">
+
+        <section>
+
+            <h2>Introduction to Comments in Java</h2>
+            <p>
+                When writing code, sometimes we need to leave <b>notes for ourselves or for others</b> 
+                to understand what the code is doing. These notes are called comments in Java. They are 
+                <strong>ignored by the Java compiler</strong> and have no effect on how the program runs. 
+                Comments make your code more understandable, especially when you or someone else revisits 
+                it later.
+            </p>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Why Should You Use Comments?</h2>
+            <ul>
+                <li><b>Clarification:</b> Helps explain what certain parts of the code do.</li>
+                <li><b>Problem-solving:</b> Easily "turn off" parts of your code while testing by commenting them out.</li>
+                <li><b>Collaboration:</b> Makes your code friendlier for others to read and work with.</li>
+
+            </ul>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Types of Comments in Java</h2>
+            <ol>
+                <li><h3>Single-line Comments</h3></li>
+                <p>Perfect for quick notes or temporarily skipping a line of code.</p>
+                <p><b>Syntax:</b> <code>// This is a single-line comment</code></p>
+                <p><b>Example:</b></p>
+            <pre><code class="language-java"><b>//</b> This variable stores the user's age
+int age = 25;</code></pre>
+                <br>
+
+                <hr>
+                <br>
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <iframe src="https://trinket.io/embed/java/7d508a733607?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <br>
+                <hr>
+
+                <li><h3>Multi-line Comments</h3></li>
+                <p>Need to write a longer explanation? Use multi-line comments!</p>
+                <p><b>Syntax:</b> <code>/* Your comment here */</code></p>
+                <p><b>Example:</b></p>
+                <pre><code class="language-java"><b>/*</b>
+ This is a multi-line comment.
+ It's useful when you need to explain something in detail.
+ <b>*/</b>
+int sum = a + b;</code></pre>
+                <br>
+
+                <hr>
+                <br>
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <iframe src="https://trinket.io/embed/java/52e71f59c6ab?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <br>
+                <hr>
+
+                <li><h3>Documentation Comments</h3></li>
+                <p>If you're writing Java code for others, these are gold! They generate neat documentation using Javadoc.</p>
+                <p><b>Syntax:</b> <code>/** Detailed comment for documentation */</code></p>
+                <p><b>Example:</b></p>
+                <pre><code class="language-java"><b>/**</b>
+ <b>*</b> This method calculates the sum of two numbers.
+ <b>*</b> @param a First number
+ <b>*</b> @param b Second number
+ <b>*</b> @return Sum of a and b
+ <b>*/</b>
+public int add(int a, int b) {
+    return a + b;
+}</code></pre>
+                
+            </ol>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Ready to Practice?</h2>
+            <p>Write a Java program that takes the user’s age as input, calculates the year they were born, and prints a message displaying their age and birth year. Include comments to explain each part of your code, using single-line, multi-line, and documentation comments.</p>
+            <ol>
+                <li>Include a <b>single-line comment</b> to explain the purpose of a variable.</li>
+                <li>Use a <b>multi-line comment</b> to describe the overall functionality of the program.</li>
+            </ol>
+            <hr>
+
+        </section>
+
+    </main>
+
+    <nav role="navigation">
+        <a href="Input.html" aria-label="Go to previous page" class="nav-button" style="float:left"> &lt; Previous</a>
+        <a href="Variable.html" aria-label="Go to next page" class="nav-button" style="float:right"> Next &gt;</a>                   
+    <br>
+    <hr>
+
+    </nav>
+
+        <footer role="contentinfo">
+
+            <p><b>Summary:</b></p>
+                <ul>
+                    <li><b>Purpose of Comments:</b> Comments clarify code, assist with debugging, and improve collaboration.</li>
+                    <li><b>Types of Comments:</b> Java includes single-line (<b>//</b>), multi-line (<b>/* */</b>), and documentation (<b>/** */</b>) comments.</li>
+                    <li><b>Key Benefit:</b> Using comments improves code readability and maintainability.</li>
+                </ul>
+                <p>&copy; JavaFlair 2024. All rights reserved.</p>
+
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="trinket-page.js"></script>
+
+    </div>
+
+</body> 
+
+</html>  

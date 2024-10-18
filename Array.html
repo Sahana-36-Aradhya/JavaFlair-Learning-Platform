@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+    <title>JavaFlair: Arrays</title>
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="Indexstyle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+</head>
+
+<body>
+    <div id="sidebar-nav"></div>
+
+    <div id="main-content">
+        <header>
+            <h1>Java Arrays</h1>
+            <hr>
+        </header>
+
+        <nav role="navigation">
+            <a href="Continue_Break.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+            <a href="oop_overview.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+              <br>
+              <hr>
+          </nav>
+
+    <main>
+
+    <section>
+        <h2>Arrays</h2>
+        <p><strong>Arrays</strong> allow you to store multiple values of the same type in a single variable. Instead of using multiple variables to store individual values, arrays help you handle large amounts of related data efficiently.</p>
+        <hr>
+    </section>
+
+    <section>
+      <h2>General Syntax:</h2>
+      <pre><code class="language-java">dataType[] arrayName;
+arrayName = new dataType[size];</code></pre>
+
+  <ul>
+    <li><b>dataType:</b> Specifies the <b>type</b> of elements (e.g., int, String, double) that the array will hold.</li>
+    <li><b>arrayName:</b> The name of the array variable, following <b>standard</b> Java naming conventions.</li>
+    <li><b>[]:</b> <b>Indicates</b> that the variable will store an array, not a single value.</li>
+    <li><b>new:</b> Used to create a new <b>instance</b> of the array, <b>allocating memory</b> for it.</li>
+    <li><b>size:</b> An integer that defines the <b>fixed number</b> of elements the array can hold, which <b>cannot be changed</b> after creation.</li>
+  </ul>
+
+  <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Declaring and Initializing an Array</h2>
+        <p>To declare an array, you first specify the data type, followed by square brackets. Here’s how you declare and initialize an array of integers and strings:</p>
+        <pre><code class="language-java">int[] numbers = {5, 10, 15, 20, 25}; 
+String[] fruits = {"Apple", "Banana", "Cherry"};</code></pre>
+
+        <ul>
+            <li>
+              <b>Array Declaration and Initialization:</b> The code initializes two arrays, <b>numbers</b> (integer array) and <b>fruits</b> (string array), in a single line.
+            </li>
+            <li>
+              <b>Data Types: <b>int[]</b> denotes that <b>numbers</b> holds integers, while <b>String[]</b> indicates <b>fruits</b> stores strings.</b>
+            </li>
+            <li>
+              <b>Elements:</b> The <b>numbers</b> array contains five integers: <b>5</b>, <b>10</b>, <b>15</b>, <b>20</b>, and <b>25</b>, while fruits holds three strings: <b>"Apple"</b>, <b>"Banana"</b>, and <b>"Cherry"</b>.
+            </li>
+            <li>
+              <b>Fixed Size:</b> Each array has a fixed size based on the initialized values, with <b>numbers</b> able to hold 5 integers and <b>fruits</b> holding 3 strings, preventing any additional elements.
+            </li>
+        </ul>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/0c13e04dde04?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Accessing Array Elements</h2>
+        <p>To access an individual element in an array, you refer to its <strong>index</strong>. Remember, array indexing in Java starts at <strong>0</strong>.</p>
+        <pre><code class="language-java">System.out.println(fruits[0]);
+System.out.println(numbers[4]);</code></pre>
+      <ul>
+          <li><b>Element Access: <b>fruits[0]</b> retrieves the first element <b>"Apple"</b> from the <b>fruits</b> array, and <b>numbers[4]</b> retrieves the fifth element <b>25</b> from the <b>numbers</b> array.</b></li>
+          <li><b>Output:</b> The <b>System.out.println</b> statements print <b>"Apple"</b> and <b>25</b> on separate lines in the console.</li>
+      </ul>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/4d8ba75624e0?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Modifying Array Elements</h2>
+        <p>You can change the value of any element in an array by directly assigning a new value to its index.</p>
+        <pre><code class="language-java">fruits[1] = "Mango";  
+System.out.println(fruits[1]);</code></pre>
+        <ul>
+            <li>
+                <b>Element Modification:</b> <code>fruits[1] = "Mango";</code> updates the second element of the <b>fruits</b> array, changing it from <code>"Banana"</code> to <code>"Mango"</code>.
+            </li>
+            <li>
+                <b>Output:</b> The <code>System.out.println(fruits[1]);</code> statement prints the updated second element, which is now <code>"Mango"</code>, to the console.
+            </li>
+        </ul>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/ea69b7f7b8fe?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Syntax</h2>
+        <pre><code class="language-java">arrayName.length</code></pre>
+        <ul>
+            <li><b>arrayName:</b> This represents the name of the array whose length you want to access. In this context, it is <b>fruits</b>, which is an array of strings.</li>
+            <li><b>.length:</b> This property is used to get the total number of elements in the array. It is an attribute that provides the size of the array, allowing you to determine how many items it contains without needing to count them manually.</li>
+            <br>
+        </ul>
+        <h2>Array Length</h2>
+        <p>The <code>length</code> property allows you to find out how many elements an array contains. This is especially useful for loops and operations that need to process every element in the array.</p>
+        <pre><code class="language-java">System.out.println(fruits.length);</code></pre>
+        <ul>
+            <li><b>Array Length Access:</b> The expression <b>fruits.length</b> retrieves the number of elements in the <b>fruits</b> array. In this case, it will return <b>3</b>, as there are three elements: <b>"Apple"</b>, <b>"Banana"</b>, and <b>"Mango"</b>.</li>
+            <li><b>Output:</b> The <b>System.out.println(fruits.length);</b> statement prints the length of the <b>fruits</b> array to the console, so executing this code will display <b>3</b>.</li>
+        </ul>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/747fb4d2bb83?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Multi-Dimensional Arrays</h2>
+        <pre><code class="language-java">dataType[][] arrayName = {
+{element1, element2, ...},
+{element3, element4, ...},
+        ...
+};</code></pre>
+        <ul>
+            <li><b>Array Declaration and Initialization:</b>The code <code>int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};</code> declares a two-dimensional array named <b>matrix</b> with three rows, each represented by inner braces <b>{}</b>.</li>
+            <li><b>Accessing an Element:</b>The statement <code>System.out.println(matrix[1][2]);</code> retrieves the value at the second row and third column (which is <b>6</b>) and prints it to the console.</li>
+        </ul>
+        <p>Java also allows you to create arrays with more than one dimension. A <strong>two-dimensional array</strong> is often used for storing data in rows and columns, like a table:</p>
+        <pre><code class="language-java">int[][] matrix = {
+    {1, 2, 3}, 
+    {4, 5, 6}, 
+    {7, 8, 9}
+};
+System.out.println(matrix[1][2]);</code></pre>
+        <ul>
+            <li><b>Two-Dimensional Array Declaration:</b> The code <code>int[][] matrix = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};</code> declares a two-dimensional integer array named <b>matrix</b> and initializes it with three rows and three columns, where each inner brace <b>{}</b> represents a row of values.</li>
+            <li><b>Indexing:</b> In the expression <strong>matrix[1][2]</strong>, the first index <b>1</b> refers to the second row (since indexing starts at 0), and the second index <b>2</b> refers to the third column of that row, which contains the value <b>6</b>.</li>
+            <li><b>Output:</b> The statement <code>System.out.println(matrix[1][2]);</code> retrieves the value <b>6</b> from the specified position in the array and prints it to the console.</li>
+        </ul>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <br>
+        <p><b>Please click on the 'Run' button to view the output.</b></p>
+        <iframe src="https://trinket.io/embed/java/e514e02e1930?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <hr>
+
+    </section>
+
+    <section>
+
+        <h2>Ready to Practice?</h2>
+        <ol>
+            <li><strong>Array Modification:</strong> Create an array of 5 integers and update the third value. Print the updated array.</li>
+            <li><strong>Multi-dimensional Array:</strong> Write a program that initializes a 2D array (3x3 matrix) and prints the diagonal elements.</li>
+        </ol>
+        <hr>
+
+    </section>
+
+</main>
+
+    <nav role="navigation">
+        <a href="Continue_Break.html" aria-label="Go to previous page" class="nav-button" style="float:left;"> &lt; Previous</a>
+        <a href="oop_overview.html" aria-label="Go to next page" class="nav-button" style="float:right;">Next &gt;</a>
+          <br>
+          <hr>
+      </nav>
+
+      <footer role="contentinfo">
+        <h2>Summary</h2>
+        <ul>
+            <li><strong>Arrays</strong> store multiple values in a single variable, making data management more efficient.</li>
+            <li><strong>Array Elements</strong> are accessed and modified using an index, with the first index being 0.</li>
+            <li>The <strong>length</strong> property is used to determine the number of elements in an array.</li>
+            <li><strong>Loops</strong>, such as <code>for</code> or <code>for-each</code>, are commonly used to iterate over arrays and access each element.</li>
+            <li><strong>Multi-dimensional arrays</strong> allow you to create tables or grids of data.</li>
+        </ul>
+        <hr>
+        <p>&copy; JavaFlair 2024. All rights reserved.</p>
+      </footer>
+
+      <script src="sidebar.js"></script>
+      <script src="trinket-page.js"></script>
+      
+    </div>
+      
+</body>
+</html>

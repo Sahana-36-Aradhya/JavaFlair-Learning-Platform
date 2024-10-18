@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+        <title>JavaFlare: Java Syntax and Basics</title>
+        <link rel="stylesheet" href="Indexstyle.css">
+        <link rel="stylesheet" href="sidebarstyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+    </head>
+
+    <body>
+
+        <div id="sidebar-nav"></div>
+        
+        <div id="main-content">
+        <header>
+            <h1>Java Syntax and Writing Your First Program</h1>
+            <hr>
+        </header>
+   
+        <nav role="navigation"> 
+            <a href="Java_JDK_Setup.html" aria-label="Go to previous page" class="nav-button"style="float:left">&lt; Previous</a>
+            <a href="Output.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>                   
+        <br>
+        <hr>
+        </nav> 
+    
+    <main role="main">
+        <article>
+
+        <section>
+
+            <h2>Writing Your First Java Program</h2>
+            <p>
+                Now that Java is set up, let's write your first program! We'll start by creating a simple program that prints a message to the screen.
+            </p>
+
+            <ol>
+
+                <li>Open Notepad:</li>
+                <ul>
+                    <li>To write your code, open a text editor like Notepad on your computer.</li>
+                </ul>
+
+                <li>Write Your Code:</li>
+                <pre><code class="language-java">public class HelloWorld {
+    public static void main(String [] args) {
+        System.out.println("Hello World!");
+    }
+}</code></pre>
+            <p>
+                Enter the following code into the text editor (you’ll learn what each part means as we progress).
+            </p>
+
+                <li>Saving the File:
+                    <ul>
+                        <li>After writing the code, save the file with a <strong>.java</strong> extension. For example, if your program is 
+                            about printing "Hello, World!", name the file <strong>HelloWorld.java</strong>. Ensure that you save it in a 
+                            location where you can easily find it.
+                        </li>
+                    </ul>
+                </li>   
+
+                <li>Running the Program:
+                    <ul>
+                        <li>Once the file is saved, you’ll need to open the command prompt (or terminal) and navigate to the directory where your file is located. From there, you can compile with <strong>javac HelloWorld.java</strong> and run your program with <strong>java HelloWorld</strong>.</li>
+                    </ul>
+                </li>
+                
+            </ol>
+            <p>Note: If you need more clarification on how to run your Java program, <a href="RunningCode.html" target="_blank" rel="noopener noreferrer">click here</a> for detailed instructions.</p>
+            <hr>
+
+        </section>
+        
+        <section>
+
+            <p><b>Please click on the 'Run' button to view the output.</b></p>
+            <br>
+            <iframe src="https://trinket.io/embed/java/089678dbcd40?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe> 
+            <hr>    
+
+        </section>
+
+        <section>
+
+            <h2>Case Sensitivity in Java</h2>
+            <p>In Java, how you use uppercase and lowercase letters matters a lot! Here are some important points to remember:</p>
+            <ol>
+                <li>
+                    <strong>Class Names:</strong> Start with an <strong>uppercase</strong> letter. For example, <b>HelloWorld</b> is correct, but <b>helloworld</b> is not.
+                </li>
+
+                <li>
+                    <strong>Method Names:</strong> Always use <strong>lowercase</strong> for method names. The main method is always written as <b>main,</b> not <b>Main</b>.
+                </li>
+
+                <li>
+                    <strong>Keywords:</strong> All keywords and access modifiers, like <strong>public, class,</strong> and <strong>static</strong> must be in lowercase.
+                </li>
+
+                <li>
+                    <strong>Predefined Classes:</strong> Built-in classes, like <b>System,</b> must keep their original case. Writing it as <b>system</b> will cause an error. 
+                </li>
+            </ol>
+            <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Java Code Explanation</h2>
+<pre><code class="language-java">public class HelloWorld {</code></pre>
+        <ul>
+            <li>
+                <strong>public:</strong> This is an access modifier that allows the class to be accessible from other classes. 
+                It is always written in lowercase.
+            </li>
+            <li>
+                <strong>class:</strong> This keyword is used to declare a class. It must be in lowercase.
+            </li>
+            <li>
+                <strong>HelloWorld:</strong> This is the name of the class. By convention, class names start with an uppercase letter. 
+                This specific name must match the filename (HelloWorld.java) exactly (including case) to compile successfully.
+            </li>
+        </ul>
+        <hr>
+
+        </section>
+
+        <section>
+
+<pre><code class="language-java">public static void main(String [] args) {</code></pre>
+        <ul>
+            <li>
+                <strong>public:</strong> Again, this is an access modifier indicating that the method is accessible from anywhere.
+            </li>
+
+            <li>
+                <strong>static: </strong> This keyword indicates that the method belongs to the class rather than 
+                instances of the class. It allows the main method to be called without creating an instance of the class.
+            </li>
+
+            <li>
+                <strong>void:</strong> This specifies that the method does not return a value.
+            </li>
+
+            <li>
+                <strong>main: </strong> This is the name of the method. It must be written in lowercase. 
+                This is the entry point of the Java application, and it must be named exactly <b>main</b> (case-sensitive).
+            </li>
+
+            <li>
+                <strong>String [] args:</strong>
+                    <ul>
+                        <li>
+                            <strong>String:</strong> This indicates that <b>args</b> is an array of <b>String</b> objects. 
+                            The type name <b>String</b> must start with an uppercase letter, as it is a predefined class in Java.
+                        </li>
+                        <li>
+                            <strong>[]:</strong>  Indicates that <b>args</b> is an array. The brackets come immediately after the type.
+                        </li>
+                    </ul>
+            </li>
+        </ul>
+        <hr>
+
+        </section>
+
+        <section>
+
+<pre><code class="language-java">System.out.println("Hello World!");</code></pre>
+        <ul>
+            <li>
+                <strong>System:</strong> This is a predefined class in Java that provides access to system resources. It starts with an uppercase <b>"S."</b>
+            </li>
+            <li>
+                <strong>out:</strong> This is a static member of the <b>System</b> class, representing the standard output stream. 
+                It is written in lowercase.
+            </li>
+            <li>
+                <strong>("Hello World!"):</strong> This is the string argument passed to the println method. Strings must be enclosed in double quotes.
+            </li>
+        </ul>
+        <hr>
+
+        </section>
+
+        <section>
+<pre><code class="language-java">
+    }
+}</code></pre>
+        <ul>
+            <li>
+                These closing braces (<b>}</b>) signify the end of the <b>main</b> method and the <b>HelloWorld</b> class, respectively.
+
+            </li>
+        </ul>
+        <hr>
+
+        </section>
+
+        <section>
+
+            <h2>Ready to Practice?</h2>
+            <p>Write a Java program that prints your name and age to the console.</p>
+            <hr>
+            
+          </section>
+
+    </main>
+    
+    <nav role="navigation"> 
+        <a href="Java_JDK_Setup.html" aria-label="Go to previous page" class="nav-button"style="float:left">&lt; Previous</a>
+        <a href="Output.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>                   
+    <br>
+    <hr>
+    </nav> 
+
+</article>
+
+<footer role="contentinfo">
+    <p><strong>Summary</strong></p>
+    <ul>
+        <li>Writing Your First Program: Created a "Hello World!" program and learned to save and run it.</li>
+        <li>Case Sensitivity: Class names start with an uppercase letter, while method names must be in lowercase.</li>
+        <li>Code Explanation: Explained key elements like access modifiers and the <b>System.out.println</b> statement.</li>
+    </ul>
+    <p>&copy; 2024 Java Flair. All rights reserved.</p>
+</footer>
+
+<script src="sidebar.js"></script>
+<script src="trinket-page.js"></script>
+
+</div>
+</body>
+
+</html>

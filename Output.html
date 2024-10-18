@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="javafavicon.ico">
+        <title>JavaFlare: Mastering Output</title>
+        <link rel="stylesheet" href="Indexstyle.css">
+        <link rel="stylesheet" href="sidebarstyle.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.js"></script>
+    </head>
+
+    <body>
+
+        <div id="sidebar-nav"></div>
+       
+            <div id="main-content">
+            <header>
+                <h1>Java Output</h1>
+                <hr>
+            </header>
+
+            <nav role="navigation"> 
+                <a href="Syntax.html" aria-label="Go to previous page" class="nav-button"style="float:left">&lt; Previous</a>
+                <a href="Input.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>                   
+            <br>
+            <hr>
+            </nav> 
+
+        <main role="main">
+        
+            <p>
+                Welcome back! Now that you're ready to dive into coding, let's start by learning how to display output on the screen using some simple commands in Java. Ready to see your first output?
+            </p>
+
+            <section>
+
+                <h2>Let’s Talk About Printing in Java</h2>
+                <p>
+                    At this point, you’re already on your journey into Java, so let's take a closer look at how to display 
+                    output on the screen. Printing messages or information is one of the most basic tasks you’ll do, but 
+                    it’s also essential for tracking how your code behaves.
+                </p>
+
+                <p>
+                    Java provides three handy ways to print things to the screen, and here they are:
+                </p>
+
+                <ol>
+
+                    <li><b>System.out.println()</b> - Prints with a new line at the end.</li>
+                    <li><b>System.out.print()</b> - Prints without moving to a new line.</li>
+                    <li><b>System.out.printf() </b> -  Prints formatted output.</li>
+
+                </ol>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Let's Print Something with System.out.println()</h2>
+                <p>
+                    Imagine you’re sending a message and hitting "Enter" after every sentence. 
+                    That's what <b>System.out.println()</b> does—it prints your message and moves to the next 
+                    line automatically. It's perfect when you want to keep things neat and organized. 
+                    <b>Ready to give it a try?</b>
+                </p>
+                
+                <p>
+                    <p><b>Try it yourself!</b></p>
+
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">System.out.println("Learning Java is fun!");</code></pre>
+                        </li>
+                    </ul>
+
+                    <b>You’ll get:</b>
+
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">Learning Java is fun!</pre></code>
+                        </li>
+                    </ul>
+
+                    The cursor moves to the next line, waiting for the next print command.
+                </p>
+                <hr>
+                    
+            </section>
+
+            <section>
+
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <br>
+                <iframe src="https://trinket.io/embed/java/58a2926838af?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+            
+            <section>
+
+                <h2>Stay on the Same Line with System.out.print()</h2>
+                <p>
+                    The <b>System.out.print()</b> method works similarly to <b>System.out.println()</b>, 
+                    but it doesn't move to a new line after printing. This is handy when you want multiple 
+                    pieces of information on the same line.
+                </p>
+
+                <p> 
+                    <p>Try this and see:</p>
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">System.out.print("Java ");
+System.out.print("is awesome!");</code></pre>
+                        </li>
+                    </ul>
+
+                    <p>You'll see this output on the same line:</p>
+
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">Java is awesome!</code></pre>
+                        </li>
+                    </ul>
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <br>
+                <iframe src="https://trinket.io/embed/java/1e26c5a8c7d6?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Format Your Output with System.out.printf()</h2>
+                <p>
+                    The <b>System.out.printf()</b> method allows you to create formatted output. You can insert variables or 
+                    numbers into your text in a neat way. Don't worry about all the details now; just give it a try:
+                </p>
+
+            </section>
+
+            <section>
+
+                <h3>Printing a Integer Value</h3>
+                <p>
+                    <p>
+                        An integer (int) is a data type used to represent <b>whole numbers</b>. You can display an 
+                        integer value using <b>System.out.printf()</b>, which allows you to format the output neatly.
+                    </p>
+
+                    <p>Try this and see:</p>
+
+                    <ul>
+                        <li><pre><code class="language-java">System.out.printf("You have %d new messages", 5);</code></pre>
+                        </li>
+                    </ul>
+                    <p>You have 5 new messages</p>
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">You have 5 new messages</code></pre></li>
+                    </ul>
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <br>
+                <iframe src="https://trinket.io/embed/java/8c07a7b0f52b?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h3>Printing a Float Value</h3>
+                <p>
+                    A float is a data type used to represent <b>decimal numbers</b>. When you want to display a number 
+                    with a decimal point in a specific format, you can use <b>System.out.printf()</b>.
+                </p>
+
+                <p>Try this and see:</p>
+
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">System.out.printf("Your average score is %.2f", 85.6789);</code></pre>
+                        </li>
+                    </ul>
+
+                    <p>The output will be:</p>
+                    <ul>
+                        <li>
+                            <pre><code class="language-java">Your average score is 85.68</code></pre>
+                        </li>
+                    </ul>
+                    <p>In this example, <b>%.2f</b> tells Java to display the float value with two decimal places.</p>
+                </p>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <br>
+                <iframe src="https://trinket.io/embed/java/85105244bdb2?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h3>Printing a String</h3>
+                    <p>
+                        A string is a sequence of characters used to represent text. You can easily include text in your 
+                        output using <b>System.out.printf()</b>.
+                    </p>
+    
+                    <p>Try this and see:</p>
+    
+                        <ul>
+                            <li>
+                                <pre><code class="language-java">System.out.printf("Welcome, %s!", "John");</code></pre>
+                            </li>
+                        </ul>
+    
+                        <p>The output will be:</p>
+                        <ul>
+                            <li>
+                                <pre><code class="language-java">Welcome, John!</code></pre>
+                            </li>
+                        </ul>
+
+                        <p>In this example, <b>%s</b> is a placeholder for a string, which gets replaced by <b>"John"</b> in the output.</p>
+                    </p>
+                    <hr>
+
+            </section>
+
+            <section>
+
+                <p><b>Please click on the 'Run' button to view the output.</b></p>
+                <br>
+                <iframe src="https://trinket.io/embed/java/15f99fd1a9ab?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <hr>
+
+            </section>
+
+            <section>
+
+                <h2>Ready to Practice?</h2>
+                <p>Write a Java program that uses System.out.println() to display the following messages on separate lines:</p>
+                <ol>
+                    <li>"Hello, World!"</li>
+                    <li>"Welcome to Java Programming."</li>
+                    <li>"Let's learn to print."</li>
+                </ol>
+                <hr>
+                
+              </section>
+        </main>
+
+        <nav role="navigation"> 
+            <a href="Syntax.html" aria-label="Go to previous page" class="nav-button"style="float:left">&lt; Previous</a>
+            <a href="Input.html" aria-label="Go to next page" class="nav-button" style="float:right">Next &gt;</a>                   
+        <br>
+        <hr>
+        </nav> 
+
+        <footer role="contentinfo">
+
+            <p><strong>Summary</strong></p>
+            <ul>
+                <li>
+                    Printing Methods: Learn to print in Java using <b>System.out.println()</b>, <b>System.out.print()</b>, 
+                    and <b>System.out.printf()</b>.
+                </li>
+                <li>
+                    Data Types: Discover how to print integers, floats, and strings with examples of formatted output.
+                </li>
+                <li>
+                    Hands-On Practice: Each section includes interactive code examples for learners to try and see the results.
+                </li>
+            </ul>
+            <p>&copy; 2024 Java Flair. All rights reserved.</p>
+
+        </footer>
+
+        <script src="sidebar.js"></script>
+        <script src="trinket-page.js"></script>
+
+    </div> 
+        
+    </body>
+</html>
