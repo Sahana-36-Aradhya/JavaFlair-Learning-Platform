@@ -78,23 +78,6 @@ hr {
   margin-left: auto; 
 }
 
-/* General button styling for desktop */
-button {
-  padding: 8px 12px; /* Adjust size */
-  font-size: 14px; /* Adjust font size */
-  margin: 5px; /* Add some space around buttons */
-  background-color: #4CAF50; /* Example color */
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* Button hover effect */
-button:hover {
-  background-color: #45a049;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .container {
@@ -137,17 +120,6 @@ button:hover {
     font-size: 0.9em;
     flex: 1; /* Allow buttons to take up equal space */
   }
-
-  /* Stack buttons vertically for smaller screens */
-  .button-container {
-    display: block; /* Stack buttons vertically */
-    text-align: center; /* Center the buttons */
-  }
-
-  button {
-    width: 80%; /* Make buttons wider on small screens */
-    margin: 10px auto; /* Add space between buttons */
-  }
 }
 
 @media (max-width: 480px) {
@@ -164,11 +136,5 @@ button:hover {
   .nav-button {
     padding: 5px 10px; 
     font-size: 0.8em; 
-  }
-
-  button {
-    padding: 5px 10px; /* Smaller button padding for mobile */
-    font-size: 0.8em; /* Adjust font size */
-    width: 100%; /* Make buttons take full width in mobile view */
   }
 }
