@@ -85,6 +85,17 @@ hr {
     padding: 20px 30px; /* Add left and right padding for medium screens */
     margin: 15px;
     width: auto; /* Allow auto width for better responsiveness */
+    margin-left: 0; /* Remove left margin on medium screens */
+  }
+
+  .nav-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px; /* Adjust space between buttons */
+  }
+
+  .nav-button {
+    flex: none; /* Remove equal width for buttons */
+    width: 100%; /* Full width buttons */
   }
 }
 
@@ -93,22 +104,38 @@ hr {
     padding: 15px 20px; /* Smaller padding for medium screens */
     margin: 10px;
     width: auto; /* Allow auto width for better responsiveness */
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 10px 10px; /* Even smaller padding for mobile */
-    margin: 10px;
-    width: auto; /* Allow auto width for better responsiveness */
+    margin-left: 0; /* Remove left margin on smaller screens */
   }
 
   h1, h2 {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .nav-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px; /* Adjust space between buttons */
   }
 
   .nav-button {
     padding: 6px 12px; /* Smaller button padding for mobile */
     font-size: 0.9em;
+    width: 100%; /* Full width buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px; /* Even smaller padding for mobile */
+    margin: 10px;
+    width: auto; /* Allow auto width for better responsiveness */
+  }
+
+  h1, h2 {
+    font-size: 1.2em; /* Adjust heading size for mobile */
+  }
+
+  .nav-button {
+    padding: 5px 10px; /* Smaller button padding for mobile */
+    font-size: 0.8em; /* Adjust font size */
   }
 }
