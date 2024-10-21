@@ -1,3 +1,4 @@
+/* Table Styling */
 table {
   width: 100%; /* Full width of the container */
   border-collapse: collapse; /* Merge borders for a cleaner look */
@@ -25,4 +26,41 @@ tr:hover {
 
 td {
   color: #000000; /* Dark text color for table cells */
+}
+
+/* Responsive Styling for Tables on Phones */
+@media only screen and (max-width: 480px) {
+  table, th, td {
+    display: block; /* Make the table, headers, and cells block elements */
+    width: 100%; /* Full width for each element */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  }
+
+  th, td {
+    padding: 10px; /* Reduce padding for smaller screens */
+    text-align: left; /* Keep text alignment */
+  }
+
+  tr {
+    display: block; /* Make each row a block element */
+    margin-bottom: 10px; /* Add spacing between rows */
+  }
+
+  th {
+    background-color: #E6E6FA; /* Keep lavender background for headers */
+    color: #000000; /* Dark text color */
+  }
+
+  td {
+    border: none; /* Remove borders from individual cells for a cleaner mobile look */
+    border-bottom: 1px solid #b9afcc; /* Add border below each cell */
+    display: flex; /* Use flex layout for content within each cell */
+    justify-content: space-between; /* Align content within each cell */
+  }
+
+  td:before {
+    content: attr(data-label); /* Use the attribute 'data-label' for header labels in mobile view */
+    font-weight: bold; /* Make the label bold */
+    margin-right: 10px; /* Space between label and content */
+  }
 }
