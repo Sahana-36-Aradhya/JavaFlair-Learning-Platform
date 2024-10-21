@@ -45,3 +45,36 @@
   color: #000000; /* Text color */
   overflow: auto; /* Allow scrolling for the main content */
 }
+
+/* Responsive Styling for Tablets */
+@media only screen and (max-width: 768px) {
+  #sidebar-nav {
+    width: 200px; /* Narrower sidebar on tablets */
+  }
+
+  #main-content {
+    margin-left: 200px; /* Adjust content margin accordingly */
+    width: calc(100% - 200px); /* Adjust content width */
+  }
+}
+
+/* Responsive Styling for Phones */
+@media only screen and (max-width: 480px) {
+  #sidebar-nav {
+    width: 100%; /* Sidebar takes full width */
+    height: auto; /* Auto height for better scrolling on mobile */
+    position: relative; /* No fixed positioning for better flow */
+    border-right: none; /* Remove border on mobile */
+    box-shadow: none; /* Remove shadow for simplicity */
+  }
+
+  #main-content {
+    margin-left: 0; /* No margin for main content */
+    width: 100%; /* Main content takes full width */
+    padding-top: 20px; /* Add top padding */
+  }
+
+  #sidebar-nav ul li a {
+    padding: 10px 15px; /* Reduce padding for links on smaller screens */
+  }
+}
