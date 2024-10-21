@@ -111,7 +111,7 @@ hr {
   }
 
   .nav-container {
-    flex-direction: row; /* Arrange buttons horizontally */
+    flex-direction: row; /* Keep buttons in a row for medium screens */
     gap: 5px; /* Adjust space between buttons */
   }
 
@@ -137,4 +137,4 @@ hr {
     padding: 5px 10px; /* Smaller button padding for mobile */
     font-size: 0.8em; /* Adjust font size */
   }
-}
+}  
