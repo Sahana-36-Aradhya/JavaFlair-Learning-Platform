@@ -19,13 +19,13 @@ a:hover {
 }
 
 .container {
-  max-width: calc(100% - 300px); /* Adjust width calculation to prevent overlap */
+  max-width: calc(100% - 300px);
   margin: 40px auto;
   padding: 20px 25px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
-  margin-left: 300px; /* Ensure content starts after the sidebar */
+  margin-left: 300px;
 }
 
 /* Typography */
@@ -42,15 +42,15 @@ p {
 /* Full-width Horizontal Line */
 hr {
   border: none;
-  border-top: 1px solid #ddd; /* Light grey line */
-  width: 100%; /* Full width */
-  margin: 20px 0; /* Space above and below */
+  border-top: 1px solid #ddd;
+  width: 100%;
+  margin: 20px 0;
 }
 
 /* Navigation Container */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* Space between buttons for left/right alignment */
+  justify-content: space-between; /* Keep buttons on opposite ends */
   margin: 10px 0;
 }
 
@@ -58,15 +58,15 @@ hr {
 .nav-button {
   background-color: #007BFF;
   color: #fff;
-  padding: 8px 16px; /* Reduced padding for a smaller button */
+  padding: 8px 16px; 
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  flex: 1; /* Allows buttons to share equal width */
-  font-size: 0.9em; /* Smaller font size */
-  box-sizing: border-box; /* Ensures padding doesn't exceed width */
-  margin: 0 5px; /* Adds a bit of margin around the buttons */
+  flex: 0 1 auto; /* Allow buttons to auto size but not stretch */
+  font-size: 0.9em; 
+  box-sizing: border-box;
+  margin: 0 5px; 
 }
 
 .nav-button:hover {
@@ -75,66 +75,66 @@ hr {
 
 /* Specific Style for Next Button */
 .next-button {
-  margin-left: auto; /* Automatically pushes the button to the right */
+  margin-left: auto; 
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .container {
-    padding: 20px 30px; /* Add left and right padding for medium screens */
+    padding: 20px 30px; 
     margin: 15px;
-    width: auto; /* Allow auto width for better responsiveness */
-    margin-left: 0; /* Remove left margin on medium screens */
+    width: auto; 
+    margin-left: 0; 
   }
 
   .nav-container {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 5px; /* Adjust space between buttons */
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 5px; 
   }
 
   .nav-button {
-    flex: none; /* Remove equal width for buttons */
-    width: 100%; /* Full width buttons */
+    width: 100%; /* Full width buttons in vertical layout */
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 15px 20px; /* Smaller padding for medium screens */
+    padding: 15px 20px; 
     margin: 10px;
-    width: auto; /* Allow auto width for better responsiveness */
-    margin-left: 0; /* Remove left margin on smaller screens */
+    width: auto; 
+    margin-left: 0; 
   }
 
   h1, h2 {
-    font-size: 1.5em; /* Adjust heading size */
+    font-size: 1.5em; 
   }
 
   .nav-container {
     flex-direction: row; /* Keep buttons in a row for medium screens */
-    gap: 5px; /* Adjust space between buttons */
+    gap: 5px; 
+    justify-content: space-between; /* Ensure buttons are spaced correctly */
   }
 
   .nav-button {
-    padding: 6px 12px; /* Smaller button padding for mobile */
+    padding: 6px 12px; 
     font-size: 0.9em;
-    width: auto; /* Allow buttons to auto size */
+    flex: 1; /* Allow buttons to take up equal space */
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 10px; /* Even smaller padding for mobile */
+    padding: 10px; 
     margin: 10px;
-    width: auto; /* Allow auto width for better responsiveness */
+    width: auto; 
   }
 
   h1, h2 {
-    font-size: 1.2em; /* Adjust heading size for mobile */
+    font-size: 1.2em; 
   }
 
   .nav-button {
-    padding: 5px 10px; /* Smaller button padding for mobile */
-    font-size: 0.8em; /* Adjust font size */
+    padding: 5px 10px; 
+    font-size: 0.8em; 
   }
-}  
+}
