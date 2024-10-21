@@ -1,3 +1,4 @@
+/* General Image Styling */
 img {
   max-width: 100%; /* Ensures the image does not exceed the width of its container */
   height: auto; /* Maintains the aspect ratio */
@@ -7,4 +8,20 @@ img {
   display: block; /* Ensures the image takes up the full width available */
   max-height: 650px; /* Ensures the image height does not exceed a typical laptop screen size */
   object-fit: cover; /* Ensures the image fits within the given width and height */
+}
+
+/* Responsive Styling for Tablets */
+@media only screen and (max-width: 768px) {
+  img {
+    max-height: 450px; /* Reduce the maximum height for tablet screens */
+  }
+}
+
+/* Responsive Styling for Phones */
+@media only screen and (max-width: 480px) {
+  img {
+    max-height: 300px; /* Reduce the maximum height even further for phones */
+    margin: 10px auto; /* Reduce the vertical margin for smaller screens */
+    border-radius: 5px; /* Make the corners slightly less rounded for smaller screens */
+  }
 }
