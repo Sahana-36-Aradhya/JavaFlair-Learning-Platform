@@ -50,8 +50,7 @@ hr {
 /* Navigation Container */
 .nav-container {
   display: flex;
-  justify-content: space-between;
-  gap: 10px; /* Space between buttons */
+  justify-content: space-between; /* Space between buttons for left/right alignment */
   margin: 10px 0;
 }
 
@@ -112,14 +111,14 @@ hr {
   }
 
   .nav-container {
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: row; /* Arrange buttons horizontally */
     gap: 5px; /* Adjust space between buttons */
   }
 
   .nav-button {
     padding: 6px 12px; /* Smaller button padding for mobile */
     font-size: 0.9em;
-    width: 100%; /* Full width buttons */
+    width: auto; /* Allow buttons to auto size */
   }
 }
 
