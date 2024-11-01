@@ -55,7 +55,7 @@ p {
   text-align: center;
   text-decoration: none;
   font-size: 0.85em;
-  margin: 0 10px; /* Space between buttons */
+  margin: 0 10px;
 }
 
 .nav-button:hover {
@@ -70,7 +70,7 @@ p {
   }
 
   h1, h2 {
-    font-size: 1.5em; 
+    font-size: 1.5em;
   }
 
   .nav-button {
@@ -86,12 +86,13 @@ p {
   }
 
   h1, h2 {
-    font-size: 1.2em; 
+    font-size: 1.2em;
   }
 
   .nav-button {
     padding: 5px 8px;
     font-size: 0.75em;
-    flex-basis: 45%; /* Buttons take up more width on small screens */
+    flex: 1 1 45%; /* Adjust to fit better on small screens */
+    margin: 0 5px; /* Reduce space between buttons */
   }
 }
