@@ -43,7 +43,7 @@ p {
   display: flex;
   justify-content: space-between; /* Buttons on left and right */
   align-items: center; /* Center align vertically */
-  margin: 10px 0;
+  margin: 5px 0;
   
 }
 
