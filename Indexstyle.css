@@ -6,7 +6,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 3rem; 
+  padding-top: 1rem; /* Reduced top padding */
 }
 
 a {
@@ -20,7 +20,7 @@ a:hover {
 
 .container {
   max-width: calc(100% - 300px);
-  margin: 40px auto;
+  margin: 20px auto; /* Reduced top and bottom margin */
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -32,10 +32,11 @@ a:hover {
 h1, h2 {
   color: #333;
   margin-top: 0;
+  margin-bottom: 10px; /* Reduced bottom margin */
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced bottom margin */
 }
 
 /* Navigation Container */
@@ -43,19 +44,19 @@ p {
   display: flex;
   justify-content: space-between; /* Buttons on left and right */
   align-items: center; /* Center align vertically */
-  margin: 5px 0; /* Reduced vertical margin for less space above and below */
+  margin: 10px 0; /* Reduced top and bottom margin */
 }
 
 /* Navigation Button Style */
 .nav-button {
   background-color: #007BFF;
   color: #fff;
-  padding: 6px 12px; /* Button size remains the same */
+  padding: 6px 12px;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   font-size: 0.85em;
-  margin: 0 8px; /* Reduced horizontal space between buttons */
+  margin: 0 8px; /* Reduced space between buttons */
 }
 
 .nav-button:hover {
@@ -71,10 +72,7 @@ p {
 
   h1, h2 {
     font-size: 1.5em;
-  }
-
-  .nav-container {
-    margin: 5px 0; /* Same reduced margin for smaller screens */
+    margin-bottom: 5px; /* Reduced margin */
   }
 
   .nav-button {
@@ -91,16 +89,13 @@ p {
 
   h1, h2 {
     font-size: 1.2em;
-  }
-
-  .nav-container {
-    margin: 5px 0; /* Minimal margin even on small screens */
+    margin-bottom: 5px; /* Reduced margin */
   }
 
   .nav-button {
     padding: 5px 8px;
     font-size: 0.75em;
     flex: 1 1 45%; /* Adjust to fit better on small screens */
-    margin: 2px; /* Reduced space between buttons */
+    margin: 0 5px; /* Reduced space between buttons */
   }
 }
