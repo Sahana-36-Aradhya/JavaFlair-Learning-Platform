@@ -43,20 +43,19 @@ p {
   display: flex;
   justify-content: space-between; /* Buttons on left and right */
   align-items: center; /* Center align vertically */
-  margin: 10px 0;
-  
+  margin: 5px 0; /* Reduced vertical margin for less space above and below */
 }
 
 /* Navigation Button Style */
 .nav-button {
   background-color: #007BFF;
   color: #fff;
-  padding: 4px 18px;
+  padding: 6px 12px; /* Button size remains the same */
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   font-size: 0.85em;
-  margin: 0;
+  margin: 0 8px; /* Reduced horizontal space between buttons */
 }
 
 .nav-button:hover {
@@ -74,8 +73,12 @@ p {
     font-size: 1.5em;
   }
 
+  .nav-container {
+    margin: 5px 0; /* Same reduced margin for smaller screens */
+  }
+
   .nav-button {
-    padding: 4px 6px;
+    padding: 5px 10px;
     font-size: 0.8em;
   }
 }
@@ -90,10 +93,14 @@ p {
     font-size: 1.2em;
   }
 
+  .nav-container {
+    margin: 5px 0; /* Minimal margin even on small screens */
+  }
+
   .nav-button {
-    padding: 4px 6px;
+    padding: 5px 8px;
     font-size: 0.75em;
-    flex: 1 1 auto; 
-    margin: 2px; 
+    flex: 1 1 45%; /* Adjust to fit better on small screens */
+    margin: 2px; /* Reduced space between buttons */
   }
 }
