@@ -43,7 +43,7 @@ p {
   display: flex;
   justify-content: space-between; /* Buttons on left and right */
   align-items: center; /* Center align vertically */
-  margin: 5px 0;
+  margin: 10px 0;
   
 }
 
@@ -51,12 +51,12 @@ p {
 .nav-button {
   background-color: #007BFF;
   color: #fff;
-  padding: 6px 12px;
+  padding: 4px 18px;
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   font-size: 0.85em;
-  margin: 0 10px;
+  margin: 0;
 }
 
 .nav-button:hover {
@@ -75,7 +75,7 @@ p {
   }
 
   .nav-button {
-    padding: 5px 10px;
+    padding: 4px 6px;
     font-size: 0.8em;
   }
 }
@@ -91,9 +91,9 @@ p {
   }
 
   .nav-button {
-    padding: 5px 8px;
+    padding: 4px 6px;
     font-size: 0.75em;
-    flex: 1 1 45%; /* Adjust to fit better on small screens */
-    margin: 0 5px; /* Reduce space between buttons */
+    flex: 1 1 auto; 
+    margin: 2px; 
   }
 }
