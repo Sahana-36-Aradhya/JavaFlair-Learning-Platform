@@ -103,9 +103,7 @@ int year;
         Methods define the <b>behavior</b> or <b>actions</b> that an object can perform. For example, the Car class could have a method to display the car’s details.
       </p>
       <pre><code class="language-java">void displayDetails() {
-  System.out.println("Model: " + model);
-  System.out.println("Color: " + color);
-  System.out.println("Year: " + year);
+  System.out.println("This is a method");
 }</code></pre>
       <hr>
 
@@ -124,15 +122,13 @@ int year;
     int year;
       
     // Constructor to initialize attributes
-    Car(String color, String model, int year) {
-    this.color = color;
-    this.model = model;
-    this.year = year;
+    Car() {
+    System.out.println("This is a constructor");
   }
 }</code></pre>
     <p>
         <b>
-          Car(String color, String model, int year):</b> This constructor takes three parameters and assigns them to the attributes  <b>color</b>, <b>model</b>, and <b>year</b> using the this keyword, which refers to the current object. 
+          Car():</b> This constructor is parameterless and executes the print statement inside it. 
     </p>
     <hr>
 
@@ -148,7 +144,7 @@ int year;
         <pre><code class="language-java">public class Main {
     public static void main(String[] args) {
         // Creating an object of the Car class
-        Car myCar = new Car("Red", "Toyota", 2020);
+        Car myCar = new Car();
         
         // Calling the method to display car details
         myCar.displayDetails();
@@ -182,9 +178,9 @@ int year;
 
         <h2>Ready to Practice?</h2>
         <ul>
-          <li><b>Define a Class:</b> Create a class named <b>Book</b> with attributes <b>title</b>, <b>author</b>, and <b>price</b>. Write a constructor and a method to display book details.</li>
-          <li><b>Object Creation:</b> In the <b>main</b> method, create an object of the <b>Book</b> class and display its details.</li>
-          <li><b>Modify Attributes:</b> Add a method in the <b>Book</b> class to update the price of the book, and demonstrate this in your main method.</li>
+          <li>What is a class in Java, and why is it considered a blueprint for objects?</li>
+          <li>What is a constructor in Java? How is it different from a method?</li>
+          <li>What is a method in Java? How is it different from a constructor?</li>
         </ul>
         <hr>
 
