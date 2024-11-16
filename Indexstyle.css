@@ -6,7 +6,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 1rem; /* Reduced top padding */
+  padding-top: 0.5rem; /* Very minimal top padding */
 }
 
 a {
@@ -20,10 +20,10 @@ a:hover {
 
 .container {
   max-width: calc(100% - 300px);
-  margin: 20px auto; /* Reduced top and bottom margin */
-  padding: 20px;
+  margin: 10px auto; /* Reduced margin to the minimum */
+  padding: 10px; /* Reduced padding */
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   overflow-wrap: break-word;
   margin-left: 300px;
 }
@@ -31,32 +31,32 @@ a:hover {
 /* Typography */
 h1, h2 {
   color: #333;
-  margin-top: 0;
-  margin-bottom: 10px; /* Reduced bottom margin */
+  margin-top: 0; /* No margin at the top */
+  margin-bottom: 5px; /* Smallest possible bottom margin */
 }
 
 p {
-  margin-bottom: 10px; /* Reduced bottom margin */
+  margin-bottom: 5px; /* Smallest bottom margin */
 }
 
 /* Navigation Container */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* Buttons on left and right */
-  align-items: center; /* Center align vertically */
-  margin: 10px 0; /* Reduced top and bottom margin */
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0; /* Reduced to the smallest gap */
 }
 
 /* Navigation Button Style */
 .nav-button {
   background-color: #007BFF;
   color: #fff;
-  padding: 6px 12px;
+  padding: 4px 8px; /* Minimal padding */
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
   font-size: 0.85em;
-  margin: 0 8px; /* Reduced space between buttons */
+  margin: 0 5px; /* Smallest gap between buttons */
 }
 
 .nav-button:hover {
@@ -66,36 +66,36 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 15px;
-    margin: 10px;
+    padding: 10px;
+    margin: 5px; /* Reduced margin for smaller screens */
   }
 
   h1, h2 {
-    font-size: 1.5em;
-    margin-bottom: 5px; /* Reduced margin */
+    font-size: 1.4em;
+    margin-bottom: 5px; /* Smallest margin for headings */
   }
 
   .nav-button {
-    padding: 5px 10px;
-    font-size: 0.8em;
+    padding: 4px 8px;
+    font-size: 0.75em;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 10px;
-    margin: 10px;
+    padding: 8px;
+    margin: 5px;
   }
 
   h1, h2 {
     font-size: 1.2em;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px; /* Smallest margin */
   }
 
   .nav-button {
-    padding: 5px 8px;
-    font-size: 0.75em;
-    flex: 1 1 45%; /* Adjust to fit better on small screens */
-    margin: 0 5px; /* Reduced space between buttons */
+    padding: 4px 6px;
+    font-size: 0.7em;
+    flex: 1 1 45%;
+    margin: 0 4px; /* Reduced margin for tight fit */
   }
 }
