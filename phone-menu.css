@@ -57,10 +57,26 @@
 /* Show mobile menu only on smaller screens */
 @media screen and (min-width: 768px) {
     #menu-toggle {
-        display: none;
+        display: none; /* Hide the menu button on larger screens */
     }
 
     #mobile-sidebar {
-        display: none;
+        display: none; /* Hide the sidebar on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    #sidebar-nav {
+        display: none; /* Hide sidebar by default on small screens */
+    }
+
+    /* Show mobile sidebar when 'active' class is added */
+    #mobile-sidebar.active {
+        display: block;
+    }
+
+    /* Ensure the menu toggle button is visible on small screens */
+    #menu-toggle {
+        display: block;
     }
 }
