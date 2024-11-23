@@ -89,12 +89,6 @@ html, body {
     transition: margin-left 0.3s ease-in-out; /* Smooth transition when sidebar is toggled */
 }
 
-/* When the sidebar is active */
-#mobile-sidebar.active + #main-content {
-    margin-left: 210px; /* Match the sidebar width */
-    width: calc(100% - 210px); /* Adjust main content width when sidebar is visible */
-}
-
 /* Responsive Styling for Tablets */
 @media only screen and (max-width: 768px) {
     /* Mobile Sidebar (Only Active on Smaller Screens) */
