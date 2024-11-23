@@ -4,15 +4,15 @@
     width: 250px;
     position: fixed;
     top: 0;
-    left: -250px; /* Start off-screen */
+    left: -250px; /* Initially off-screen */
     background-color: #111;
     overflow-y: auto;
-    transition: 0.3s; /* Smooth transition for sliding in/out */
+    transition: 0.3s; /* Smooth transition for sliding */
     padding-top: 20px;
     z-index: 1000;
 }
 
-/* When sidebar is active, move it into view */
+/* When the sidebar is active (visible) */
 #mobile-sidebar.active {
     left: 0; /* Slide in from left */
 }
@@ -63,7 +63,7 @@
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
     #menu-toggle {
-        display: block; /* Show the menu toggle button on small screens */
+        display: block; /* Ensure the menu toggle button is visible on small screens */
     }
 
     #mobile-sidebar {
