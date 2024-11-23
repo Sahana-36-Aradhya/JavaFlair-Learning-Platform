@@ -17,4 +17,3 @@ if (window.innerWidth < 768) {
         })
         .catch(error => console.error('Error loading mobile menu:', error));
 }
-
