@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: -250px; /* Initially off-screen */
-    background-color: #111;
+    background-color: #E6E6FA;
     overflow-y: auto;
     transition: 0.3s; /* Smooth transition for sliding */
     padding-top: 20px;
@@ -38,15 +38,15 @@
 }
 
 #mobile-sidebar a:hover {
-    background-color: #575757;
-    color: #fff;
+    background-color: #B2E0FF;
+    color: white;
 }
 
 /* Button to toggle the sidebar */
 #menu-toggle {
     font-size: 18px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #E6E6FA;
     color: white;
     border: none;
     padding: 10px 15px;
