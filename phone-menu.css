@@ -1,11 +1,11 @@
 /* Sidebar Styling */
 #mobile-sidebar {
     height: 100%; /* Full height of the viewport */
-    width: 200px; /* Sidebar width */
+    width: 210px; /* Sidebar width */
     position: fixed; /* Fixed position */
     top: 0;
     left: -250px; /* Initially off-screen */
-    background-color: #00BFFF; /* Lavender background color */
+    background-color: #E6E6FA; /* Lavender background color */
     overflow-y: auto; /* Enable scrolling if the content overflows */
     transition: left 0.3s ease-in-out; /* Smooth transition when toggling */
     z-index: 1000; /* Ensure it appears above other elements */
@@ -68,7 +68,7 @@
 /* Prevent Horizontal Scrolling */
 html, body {
     margin-top: 20px;
-    marging-right:10px;
+    marging-right:20px;
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
     font-family:'Times New Roman', Times, serif;
