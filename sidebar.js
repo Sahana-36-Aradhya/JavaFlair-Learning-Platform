@@ -26,8 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo(0, 0);
       })
       .catch(error => console.error('Error loading sidebar:', error));
-  } else {
-    // Hide the desktop sidebar on smaller screens
+  } else {  // Mobile view (screen width <= 768px)
+    // Hide the desktop sidebar
     document.getElementById('sidebar-nav').style.display = 'none';
+    
+    // Mobile menu toggle functionality
+    const menuButton = document.getElementById('menu-button'); // Your mobile menu button
+    const mobileMenu = document.getElementById('phone-menu'); // Your mobile menu
+    
+    // Initially hide the mobile menu
+    mobileMenu.style.display = 'none';
+    
+    // Add event listener to the menu button to toggle the mobile menu
+    menuButton.addEventListener('click', function() {
+      if (mobileMenu.style.display === 'none') {
+        mobileMenu.style.display = 'block'; // Show the mobile menu
+      } else {
+        mobileMenu.style.display = 'none'; // Hide the mobile menu
+      }
+    });
   }
 });
