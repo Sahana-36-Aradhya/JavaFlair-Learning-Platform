@@ -1,111 +1,65 @@
 /* Sidebar Styling */
 #sidebar-nav {
   width: 250px; /* Sidebar width */
-  background-color: #E6E6FA; /* Lavender background color */
-  position: fixed; /* Fixed position to make it stay in place */
-  top: 0; /* Align to the top of the viewport */
-  left: 0; /* Align to the left side of the viewport */
-  height: 100vh; /* Full height of the viewport */
-  padding-top: 0; /* Remove padding to ensure no extra space */
-  overflow-y: auto; /* Scrollable content if sidebar exceeds viewport height */
-  border-right: 3px solid #00BFFF; /* Blue border for styling */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
-  z-index: 1000; /* Ensures the sidebar stays on top of other content */
+  background-color: #E6E6FA; /* Lavender background */
+  position: fixed; /* Fixed position to stay in place */
+  top: 0; /* Align to the top */
+  left: -250px; /* Sidebar hidden by default on mobile */
+  height: 100vh; /* Full viewport height */
+  padding-top: 0; /* No extra padding */
+  overflow-y: auto; /* Scrollable content if needed */
+  border-right: 3px solid #00BFFF; /* Blue border */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  z-index: 1000; /* Ensure sidebar is on top */
+  transition: left 0.3s ease; /* Smooth transition for slide-in effect */
 }
 
-/* Sidebar Navigation Links */
-#sidebar-nav ul {
-  list-style-type: none; /* No bullet points for list items */
-  padding: 0; /* No padding for list */
-}
-
-#sidebar-nav ul li a {
-  display: block; /* Full-width clickable area */
-  color: #000000; /* Dark purple text color */
-  padding: 15px 20px; /* Padding for links */
-  background-color: transparent; /* No background color by default */
-  text-decoration: none; /* Remove underline from links */
-}
-
-#sidebar-nav ul li a:hover {
-  background-color: #B2E0FF; /* Very light blue on hover */
-}
-
-#sidebar-nav ul li a.active {
-  background-color: #00BFFF; /* Blue for the active page */
-  color: #000000; /* Black text color for active link */
+/* When Sidebar is Active (Visible) */
+#sidebar-nav.active {
+  left: 0; /* Sidebar visible when active */
 }
 
 /* Main Content */
 #main-content {
-  margin-left: 250px; /* Offset the main content to the right of the sidebar */
-  padding: 0 20px 20px 20px; /* Adjust padding */
-  width: calc(100% - 250px); /* Main content width minus the sidebar */
-  background-color: #F8F8FF; /* Light lavender for the background */
-  color: #000000; /* Text color */
-  overflow: auto; /* Allow scrolling for the main content */
-  transition: margin-left 0.3s ease; /* Smooth transition */
+  margin-left: 250px; /* Offset main content to the right of sidebar */
+  padding: 0 20px 20px 20px;
+  width: calc(100% - 250px); /* Content width reduced by sidebar width */
+  background-color: #F8F8FF;
+  color: #000000;
+  overflow: auto;
+  transition: margin-left 0.3s ease; /* Smooth transition for content shift */
 }
 
-/* Adjust Main Content when Sidebar is Active (For larger screens) */
-#sidebar-nav.active + #main-content {
-  margin-left: 250px; /* Shift content when sidebar is visible */
-  width: calc(100% - 250px); /* Reduce width of main content */
-}
-
-/* Responsive Styling for Tablets */
+/* Responsive Design for Tablets */
 @media only screen and (max-width: 768px) {
-  /* Sidebar for Tablets and Phones */
   #sidebar-nav {
-    width: 250px; /* Sidebar width for tablets */
-    left: -250px; /* Sidebar hidden by default */
-    transition: left 0.3s ease; /* Smooth transition when it appears */
+    left: -250px; /* Sidebar hidden initially */
   }
 
-  /* When Sidebar is Active (Visible) */
-  #sidebar-nav.active {
-    left: 0; /* Move sidebar into view when active */
-  }
-
-  /* Main Content */
   #main-content {
-    margin-left: 0; /* No margin for content */
-    width: 100%; /* Main content takes full width */
+    margin-left: 0; /* No margin for mobile */
+    width: 100%;
   }
 
   /* Mobile Menu Toggle */
   #menu-toggle {
-    display: block; /* Show menu button on mobile */
+    display: block; /* Show the menu toggle button */
   }
 }
 
-/* Additional Mobile-Specific Styling */
+/* Mobile-specific Styling */
 @media only screen and (max-width: 480px) {
   #sidebar-nav {
     width: 100%; /* Sidebar takes full width */
-    position: relative; /* No fixed position for mobile */
-    height: auto; /* Auto height for better scrolling on mobile */
-    border-right: none; /* Remove border on mobile */
-    box-shadow: none; /* Remove shadow for simplicity */
-    left: -100%; /* Sidebar is hidden by default */
+    position: relative;
+    height: auto;
+    border-right: none;
+    box-shadow: none;
   }
 
   #main-content {
-    margin-left: 0; /* No margin for content */
-    width: 100%; /* Main content takes full width */
-    padding-top: 20px; /* Add top padding */
-  }
-
-  #sidebar-nav ul li a {
-    padding: 10px 15px; /* Reduce padding for links on smaller screens */
-  }
-
-  /* Show mobile menu toggle */
-  #menu-toggle {
-    display: block;
-  }
-
-  #sidebar-nav.active {
-    left: 0; /* Show the sidebar when active */
+    margin-left: 0; /* Main content full width */
+    width: 100%; /* Full width */
+    padding-top: 20px;
   }
 }
