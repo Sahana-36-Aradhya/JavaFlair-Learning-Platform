@@ -1,14 +1,16 @@
-/* Sidebar - Initially Hidden */
+/* Sidebar Styling */
 #mobile-sidebar {
     height: 100%; /* Full height of the viewport */
     width: 250px; /* Sidebar width */
     position: fixed; /* Fixed position */
     top: 0;
     left: -250px; /* Initially off-screen */
-    background-color: #111; /* Dark background for the sidebar */
+    background-color: #E6E6FA; /* Lavender background color */
     overflow-y: auto; /* Enable scrolling if the content overflows */
     transition: left 0.3s ease-in-out; /* Smooth transition when toggling */
     z-index: 1000; /* Ensure it appears above other elements */
+    border-right: 3px solid #00BFFF; /* Blue border for styling */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
 }
 
 /* Sidebar - When Active (Visible) */
@@ -30,14 +32,19 @@
 
 #mobile-sidebar a {
     text-decoration: none;
-    color: white;
+    color: #000000; /* Dark text color */
     font-size: 18px;
     display: block;
     transition: 0.3s;
 }
 
 #mobile-sidebar a:hover {
-    background-color: #575757;
+    background-color: #B2E0FF; /* Light blue on hover */
+}
+
+#mobile-sidebar a.active {
+    background-color: #00BFFF; /* Blue for active links */
+    color: #000000; /* Black text color for active link */
 }
 
 /* Toggle Button Styling */
@@ -60,12 +67,23 @@
 
 /* Prevent Horizontal Scrolling */
 html, body {
-    margin-top:20px;
+    margin-top: 20px;
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
 }
 
-/* Responsive Design for Tablets and Mobile */
+/* Main Content */
+#main-content {
+    margin-left: 250px; /* Offset the main content to the right of the sidebar */
+    margin-right: 20px; /* Added margin-right to ensure content is not hidden */
+    padding: 0 20px 20px 20px;
+    width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
+    background-color: #F8F8FF; /* Light lavender for the background */
+    color: #000000; /* Text color */
+    overflow: auto; /* Allow scrolling for the main content */
+}
+
+/* Responsive Styling for Tablets */
 @media only screen and (max-width: 768px) {
     /* Mobile Sidebar (Only Active on Smaller Screens) */
     #sidebar-nav {
@@ -81,5 +99,26 @@ html, body {
     /* Mobile Menu Toggle */
     #menu-toggle {
         display: block; /* Make toggle button visible on small screens */
+    }
+}
+
+/* Responsive Styling for Phones */
+@media only screen and (max-width: 480px) {
+    #sidebar-nav {
+        width: 100%; /* Sidebar takes full width */
+        height: auto; /* Auto height for better scrolling on mobile */
+        position: relative; /* No fixed positioning for better flow */
+        border-right: none; /* Remove border on mobile */
+        box-shadow: none; /* Remove shadow for simplicity */
+    }
+
+    #main-content {
+        margin-left: 0; /* No margin for main content */
+        width: 100%; /* Main content takes full width */
+        padding-top: 20px; /* Add top padding */
+    }
+
+    #sidebar-nav ul li a {
+        padding: 10px 15px; /* Reduce padding for links on smaller screens */
     }
 }
