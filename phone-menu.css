@@ -27,7 +27,7 @@
 #mobile-sidebar li {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #444;
+    border:none;
 }
 
 #mobile-sidebar a {
@@ -68,6 +68,7 @@
 /* Prevent Horizontal Scrolling */
 html, body {
     margin-top: 20px;
+    marging-right:10px;
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
 }
