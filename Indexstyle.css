@@ -64,7 +64,7 @@ p {
 
 /* Center and Resize YouTube Video */
 .video-container {
-    width: 600px; /* Fixed width for the video */
+    width: 50%; /* Fixed width for the video */
     height: auto; /* Fixed height for the video */
     margin: auto;
 }
