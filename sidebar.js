@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Check screen width and load sidebar only for larger screens
-  if (window.innerWidth > 480) { 
+  // Check screen width and load sidebar only for larger screens (desktop/tablet)
+  if (window.innerWidth > 768) {  // Desktop/tablet (screen width > 768px)
     // Load the sidebar content for desktop/tablet
     fetch('HTML/sidebar.html') // Adjust the path if necessary
       .then(response => {
@@ -26,5 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo(0, 0);
       })
       .catch(error => console.error('Error loading sidebar:', error));
+  } else {
+    // Hide the desktop sidebar on smaller screens
+    document.getElementById('sidebar-nav').style.display = 'none';
   }
 });
