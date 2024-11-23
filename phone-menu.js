@@ -1,11 +1,16 @@
 // Function to toggle the visibility of the mobile sidebar
 function toggleSidebar() {
-    const sidebar = document.getElementById("mobile-sidebar");
+    const sidebar = document.getElementById('mobile-sidebar');
+
+    // Check if the sidebar is using inline style for display
     if (sidebar.style.display === "block") {
-        sidebar.style.display = "none";
+        sidebar.style.display = "none";  // Hide it
     } else {
-        sidebar.style.display = "block";
+        sidebar.style.display = "block"; // Show it
     }
+
+    // Also toggle the 'active' class on the sidebar
+    sidebar.classList.toggle('active');
 }
 
 // Dynamically load the mobile menu only on smaller screens
@@ -21,6 +26,7 @@ if (window.innerWidth < 768) {
         })
         .catch(error => console.error('Error loading mobile menu:', error));
 }
+
 /* Initially hide the mobile menu */
 #phone-menu {
   visibility: hidden; /* Hide the menu without taking space */
