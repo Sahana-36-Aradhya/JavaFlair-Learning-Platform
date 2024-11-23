@@ -1,11 +1,11 @@
 /* Sidebar Styling */
 #mobile-sidebar {
     height: 100%; /* Full height of the viewport */
-    width: 150px; /* Sidebar width */
+    width: 200px; /* Sidebar width */
     position: fixed; /* Fixed position */
     top: 0;
     left: -250px; /* Initially off-screen */
-    background-color: #E6E6FA; /* Lavender background color */
+    background-color: #00BFFF;/* Lavender background color */
     overflow-y: auto; /* Enable scrolling if the content overflows */
     transition: left 0.3s ease-in-out; /* Smooth transition when toggling */
     z-index: 1000; /* Ensure it appears above other elements */
