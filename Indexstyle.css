@@ -63,9 +63,9 @@ p {
 }
 
 .video-container {
-    width: 70%; /* Matches screenshot width */
-    height: 60%; /* Fixed height */
-    margin: 20px auto; /* Center the container and add spacing */
+    width: 50%; /* Matches screenshot width */
+    height: 70%; /* Fixed height */
+    margin: auto; /* Center the container and add spacing */
     background-color: #f8f8f8; /* Light background for contrast */
     display: flex; /* Ensures content stays centered */
     align-items: center; /* Vertical centering */
