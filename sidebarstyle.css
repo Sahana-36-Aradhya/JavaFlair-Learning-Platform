@@ -1,16 +1,21 @@
 /* Sidebar Styling */
 #sidebar-nav {
-  width: 250px; /* Width of the sidebar */
+  width: 250px;
   background-color: #E6E6FA; /* Lavender background color */
   position: fixed; /* Fixed position to make it stay in place */
   top: 0; /* Align to the top of the viewport */
-  left: 0; /* Align to the left side of the viewport */
+  left: -250px; /* Start hidden (updated for sliding effect) */
   height: 100vh; /* Full height of the viewport */
   padding-top: 0; /* Remove padding to ensure no extra space */
   overflow-y: auto; /* Scrollable content if sidebar exceeds viewport height */
   border-right: 3px solid #00BFFF; /* Blue border for styling */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
   z-index: 1000; /* Ensures the sidebar stays on top of other content */
+  transition: all 0.3s ease; /* Smooth sliding transition */
+}
+
+#sidebar-nav.active {
+  left: 0; /* Show the sidebar */
 }
 
 /* Sidebar Navigation Links */
@@ -36,14 +41,33 @@
   color: #000000; /* Black text color for active link */
 }
 
+/* Toggle Button (Hidden by Default) */
+#menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  background-color: #00BFFF; /* Blue button */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure it appears above the sidebar */
+  display: none; /* Hidden by default */
+}
+
 /* Main Content */
 #main-content {
-  margin-left: 250px; /* Offset the main content to the right of the sidebar */
-  padding: 0 20px 20px 20px; /* Remove top padding to align with the top */
-  width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
+  padding: 0 20px 20px 20px; /* Adjust padding */
+  width: 100%; /* Ensure content takes full width */
   background-color: #F8F8FF; /* Light lavender for the background */
   color: #000000; /* Text color */
   overflow: auto; /* Allow scrolling for the main content */
+  transition: margin-left 0.3s ease; /* Smooth shifting effect */
+}
+
+#main-content.shift {
+  margin-left: 250px; /* Shift content when the sidebar is active */
 }
 
 /* Responsive Styling for Tablets */
@@ -60,21 +84,26 @@
 
 /* Responsive Styling for Phones */
 @media only screen and (max-width: 480px) {
+  #menu-toggle {
+    display: block; /* Show the toggle button only on phones */
+  }
+
   #sidebar-nav {
-    width: 100%; /* Sidebar takes full width */
-    height: auto; /* Auto height for better scrolling on mobile */
-    position: relative; /* No fixed positioning for better flow */
-    border-right: none; /* Remove border on mobile */
-    box-shadow: none; /* Remove shadow for simplicity */
+    width: 250px; /* Full-width sidebar */
+    left: -250px; /* Keep hidden initially */
+    height: 100%; /* Sidebar fills the entire height */
+    position: fixed; /* Fixed position for sliding */
+    border-right: 3px solid #00BFFF; /* Blue border */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition */
   }
 
   #main-content {
-    margin-left: 0; /* No margin for main content */
-    width: 100%; /* Main content takes full width */
-    padding-top: 20px; /* Add top padding */
+    margin-left: 0; /* No margin for main content on phones */
+    width: 100%; /* Full width */
   }
 
   #sidebar-nav ul li a {
-    padding: 10px 15px; /* Reduce padding for links on smaller screens */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
   }
 }
