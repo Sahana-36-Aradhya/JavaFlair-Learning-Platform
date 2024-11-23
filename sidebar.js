@@ -1,48 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Check screen width and load sidebar only for larger screens (desktop/tablet)
-  if (window.innerWidth > 768) {  // Desktop/tablet (screen width > 768px)
+document.addEventListener('DOMContentLoaded', function () {
+  const sidebar = document.getElementById('sidebar-nav');
+  const menuButton = document.getElementById('menu-button'); // The menu toggle button for mobile
+  const currentLocation = window.location.pathname.split('/').pop();
+
+  // For larger screens
+  if (window.innerWidth > 768) {
     // Load the sidebar content for desktop/tablet
-    fetch('HTML/sidebar.html') // Adjust the path if necessary
-      .then(response => {
+    fetch('HTML/sidebar.html')
+      .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok: ' + response.statusText);
         }
         return response.text();
       })
-      .then(data => {
-        document.getElementById('sidebar-nav').innerHTML = data;
+      .then((data) => {
+        sidebar.innerHTML = data;
 
-        // Set the active class for the current page
-        const currentLocation = window.location.pathname.split('/').pop();
+        // Set the active link
         const navLinks = document.querySelectorAll('#sidebar-nav ul li a');
-
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
           if (link.getAttribute('href') === currentLocation) {
             link.classList.add('active');
           }
         });
 
-        // Scroll to the top of the page after loading the sidebar
+        // Scroll to top after loading
         window.scrollTo(0, 0);
       })
-      .catch(error => console.error('Error loading sidebar:', error));
-  } else {  // Mobile view (screen width <= 768px)
-    // Hide the desktop sidebar
-    document.getElementById('sidebar-nav').style.display = 'none';
-    
-    // Mobile menu toggle functionality
-    const menuButton = document.getElementById('menu-button'); // Your mobile menu button
-    const mobileMenu = document.getElementById('phone-menu'); // Your mobile menu
-    
-    // Initially hide the mobile menu without taking up space
-    mobileMenu.classList.remove('visible');
-
-    // Add event listener to the menu button to toggle the mobile menu
-    menuButton.addEventListener('click', function() {
-      if (mobileMenu.classList.contains('visible')) {
-        mobileMenu.classList.remove('visible'); // Hide the mobile menu and remove space
+      .catch((error) => console.error('Error loading sidebar:', error));
+  } else {
+    // Mobile: Add toggle functionality
+    sidebar.style.left = '-250px'; // Start hidden
+    menuButton.addEventListener('click', () => {
+      if (sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active'); // Hide the sidebar
       } else {
-        mobileMenu.classList.add('visible'); // Show the mobile menu and make it take space
+        sidebar.classList.add('active'); // Show the sidebar
       }
     });
   }
