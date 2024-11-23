@@ -4,14 +4,13 @@
   background-color: #E6E6FA; /* Lavender background color */
   position: fixed; /* Fixed position to make it stay in place */
   top: 0; /* Align to the top of the viewport */
-  left: -250px; /* Sidebar hidden by default */
+  left: 0; /* Align to the left side of the viewport */
   height: 100vh; /* Full height of the viewport */
   padding-top: 0; /* Remove padding to ensure no extra space */
   overflow-y: auto; /* Scrollable content if sidebar exceeds viewport height */
   border-right: 3px solid #00BFFF; /* Blue border for styling */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
   z-index: 1000; /* Ensures the sidebar stays on top of other content */
-  transition: left 0.3s ease; /* Smooth transition for slide-in effect */
 }
 
 /* Sidebar Navigation Links */
@@ -39,45 +38,74 @@
 
 /* Main Content */
 #main-content {
-  margin-left: 250px; /* Offset the main content to the right of the sidebar */
-  padding: 0 20px 20px 20px; /* Remove top padding to align with the top */
-  width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
+  margin-left: 0; /* No margin to the left of content (no offset) */
+  padding: 0 20px 20px 20px; /* Adjust padding */
+  width: 100%; /* Full width of the screen */
   background-color: #F8F8FF; /* Light lavender for the background */
   color: #000000; /* Text color */
   overflow: auto; /* Allow scrolling for the main content */
-  transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+  transition: margin-left 0.3s ease; /* Smooth transition */
 }
 
-/* Responsive Styling for Tablets */
+/* Adjust Main Content when Sidebar is Active (For larger screens) */
+#sidebar-nav.active + #main-content {
+  margin-left: 250px; /* Shift content when sidebar is visible */
+  width: calc(100% - 250px); /* Reduce width of main content */
+}
+
+/* Responsive Styling for Tablets and Phones */
 @media only screen and (max-width: 768px) {
+  /* Sidebar for Tablets and Phones */
   #sidebar-nav {
-    left: -250px; /* Sidebar hidden initially */
-    width: 200px; /* Narrower sidebar on tablets */
+    width: 250px; /* Sidebar width for tablets and phones */
+    left: -250px; /* Sidebar hidden by default */
+    transition: left 0.3s ease; /* Smooth transition when it appears */
   }
 
+  /* When Sidebar is Active (Visible) */
+  #sidebar-nav.active {
+    left: 0; /* Move sidebar into view when active */
+  }
+
+  /* Main Content */
   #main-content {
-    margin-left: 0; /* Adjust content margin accordingly */
-    width: 100%; /* Adjust content width */
+    margin-left: 0; /* No margin for content */
+    width: 100%; /* Main content takes full width */
+  }
+
+  /* Mobile Menu Toggle */
+  #menu-toggle {
+    display: block; /* Show menu button on mobile */
   }
 }
 
-/* Responsive Styling for Phones */
+/* Additional Mobile-Specific Styling */
 @media only screen and (max-width: 480px) {
   #sidebar-nav {
     width: 100%; /* Sidebar takes full width */
+    position: relative; /* No fixed position for mobile */
     height: auto; /* Auto height for better scrolling on mobile */
-    position: relative; /* No fixed positioning for better flow */
     border-right: none; /* Remove border on mobile */
     box-shadow: none; /* Remove shadow for simplicity */
+    left: -100%; /* Sidebar is hidden by default */
   }
 
   #main-content {
-    margin-left: 0; /* No margin for main content */
+    margin-left: 0; /* No margin for content */
     width: 100%; /* Main content takes full width */
     padding-top: 20px; /* Add top padding */
   }
 
   #sidebar-nav ul li a {
     padding: 10px 15px; /* Reduce padding for links on smaller screens */
+  }
+
+  /* Show mobile menu toggle */
+  #menu-toggle {
+    display: block;
+  }
+
+  #sidebar-nav.active {
+    left: 0; /* Show the sidebar when active */
   }
 }
