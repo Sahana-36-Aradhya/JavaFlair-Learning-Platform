@@ -55,7 +55,7 @@
     background-color: #00BFFF; 
     color: white;
     border: none;
-    padding: 1px; /* Reduced padding as requested */
+    padding: 3px; /* Reduced padding as requested */
     position: fixed;
     top: 10px;
     left: 10px;
