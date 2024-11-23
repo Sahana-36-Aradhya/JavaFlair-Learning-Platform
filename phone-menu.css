@@ -4,17 +4,16 @@
     width: 250px; /* Sidebar width */
     position: fixed; /* Fixed position */
     top: 0;
-    left: 0; /* Always aligned to the left */
+    left: -250px; /* Initially off-screen */
     background-color: #111; /* Dark background for the sidebar */
     overflow-y: auto; /* Enable scrolling if the content overflows */
-    transform: translateX(-100%); /* Completely off-screen */
-    transition: transform 0.3s ease-in-out; /* Smooth transition when toggling */
+    transition: left 0.3s ease-in-out; /* Smooth transition when toggling */
     z-index: 1000; /* Ensure it appears above other elements */
 }
 
 /* Sidebar - When Active (Visible) */
 #mobile-sidebar.active {
-    transform: translateX(0); /* Slide into view */
+    left: 0; /* Slide into view */
 }
 
 /* Links inside the sidebar */
@@ -64,4 +63,23 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
+}
+
+/* Responsive Design for Tablets and Mobile */
+@media only screen and (max-width: 768px) {
+    /* Mobile Sidebar (Only Active on Smaller Screens) */
+    #sidebar-nav {
+        display: none; /* Hide desktop sidebar on mobile */
+    }
+
+    /* Ensure Full Width for Main Content */
+    #main-content {
+        margin-left: 0; /* Full width */
+        width: 100%;
+    }
+
+    /* Mobile Menu Toggle */
+    #menu-toggle {
+        display: block; /* Make toggle button visible on small screens */
+    }
 }
