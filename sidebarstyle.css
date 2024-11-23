@@ -6,7 +6,6 @@
   top: 0; /* Align to the top of the viewport */
   left: -250px; /* Move it off-screen by default */
   height: 100vh; /* Full height */
-  padding-top: 0; /* No extra padding */
   overflow-y: auto; /* Scrollable content if needed */
   border-right: 3px solid #00BFFF; /* Blue border for styling */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Depth effect */
@@ -14,16 +13,16 @@
   transition: all 0.3s ease-in-out; /* Smooth transitions */
 }
 
-/* When Sidebar is Active (Visible) */
+/* Sidebar Active (Visible) */
 #sidebar-nav.active {
   left: 0; /* Slide into view */
 }
 
-/* Main Content */
+/* Main Content Styling */
 #main-content {
-  margin-left: 0; /* By default, no offset for the main content */
+  margin-left: 0; /* Default: no offset */
   padding: 0 20px 20px 20px; /* Adjust padding */
-  width: 100%; /* Full width by default */
+  width: 100%; /* Full width */
   background-color: #F8F8FF; /* Light lavender background */
   color: #000000; /* Text color */
   overflow: auto; /* Allow scrolling */
@@ -32,24 +31,42 @@
 
 /* Adjust Main Content When Sidebar is Active */
 #sidebar-nav.active + #main-content {
-  margin-left: 250px; /* Shift content when sidebar is visible */
+  margin-left: 250px; /* Shift content to make space for sidebar */
   width: calc(100% - 250px); /* Reduce width accordingly */
 }
 
-/* Responsive Design for Tablets and Mobile */
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
   #sidebar-nav {
-    left: -250px; /* Hide sidebar off-screen */
-    display: block; /* Ensure the sidebar exists but is hidden */
+    left: -250px; /* Hide sidebar off-screen for mobile */
   }
 
   #main-content {
-    margin-left: 0; /* Ensure full width for smaller screens */
-    width: 100%; /* Full width */
+    margin-left: 0; /* Full width for mobile */
+    width: 100%; /* Ensure no offset */
   }
 
-  /* Mobile Menu Toggle */
+  /* Show Mobile Menu Button */
   #menu-toggle {
-    display: block; /* Make toggle button visible on small screens */
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background-color: #00BFFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+  }
+}
+
+/* Hide Menu Button for Desktop/Tablet */
+@media only screen and (min-width: 769px) {
+  #menu-toggle {
+    display: none; /* Don't show the toggle button on larger screens */
   }
 }
