@@ -62,23 +62,34 @@ p {
   background-color: #0056b3;
 }
 
+/* Center and Resize YouTube Video */
 .video-container {
-    position: relative;
-    width: 100%; /* Full width for responsiveness */
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-    height: 0;
-    overflow: hidden;
+    width: 320px; /* Fixed width for the video */
+    height: 180px; /* Fixed height for the video */
+    margin: auto;
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    border: none; /* Remove iframe border */
+    width: 100%; /* Make iframe width 100% of container */
+    height: 100%; /* Make iframe height 100% of container */
+    border: none;
 }
 
+/* Responsive adjustments for tablets */
+@media only screen and (max-width: 768px) {
+    .video-container {
+        width: 280px; /* Smaller width for tablets */
+        height: 157px; /* Adjust height to maintain 16:9 aspect ratio */
+    }
+}
+
+/* Responsive adjustments for phones */
+@media only screen and (max-width: 480px) {
+    .video-container {
+        width: 240px; /* Even smaller width for phones */
+        height: 135px; /* Adjust height for phones */
+    }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
