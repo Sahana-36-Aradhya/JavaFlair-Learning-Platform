@@ -5,7 +5,7 @@
     position: fixed; /* Fixed position */
     top: 0;
     left: -250px; /* Initially off-screen */
-    background-color: #00BFFF;/* Lavender background color */
+    background-color: #00BFFF; /* Lavender background color */
     overflow-y: auto; /* Enable scrolling if the content overflows */
     transition: left 0.3s ease-in-out; /* Smooth transition when toggling */
     z-index: 1000; /* Ensure it appears above other elements */
@@ -33,7 +33,7 @@
 #mobile-sidebar a {
     text-decoration: none;
     color: #000000; /* Dark text color */
-    font-size: 18px;
+    font-size: 20px; /* Increased font size for better visibility */
     display: block;
     transition: 0.3s;
 }
@@ -49,12 +49,12 @@
 
 /* Toggle Button Styling */
 #menu-toggle {
-    font-size: 18px;
+    font-size: 20px; /* Increased font size for better readability */
     cursor: pointer;
     background-color: #00BFFF; 
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 18px; /* Adjusted padding slightly */
     position: fixed;
     top: 10px;
     left: 10px;
@@ -72,6 +72,8 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
     font-family:'Times New Roman', Times, serif;
+    word-wrap: break-word; /* Break words when necessary */
+    overflow-wrap: break-word; 
 }
 
 /* Main Content */
@@ -83,6 +85,8 @@ html, body {
     background-color: #F8F8FF; /* Light lavender for the background */
     color: #000000; /* Text color */
     overflow: auto; /* Allow scrolling for the main content */
+    font-size: 18px; /* Adjusted main content font size */
+    line-height: 1.6; /* Better line spacing for readability */
 }
 
 /* Responsive Styling for Tablets */
@@ -96,11 +100,13 @@ html, body {
     #main-content {
         margin-left: 0; /* Full width */
         width: 100%;
+        font-size: 16px; /* Slightly smaller font size for tablets */
     }
 
     /* Mobile Menu Toggle */
     #menu-toggle {
         display: block; /* Make toggle button visible on small screens */
+        font-size: 18px; /* Adjust toggle button font size for tablets */
     }
 }
 
@@ -118,9 +124,11 @@ html, body {
         margin-left: 0; /* No margin for main content */
         width: 100%; /* Main content takes full width */
         padding-top: 20px; /* Add top padding */
+        font-size: 16px; /* Smaller font size for phones */
     }
 
     #sidebar-nav ul li a {
+        font-size: 16px; /* Adjust font size for sidebar links on smaller screens */
         padding: 10px 15px; /* Reduce padding for links on smaller screens */
     }
 }
