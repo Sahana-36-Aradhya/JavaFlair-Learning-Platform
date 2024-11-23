@@ -21,3 +21,19 @@ if (window.innerWidth < 768) {
         })
         .catch(error => console.error('Error loading mobile menu:', error));
 }
+/* Initially hide the mobile menu */
+#phone-menu {
+  visibility: hidden; /* Hide the menu without taking space */
+  position: absolute; /* Remove it from the document flow */
+  top: 0; /* Adjust position if necessary */
+  left: 0; /* Adjust position if necessary */
+  width: 100%; /* Make the mobile menu full width */
+  background-color: #333; /* Style the mobile menu background */
+  z-index: 1000; /* Make sure it appears above other content */
+}
+
+/* When the menu is visible */
+#phone-menu.visible {
+  visibility: visible; /* Make the menu visible */
+  position: relative; /* Place it in the document flow */
+}
