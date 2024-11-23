@@ -48,12 +48,18 @@
 
 /* Responsive Styling for Tablets */
 @media only screen and (max-width: 768px) {
+  /* Hide sidebar on mobile and tablets */
   #sidebar-nav {
-    width: 200px; /* Narrower sidebar on tablets */
+    display: none; /* Completely hide the sidebar */
   }
 
   #main-content {
-    margin-left: 200px; /* Adjust content margin accordingly */
-    width: calc(100% - 200px); /* Adjust content width */
+    margin-left: 0; /* Adjust main content to take the full width */
+    width: 100%; /* Ensure the content takes the full screen width */
+  }
+
+  /* Show mobile menu */
+  #menu-toggle {
+    display: block; /* Ensure the menu toggle button is visible on small screens */
   }
 }
