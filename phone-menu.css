@@ -69,7 +69,8 @@
 
 /* Prevent Horizontal Scrolling */
 html, body {
-    margin:0;
+    margin-top: 20px;
+    margin-right: 20px; /* Ensure proper space on the right */
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
     font-family:'Times New Roman', Times, serif;
@@ -77,16 +78,15 @@ html, body {
     overflow-wrap: break-word; 
 }
 
+/* Main Content */
 #main-content {
-    padding: 20px; /* Consistent padding */
-    margin-left: 0; /* Default to no margin */
-    width: 100%; /* Full width by default */
+    padding: 0 20px 20px 20px;
+    width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
     background-color: #F8F8FF; /* Light lavender for the background */
     color: #000000; /* Text color */
     overflow: auto; /* Allow scrolling for the main content */
     font-size: 18px; /* Adjusted main content font size */
     line-height: 1.6; /* Better line spacing for readability */
-    transition: margin-left 0.3s ease-in-out; /* Smooth transition when sidebar is toggled */
 }
 
 /* Responsive Styling for Tablets */
