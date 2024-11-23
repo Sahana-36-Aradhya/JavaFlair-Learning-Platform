@@ -80,8 +80,6 @@ html, body {
 
 /* Main Content */
 #main-content {
-    margin-left: 250px; /* Offset the main content to the right of the sidebar */
-    margin-right: 30px; /* Adjusted margin-right for better visibility of content */
     padding: 0 20px 20px 20px;
     width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
     background-color: #F8F8FF; /* Light lavender for the background */
