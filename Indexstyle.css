@@ -64,7 +64,7 @@ p {
 
 .video-container {
     width: 50%; /* Fixed width for the video */
-    height: 45%; /* Slightly less height than width for a better aspect ratio */
+    height: 55%; 
     margin: auto;
 }
 
