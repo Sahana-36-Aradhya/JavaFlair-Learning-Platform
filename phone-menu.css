@@ -36,6 +36,7 @@
     font-size: 20px; /* Increased font size for better visibility */
     display: block;
     transition: 0.3s;
+    background-color: #E6E6FA; /* Match the sidebar background */
 }
 
 #mobile-sidebar a:hover {
@@ -54,7 +55,7 @@
     background-color: #00BFFF; 
     color: white;
     border: none;
-    padding: 12px 18px; /* Adjusted padding slightly */
+    padding: 1px; /* Reduced padding as requested */
     position: fixed;
     top: 10px;
     left: 10px;
@@ -62,13 +63,13 @@
 }
 
 #menu-toggle:hover {
-    background-color: #E6E6FA;;
+    background-color: #E6E6FA; /* Match the sidebar background on hover */
 }
 
 /* Prevent Horizontal Scrolling */
 html, body {
     margin-top: 20px;
-    marging-right:20px;
+    margin-right: 20px; /* Ensure proper space on the right */
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
     font-family:'Times New Roman', Times, serif;
@@ -79,7 +80,7 @@ html, body {
 /* Main Content */
 #main-content {
     margin-left: 250px; /* Offset the main content to the right of the sidebar */
-    margin-right: 20px; /* Added margin-right to ensure content is not hidden */
+    margin-right: 30px; /* Adjusted margin-right for better visibility of content */
     padding: 0 20px 20px 20px;
     width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
     background-color: #F8F8FF; /* Light lavender for the background */
