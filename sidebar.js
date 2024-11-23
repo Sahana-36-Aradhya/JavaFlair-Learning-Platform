@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.getElementById('menu-button'); // Your mobile menu button
     const mobileMenu = document.getElementById('phone-menu'); // Your mobile menu
     
-    // Initially hide the mobile menu
-    mobileMenu.style.display = 'none';
-    
+    // Initially hide the mobile menu without taking up space
+    mobileMenu.classList.remove('visible');
+
     // Add event listener to the menu button to toggle the mobile menu
     menuButton.addEventListener('click', function() {
-      if (mobileMenu.style.display === 'none') {
-        mobileMenu.style.display = 'block'; // Show the mobile menu
+      if (mobileMenu.classList.contains('visible')) {
+        mobileMenu.classList.remove('visible'); // Hide the mobile menu and remove space
       } else {
-        mobileMenu.style.display = 'none'; // Hide the mobile menu
+        mobileMenu.classList.add('visible'); // Show the mobile menu and make it take space
       }
     });
   }
