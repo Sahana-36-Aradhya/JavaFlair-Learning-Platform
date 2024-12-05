@@ -7,8 +7,8 @@ body {
   color: #333;
   line-height: 1.6;
   padding-top: 3rem;
-  width:95%;
-  overflow:auto;
+  width: 95%; /* Adjusted to prevent horizontal overflow */
+  overflow-x: hidden; /* Ensure no horizontal scrolling */
 }
 
 a {
@@ -27,7 +27,7 @@ a:hover {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
-  margin-left: 300px;
+  margin-left: 300px; /* Space for the fixed sidebar */
   box-sizing: border-box; /* Include padding and borders in width */
 }
 
@@ -103,6 +103,7 @@ p {
   .container {
     margin-left: 0; /* Remove left margin for smaller screens */
     max-width: 100%; /* Make container full-width */
+    overflow-x: hidden; /* Prevent overflow */
   }
 
   #sidebar-nav {
@@ -127,6 +128,7 @@ p {
 
   #sidebar-nav {
     padding: 5px; /* Adjust padding for smaller devices */
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
   }
 }
 
@@ -135,6 +137,7 @@ p {
   .container {
     padding: 15px;
     margin: 10px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   h1, h2 {
@@ -151,6 +154,7 @@ p {
   .container {
     padding: 10px;
     margin: 10px;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
   }
 
   h1, h2 {
