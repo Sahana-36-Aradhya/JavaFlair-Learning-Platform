@@ -47,6 +47,15 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6b90b7;
+}
+
 /* Typography */
 h1 {
   font-size: 1.8em; /* Increased for better visibility */
