@@ -35,12 +35,12 @@ body {
 /* Main Content */
 .container {
   max-width: calc(100% - 280px);
-  margin: 40px auto;
+  margin: 40px 60px;
   padding: 20px 40px; /* Added left & right spacing */
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
-  margin-left: 300px; /* Space for the fixed sidebar */
+  margin-left: 330px; /* Space for the fixed sidebar */
 }
 
 /* Typography */
