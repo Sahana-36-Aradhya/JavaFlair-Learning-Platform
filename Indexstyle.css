@@ -1,3 +1,5 @@
+
+/* Base Styling */
 body {
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
@@ -5,9 +7,9 @@ body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
-  padding-top: 3rem; 
-  overflow-x: auto;
-  width: 95%;
+  padding-top: 3rem;
+  width: 95%; /* Adjusted to prevent horizontal overflow */
+  overflow-x: hidden; /* Ensure no horizontal scrolling */
 }
 
 a {
@@ -20,11 +22,27 @@ a:hover {
 }
 
 .container {
-  width: calc(100% - 300px);
-  margin: 40px 40px;
+  width: calc(100% - 300px); /* Adjust to account for sidebar */
+  margin: 40px auto;
+  padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
-  margin-left: 300px;
+  margin-left: 300px; /* Space for the fixed sidebar */
+  box-sizing: border-box; 
+}
+
+/* Sidebar Styling */
+#sidebar-nav {
+  width: 300px; /* Fixed sidebar width */
+  position: fixed; /* Keep the sidebar fixed on the left */
+  left: 0;
+  top: 0;
+  height: 100%; /* Full height of the viewport */
+  background-color: #E6E6FA; /* Light lavender background */
+  overflow-y: auto; /* Enable scrolling within the sidebar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  padding: 10px; /* Add padding inside the sidebar */
+  box-sizing: border-box;
 }
 
 /* Typography */
@@ -45,6 +63,7 @@ p {
   margin: 20px 0;
 }
 
+/* Navigation Button Style */
 .nav-button {
   background-color: #007BFF;
   color: #fff;
@@ -60,11 +79,65 @@ p {
   background-color: #0056b3;
 }
 
+.video-container {
+  width: 50%; /* Fixed width for the video */
+  height: 55%;
+  margin: auto;
+}
+
+/* Style for the iframe */
+.video-container iframe {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  border: 2px solid #ddd; /* Subtle border for definition */
+  border-radius: 5px; /* Matches container's rounded corners */
+}
+
+/* Responsive adjustments for tablets */
+@media only screen and (max-width: 768px) {
+  .video-container {
+    width: 280px; /* Smaller width for tablets */
+    height: 157px; /* Adjust height to maintain 16:9 aspect ratio */
+  }
+
+  .container {
+    margin-left: 0; /* Remove left margin for smaller screens */
+    max-width: 100%; /* Make container full-width */
+    overflow-x: hidden; /* Prevent overflow */
+  }
+
+  #sidebar-nav {
+    position: relative; /* Sidebar flows naturally in smaller screens */
+    width: 100%; /* Full-width sidebar */
+    height: auto; /* Adjust height automatically */
+    box-shadow: none; /* Remove shadow on small screens */
+  }
+}
+
+/* Responsive adjustments for phones */
+@media only screen and (max-width: 480px) {
+  .video-container {
+    width: 240px; /* Even smaller width for phones */
+    height: 135px; /* Adjust height for phones */
+  }
+
+  .container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #sidebar-nav {
+    padding: 5px; /* Adjust padding for smaller devices */
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 15px;
     margin: 10px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
   h1, h2 {
@@ -81,6 +154,7 @@ p {
   .container {
     padding: 10px;
     margin: 10px;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
   }
 
   h1, h2 {
@@ -90,7 +164,7 @@ p {
   .nav-button {
     padding: 5px 8px;
     font-size: 0.75em;
-    flex: 1 1 45%; 
-    margin: 0 5px; 
+    flex: 1 1 45%; /* Adjust to fit better on small screens */
+    margin: 0 5px; /* Reduce space between buttons */
   }
 }
