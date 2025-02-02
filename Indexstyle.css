@@ -24,7 +24,7 @@ a:hover {
 .container {
   width: calc(100% - 300px); /* Adjust to account for sidebar */
   margin: 40px auto;
-  padding: 30px;
+  padding: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
   margin-left: 300px; /* Space for the fixed sidebar */
