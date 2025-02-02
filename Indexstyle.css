@@ -1,3 +1,4 @@
+
 /* Base Styling */
 body {
   font-family: 'Times New Roman', Times, serif;
@@ -7,7 +8,7 @@ body {
   color: #333;
   line-height: 1.6;
   padding-top: 3rem;
-  width: 90%; /* Adjusted to prevent horizontal overflow */
+  width: 95%; /* Adjusted to prevent horizontal overflow */
   overflow-x: hidden; /* Ensure no horizontal scrolling */
 }
 
@@ -22,12 +23,12 @@ a:hover {
 
 .container {
   width: calc(100% - 300px); /* Adjust to account for sidebar */
-  margin: 40px 10px;
-  padding: 500px;
+  margin: 40px 20px;
+  padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
   margin-left: 300px; /* Space for the fixed sidebar */
-
+  box-sizing: border-box; 
 }
 
 /* Sidebar Styling */
