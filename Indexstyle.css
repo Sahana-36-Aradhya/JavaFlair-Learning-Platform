@@ -21,11 +21,11 @@ body {
 
 /* Sidebar Styling */
 #sidebar-nav {
-  width: 280px; /* Reduced width slightly */
+  width: 260px; /* Reduced width slightly for better spacing */
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh; /* Full height */
+  height: 100vh;
   background-color: #E6E6FA;
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -34,9 +34,9 @@ body {
 
 /* Main Content */
 .container {
-  max-width: calc(100% - 280px); /* Prevents overflow */
+  max-width: calc(100% - 280px);
   margin: 40px auto;
-  padding: 20px;
+  padding: 20px 40px; /* Added left & right spacing */
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-wrap: break-word;
@@ -101,7 +101,7 @@ p {
   .container {
     width: 100%;
     margin: 10px auto;
-    padding: 15px;
+    padding: 15px 20px; /* Adjusted spacing */
     margin-left: 0; /* Remove sidebar space on small screens */
   }
 
@@ -125,7 +125,7 @@ p {
 @media only screen and (max-width: 480px) {
   .container {
     width: 100%;
-    padding: 10px;
+    padding: 10px 15px; /* Adjusted spacing */
     margin: 8px auto;
   }
 
