@@ -47,13 +47,15 @@ body {
   box-sizing: border-box;
 }
 
+/* Links (Underline Removed) */
 a {
   color: #007BFF;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline */
 }
 
 a:hover {
   color: #6b90b7;
+  text-decoration: none; /* Prevent underline on hover */
 }
 
 /* Typography */
