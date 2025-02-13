@@ -125,56 +125,78 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+  }
+
   .container {
     height: auto;
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .logo {
-    width: 40px;
+    width: 35px;
+    position: absolute;
     top: 10px;
     left: 10px;
   }
 
   .name {
-    font-size: 20px;
-    margin: 20px 0 0 60px;
+    font-size: 18px;
+    margin: 15px 0 0 50px;
   }
 
   .mainheading {
-    font-size: 28px;
-    margin: 100px 20px 20px 20px;
+    font-size: 24px;
+    margin: 80px 10px 10px 10px;
     text-align: center;
+    background: linear-gradient(to right, rgb(96, 224, 224), rgb(115, 188, 216));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
   }
 
   .intro-container {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     text-align: center;
-    max-width: 100%;
+    max-width: 95%;
+    padding: 5px;
+    margin-top: 5px;
   }
 
   .intro {
-    font-size: 14px;
-    width: 95%;
-    padding: 10px;
+    font-size: 13px;
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+    line-height: 1.4;
   }
 
   .developer {
-    width: 120px; 
-    margin: 10px auto; /* Center the image */
+    width: 100px; 
+    margin: 5px auto;
   }
 
   .btn-container {
-    flex-direction: column; /* Stack buttons vertically */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 20px auto;
+    margin: 15px auto;
   }
 
   .btn {
     font-size: 14px;
-    padding: 10px 20px;
-    width: 80%; /* Make buttons wider */
+    padding: 8px 15px;
+    width: 80%;
+    border-radius: 20px;
+    margin: 5px 0;
+    text-align: center;
   }
 }
-
