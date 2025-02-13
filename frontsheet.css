@@ -123,3 +123,58 @@ body {
   color: white;
   box-shadow: 0 0 10px greenyellow;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 40px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .name {
+    font-size: 20px;
+    margin: 20px 0 0 60px;
+  }
+
+  .mainheading {
+    font-size: 28px;
+    margin: 100px 20px 20px 20px;
+    text-align: center;
+  }
+
+  .intro-container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .intro {
+    font-size: 14px;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .developer {
+    width: 120px; 
+    margin: 10px auto; /* Center the image */
+  }
+
+  .btn-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 80%; /* Make buttons wider */
+  }
+}
+
