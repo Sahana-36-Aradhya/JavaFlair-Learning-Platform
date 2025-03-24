@@ -3,40 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaFlair Online Tutorial</title>
+    <meta name="description" content="JavaFlair - Your ultimate guide to mastering Java programming. Learn Java with structured tutorials, in-depth notes, and hands-on coding exercises.">
+    <meta name="keywords" content="Java programming, Java tutorials, coding exercises, Java learning platform">
+    <meta name="author" content="JavaFlair">
+    <title>JavaFlair - Master Java Programming</title>
     <link rel="stylesheet" href="frontsheet.css">
     <link rel="icon" type="image/png" href="browserlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <img class="logo" src="logo.png" alt="JavaFlair Logo">
+            <h1>Welcome to JavaFlair</h1>
+            <p>Your journey to Java mastery begins here</p>
+            <button class="start-btn" onclick="hideWelcomeScreen()">Get Started</button>
+        </div>
+    </div>
 
     <main class="container">
-        <img class="background" src="landingpage.jpg" alt="Background screen">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img class="logo" src="logo.png" alt="JavaFlair Logo">
+                <span class="brand-name">JavaFlair</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
 
-        <section class="header">
-            <img class="logo" src="logo.png" alt="Java Logo">
-            <p class="name">JavaFlair</p>
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1>Master Java Programming</h1>
+                <p>Learn Java from basics to advanced with structured tutorials and hands-on practice</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Start Learning</a>
+                    <a href="#resources" class="btn btn-secondary">View Resources</a>
+                </div>
+            </div>
         </section>
 
-        <h1 class="mainheading">Master Java with JavaFlair</h1>
-        <div class="intro-container">
-          <img class="developer" src="sahana.png">
-          <p class="intro">
-              Welcome to JavaFlair – your ultimate guide to mastering Java effortlessly! 
-              Whether you're a beginner taking your first step or an aspiring developer 
-              looking to sharpen your skills, our structured tutorials, in-depth notes, 
-              and hands-on coding exercises make learning Java simple and effective. 
-              With easy-to-follow video lectures and real-world examples, you'll gain the 
-              confidence to write clean, efficient code. Start your Java journey today and 
-              unlock endless opportunities in the world of programming!
-          </p>
-      </div>
-        <div class="btn-container">
-            <a href="https://youtube.com/@javaflair?si=mtztAlccO-uux3Kw" class="btn btn-primary">🎥 Watch Lectures</a>
-            <a href="#" class="btn btn-secondary">📜 Download Notes</a>
-            <a href="history.html" class="btn btn-tertiary">💻 Start Coding</a>
-        </div>
+        <section class="features-section" id="courses">
+            <h2>Learning Path</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <h3>Video Lectures</h3>
+                    <p>Watch comprehensive video tutorials on YouTube</p>
+                    <a href="https://youtube.com/@javaflair?si=mtztAlccO-uux3Kw" class="card-btn" target="_blank">
+                        Watch Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Study Materials</h3>
+                    <p>Download detailed notes and practice materials</p>
+                    <a href="#" class="card-btn">
+                        Download <i class="fas fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Practice Coding</h3>
+                    <p>Hands-on coding exercises and projects</p>
+                    <a href="history.html" class="card-btn">
+                        Start Coding <i class="fas fa-code"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="resources">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About JavaFlair</h2>
+                    <p>JavaFlair is your comprehensive platform for learning Java programming. Our structured approach combines theoretical knowledge with practical implementation, making it easier for you to master Java development.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Structured Learning Path</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Practical Examples</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Hands-on Projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="sahana.png" alt="JavaFlair Developer">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#resources">Resources</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://youtube.com/@javaflair" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:JavaFlair@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <div class="email-contact">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:JavaFlair@gmail.com">JavaFlair@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JavaFlair. All rights reserved.</p>
+            </div>
+        </footer>
     </main>
 
+    <script>
+        function hideWelcomeScreen() {
+            document.getElementById('welcomeScreen').style.display = 'none';
+            localStorage.setItem('welcomeScreenShown', 'true');
+        }
+
+        // Check if welcome screen has been shown before
+        if (localStorage.getItem('welcomeScreenShown') === 'true') {
+            document.getElementById('welcomeScreen').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
