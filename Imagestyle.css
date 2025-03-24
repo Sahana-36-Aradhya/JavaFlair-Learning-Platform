@@ -11,17 +11,24 @@ img {
 }
 
 /* Responsive Styling for Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   img {
-    max-height: 450px; /* Reduce the maximum height for tablet screens */
+    max-height: 500px;
   }
 }
 
 /* Responsive Styling for Phones */
+@media only screen and (max-width: 768px) {
+  img {
+    max-height: 400px;
+    margin: 15px auto;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   img {
-    max-height: 300px; /* Reduce the maximum height even further for phones */
-    margin: 10px auto; /* Reduce the vertical margin for smaller screens */
-    border-radius: 5px; /* Make the corners slightly less rounded for smaller screens */
+    max-height: 250px;
+    margin: 10px auto;
+    border-radius: 4px;
   }
 }
