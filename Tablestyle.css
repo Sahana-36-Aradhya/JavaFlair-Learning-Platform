@@ -9,8 +9,9 @@ th, td {
   padding: 15px;
   text-align: left;
   border: 1px solid #b9afcc;
-  word-wrap: break-word;   /* ✅ allow long text to wrap */
-  white-space: normal;     /* ✅ allow wrapping in small screens */
+  word-wrap: break-word;     /* ✅ allow long text to wrap */
+  white-space: normal;       /* ✅ allow wrapping */
+  overflow-wrap: break-word; /* ✅ extra safety */
 }
 
 th {
@@ -50,12 +51,16 @@ td {
 /* ✅ Phone (≤480px): shrink but keep table layout */
 @media only screen and (max-width: 480px) {
   table {
-    font-size: 0.8em;       /* smaller font */
-    table-layout: fixed;    /* ✅ force equal column widths */
-    word-wrap: break-word;  /* ✅ wrap long words */
+    font-size: 0.8em;        /* smaller font */
+    table-layout: fixed;     /* ✅ equal column widths */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   th, td {
-    padding: 6px;           /* tighter padding */
+    padding: 6px;
+    max-width: 100px;        /* ✅ force content to wrap instead of overflow */
+    word-break: break-word;  /* ✅ break long words if needed */
+    white-space: normal;     /* ✅ ensure wrapping */
   }
 }
