@@ -9,6 +9,8 @@ th, td {
   padding: 15px;
   text-align: left;
   border: 1px solid #b9afcc;
+  word-wrap: break-word;   /* ✅ allow long text to wrap */
+  white-space: normal;     /* ✅ allow wrapping in small screens */
 }
 
 th {
@@ -45,45 +47,15 @@ td {
   }
 }
 
-/* ✅ Phone (≤480px): Convert into stacked "card-like" rows */
+/* ✅ Phone (≤480px): shrink but keep table layout */
 @media only screen and (max-width: 480px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
+  table {
+    font-size: 0.8em;       /* smaller font */
+    table-layout: fixed;    /* ✅ force equal column widths */
+    word-wrap: break-word;  /* ✅ wrap long words */
   }
 
-  thead {
-    display: none; /* Hide table headers on mobile */
-  }
-
-  tr {
-    margin-bottom: 15px;
-    border: 1px solid #b9afcc;
-    border-radius: 8px;
-    padding: 10px;
-    background: #fff;
-  }
-
-  td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    font-size: 0.9em;
-  }
-
-  td:last-child {
-    border-bottom: none;
-  }
-
-  td:before {
-    content: attr(data-label); /* Show header name */
-    font-weight: bold;
-    color: #333;
-    min-width: 120px;
-    margin-right: 10px;
+  th, td {
+    padding: 6px;           /* tighter padding */
   }
 }
