@@ -124,17 +124,17 @@ html, body {
     #main-content {
         margin-left: 0;
         width: 100%;
-        padding-top: 20px;
-        font-size: 14px; /* Smaller font size for phones */
+        padding-top: 18px; /* ✅ 20px → 18px */
+        font-size: 12px;   /* ✅ 14px → 12px */
     }
 
     #sidebar-nav ul li a {
-        font-size: 14px; /* Reduced font size */
-        padding: 8px 10px;
+        font-size: 12px;   /* ✅ 14px → 12px */
+        padding: 6px 8px;  /* ✅ 8px 10px → 6px 8px */
     }
 
     #menu-toggle {
-        font-size: 14px; /* Compact toggle on small screens */
-        padding: 4px 6px;
+        font-size: 12px;   /* ✅ 14px → 12px */
+        padding: 2px 4px;  /* ✅ 4px 6px → 2px 4px */
     }
 }
