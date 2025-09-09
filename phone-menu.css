@@ -26,7 +26,7 @@
 }
 
 #mobile-sidebar li {
-    padding: 8px; /* Slightly reduced padding */
+    padding: 10px;
     text-align: left;
     border-bottom: none;
 }
@@ -34,11 +34,11 @@
 #mobile-sidebar a {
     text-decoration: none;
     color: #000000; /* Dark text color */
-    font-size: 18px; /* Reduced from 20px */
+    font-size: 20px;
     display: block;
     transition: 0.3s;
     background-color: #E6E6FA; /* Match the sidebar background */
-    padding: 8px 12px; /* Balanced padding */
+    padding: 10px 15px;
 }
 
 #mobile-sidebar a:hover {
@@ -52,12 +52,12 @@
 
 /* Toggle Button Styling */
 #menu-toggle {
-    font-size: 18px; /* Reduced from 20px */
+    font-size: 20px;
     cursor: pointer;
     background-color: #00BFFF; 
     color: white;
     border: none;
-    padding: 5px 8px; /* Compact padding */
+    padding: 8px 12px;
     position: fixed;
     top: 10px;
     left: 10px;
@@ -75,19 +75,17 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
     font-family: 'Times New Roman', Times, serif;
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
     background-color: #F8F8FF;
 }
 
 /* Main Content */
 #main-content {
-    padding: 0 20px 20px 20px;
+    padding: 20px;
     width: calc(100% - 210px); /* Match sidebar width */
     background-color: #F8F8FF; /* Light lavender for the background */
     color: #000000; /* Text color */
     overflow: auto; /* Allow scrolling for the main content */
-    font-size: 17px; /* Reduced from 18px */
+    font-size: 18px;
     line-height: 1.6; /* Better line spacing for readability */
 }
 
@@ -99,15 +97,15 @@ html, body {
     }
 
     #main-content {
-        padding: 10px; 
+        padding: 15px;
         margin-left: 0;
         width: 100%;
-        font-size: 15px; /* Reduced from 16px */
+        font-size: 16px;
     }
 
     #menu-toggle {
         display: block;
-        font-size: 16px; /* Reduced for better balance */
+        font-size: 18px;
     }
 }
 
@@ -124,17 +122,17 @@ html, body {
     #main-content {
         margin-left: 0;
         width: 100%;
-        padding-top: 18px; /* ✅ 20px → 18px */
-        font-size: 12px;   /* ✅ 14px → 12px */
+        padding-top: 20px;
+        font-size: 15px;
     }
 
     #sidebar-nav ul li a {
-        font-size: 12px;   /* ✅ 14px → 12px */
-        padding: 6px 8px;  /* ✅ 8px 10px → 6px 8px */
+        font-size: 15px;
+        padding: 8px 12px;
     }
 
     #menu-toggle {
-        font-size: 12px;   /* ✅ 14px → 12px */
-        padding: 2px 4px;  /* ✅ 4px 6px → 2px 4px */
+        font-size: 16px;
+        padding: 6px 8px;
     }
 }
