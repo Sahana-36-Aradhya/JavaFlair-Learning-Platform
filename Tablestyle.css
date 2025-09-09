@@ -1,108 +1,89 @@
 /* Table Styling */
 table {
-  width: 100%; /* Full width of the container */
-  border-collapse: collapse; /* Merge borders for a cleaner look */
-  margin-top: 20px; /* Space above the table */
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 th, td {
-  padding: 15px; /* Padding inside cells */
-  text-align: left; /* Align text to the left */
-  border: 1px solid #b9afcc; /* Light lavender border for cells */
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #b9afcc;
 }
 
 th {
-  background-color: #E6E6FA; /* Lavender background for table headers */
-  color: #000000; /* Dark text color for headers */
+  background-color: #E6E6FA;
+  color: #000000;
 }
 
 tr:nth-child(even) {
-  background-color: #F8F8FF; /* Light lavender for even rows */
+  background-color: #F8F8FF;
 }
 
 tr:hover {
-  background-color: #D1E7FF; /* Light blue on hover for rows */
+  background-color: #D1E7FF;
 }
 
 td {
-  color: #000000; /* Dark text color for table cells */
+  color: #000000;
 }
 
-/* Responsive Styling for Tables on Phones */
+/* ✅ Tablet (≤1024px) adjustments */
+@media only screen and (max-width: 1024px) {
+  th, td {
+    padding: 12px;
+  }
+}
+
+/* ✅ Small Tablet (≤768px) adjustments */
+@media only screen and (max-width: 768px) {
+  table {
+    font-size: 0.95em;
+  }
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* ✅ Phone (≤480px): Convert into stacked "card-like" rows */
 @media only screen and (max-width: 480px) {
-  table, th, td {
-    display: block; /* Make the table, headers, and cells block elements */
-    width: 100%; /* Full width for each element */
-    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  th, td {
-    padding: 10px; /* Reduce padding for smaller screens */
-    text-align: left; /* Keep text alignment */
+  thead {
+    display: none; /* Hide table headers on mobile */
   }
 
   tr {
-    display: block; /* Make each row a block element */
-    margin-bottom: 10px; /* Add spacing between rows */
-  }
-
-  th {
-    background-color: #E6E6FA; /* Keep lavender background for headers */
-    color: #000000; /* Dark text color */
+    margin-bottom: 15px;
+    border: 1px solid #b9afcc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
   }
 
   td {
-    border: none; /* Remove borders from individual cells for a cleaner mobile look */
-    border-bottom: 1px solid #b9afcc; /* Add border below each cell */
-    display: flex; /* Use flex layout for content within each cell */
-    justify-content: space-between; /* Align content within each cell */
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+  td:last-child {
+    border-bottom: none;
   }
 
   td:before {
-    content: attr(data-label); /* Use the attribute 'data-label' for header labels in mobile view */
-    font-weight: bold; /* Make the label bold */
-    margin-right: 10px; /* Space between label and content */
-  }
-}
-
-/* Add new responsive styles */
-@media only screen and (max-width: 1024px) {
-    th, td {
-        padding: 12px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    table {
-        font-size: 0.95em;
-    }
-
-    th, td {
-        padding: 10px;
-    }
-}
-
-/* Responsive Styling for Tables on Phones */
-@media only screen and (max-width: 480px) {
-  table {
-    width: 100%;              /* Fit screen */
-    max-width: 100%;          /* Prevent overflow */
-    border-collapse: collapse; /* Keep table look */
-    table-layout: fixed;       /* Force columns to shrink */
-    word-wrap: break-word;     /* Wrap long text */
-    font-size: 0.85em;         /* Slightly smaller font */
-  }
-
-  th, td {
-    padding: 8px;             /* Reduce padding for small screen */
-    text-align: left;
-  }
-
-  tr {
-    display: table-row;       /* Keep proper table rows */
-  }
-
-  td, th {
-    display: table-cell;      /* Keep proper table cells */
+    content: attr(data-label); /* Show header name */
+    font-weight: bold;
+    color: #333;
+    min-width: 120px;
+    margin-right: 10px;
   }
 }
