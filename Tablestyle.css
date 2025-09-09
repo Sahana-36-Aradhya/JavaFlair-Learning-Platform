@@ -82,12 +82,27 @@ td {
     }
 }
 
+/* Responsive Styling for Tables on Phones */
 @media only screen and (max-width: 480px) {
-    table {
-        font-size: 0.9em;
-    }
+  table {
+    width: 100%;              /* Fit screen */
+    max-width: 100%;          /* Prevent overflow */
+    border-collapse: collapse; /* Keep table look */
+    table-layout: fixed;       /* Force columns to shrink */
+    word-wrap: break-word;     /* Wrap long text */
+    font-size: 0.85em;         /* Slightly smaller font */
+  }
 
-    td:before {
-        min-width: 120px;
-    }
+  th, td {
+    padding: 8px;             /* Reduce padding for small screen */
+    text-align: left;
+  }
+
+  tr {
+    display: table-row;       /* Keep proper table rows */
+  }
+
+  td, th {
+    display: table-cell;      /* Keep proper table cells */
+  }
 }
