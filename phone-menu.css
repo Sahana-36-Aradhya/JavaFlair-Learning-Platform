@@ -22,10 +22,11 @@
 #mobile-sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #mobile-sidebar li {
-    padding: 10px;
+    padding: 8px; /* Slightly reduced padding */
     text-align: left;
     border-bottom: none;
 }
@@ -33,10 +34,11 @@
 #mobile-sidebar a {
     text-decoration: none;
     color: #000000; /* Dark text color */
-    font-size: 20px; /* Increased font size for better visibility */
+    font-size: 18px; /* Reduced from 20px */
     display: block;
     transition: 0.3s;
     background-color: #E6E6FA; /* Match the sidebar background */
+    padding: 8px 12px; /* Balanced padding */
 }
 
 #mobile-sidebar a:hover {
@@ -50,85 +52,89 @@
 
 /* Toggle Button Styling */
 #menu-toggle {
-    font-size: 20px; /* Increased font size for better readability */
+    font-size: 18px; /* Reduced from 20px */
     cursor: pointer;
     background-color: #00BFFF; 
     color: white;
     border: none;
-    padding: 3px; /* Reduced padding as requested */
+    padding: 5px 8px; /* Compact padding */
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 1100; /* Above the sidebar */
-    margin-botton:5px;
 }
 
 #menu-toggle:hover {
     background-color: #E6E6FA; /* Match the sidebar background on hover */
+    color: #000000;
 }
 
 /* Prevent Horizontal Scrolling */
 html, body {
-    margin-top: 20px;
-    margin-right: 20px; /* Ensure proper space on the right */
+    margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent white space caused by sidebar */
-    font-family:'Times New Roman', Times, serif;
-    word-wrap: break-word; /* Break words when necessary */
+    font-family: 'Times New Roman', Times, serif;
+    word-wrap: break-word; 
     overflow-wrap: break-word; 
+    background-color: #F8F8FF;
 }
 
 /* Main Content */
 #main-content {
     padding: 0 20px 20px 20px;
-    width: calc(100% - 250px); /* Ensure the main content takes up the remaining width */
+    width: calc(100% - 210px); /* Match sidebar width */
     background-color: #F8F8FF; /* Light lavender for the background */
     color: #000000; /* Text color */
     overflow: auto; /* Allow scrolling for the main content */
-    font-size: 18px; /* Adjusted main content font size */
+    font-size: 17px; /* Reduced from 18px */
     line-height: 1.6; /* Better line spacing for readability */
 }
 
 /* Responsive Styling for Tablets */
 @media only screen and (max-width: 768px) {
-    /* Mobile Sidebar (Only Active on Smaller Screens) */
+    /* Hide desktop sidebar on mobile */
     #sidebar-nav {
-        display: none; /* Hide desktop sidebar on mobile */
+        display: none;
     }
 
     #main-content {
         padding: 10px; 
-        margin-left: 0; /* Full width */
+        margin-left: 0;
         width: 100%;
-        font-size: 16px; /* Slightly smaller font size for tablets */
+        font-size: 15px; /* Reduced from 16px */
     }
 
-    /* Mobile Menu Toggle */
     #menu-toggle {
-        display: block; /* Make toggle button visible on small screens */
-        font-size: 18px; /* Adjust toggle button font size for tablets */
+        display: block;
+        font-size: 16px; /* Reduced for better balance */
     }
 }
 
 /* Responsive Styling for Phones */
 @media only screen and (max-width: 480px) {
     #sidebar-nav {
-        width: 100%; /* Sidebar takes full width */
-        height: auto; /* Auto height for better scrolling on mobile */
-        position: relative; /* No fixed positioning for better flow */
-        border-right: none; /* Remove border on mobile */
-        box-shadow: none; /* Remove shadow for simplicity */
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        box-shadow: none;
     }
 
     #main-content {
-        margin-left: 0; /* No margin for main content */
-        width: 100%; /* Main content takes full width */
-        padding-top: 20px; /* Add top padding */
-        font-size: 16px; /* Smaller font size for phones */
+        margin-left: 0;
+        width: 100%;
+        padding-top: 20px;
+        font-size: 14px; /* Smaller font size for phones */
     }
 
     #sidebar-nav ul li a {
-        font-size: 16px; /* Adjust font size for sidebar links on smaller screens */
-        padding: 10px 15px; /* Reduce padding for links on smaller screens */
+        font-size: 14px; /* Reduced font size */
+        padding: 8px 10px;
+    }
+
+    #menu-toggle {
+        font-size: 14px; /* Compact toggle on small screens */
+        padding: 4px 6px;
     }
 }
